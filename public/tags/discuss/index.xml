@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>discuss on rubensanchez.dev</title>
-    <link>https://www.rubensanchez.dev/tags/discuss/</link>
+    <link>/tags/discuss/</link>
     <description>Recent content in discuss on rubensanchez.dev</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 22 May 2020 08:49:19 +0000</lastBuildDate><atom:link href="https://www.rubensanchez.dev/tags/discuss/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 22 May 2020 08:49:19 +0000</lastBuildDate><atom:link href="/tags/discuss/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>How do you approach your DEV &#34;Reading List&#34;?</title>
-      <link>https://www.rubensanchez.dev/blog/how-do-you-approach-your-dev-reading-list-1l28/</link>
+      <link>/blog/how-do-you-approach-your-dev-reading-list-1l28/</link>
       <pubDate>Fri, 22 May 2020 08:49:19 +0000</pubDate>
       
-      <guid>https://www.rubensanchez.dev/blog/how-do-you-approach-your-dev-reading-list-1l28/</guid>
+      <guid>/blog/how-do-you-approach-your-dev-reading-list-1l28/</guid>
       <description>I have noticed that when faced with articles that are either long, or likely to be useful in the future, people tend to add them to their reading list.
 I am curious about how do you use this list. Do you set a time during the week when you go through it and read what you have saved during the last days?
 Do you use it as a sort of library, where you can go and search for answers on interesting topics whenever the need comes?</description>

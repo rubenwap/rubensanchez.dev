@@ -2,287 +2,287 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on rubensanchez.dev</title>
-    <link>https://www.rubensanchez.dev/tags/</link>
+    <link>/tags/</link>
     <description>Recent content in Tags on rubensanchez.dev</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 01 Apr 2021 09:14:10 +0000</lastBuildDate><atom:link href="https://www.rubensanchez.dev/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 01 Apr 2021 09:14:10 +0000</lastBuildDate><atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>go</title>
-      <link>https://www.rubensanchez.dev/tags/go/</link>
+      <link>/tags/go/</link>
       <pubDate>Thu, 01 Apr 2021 09:14:10 +0000</pubDate>
       
-      <guid>https://www.rubensanchez.dev/tags/go/</guid>
+      <guid>/tags/go/</guid>
       <description></description>
     </item>
     
     <item>
       <title>learning</title>
-      <link>https://www.rubensanchez.dev/tags/learning/</link>
+      <link>/tags/learning/</link>
       <pubDate>Thu, 01 Apr 2021 09:14:10 +0000</pubDate>
       
-      <guid>https://www.rubensanchez.dev/tags/learning/</guid>
+      <guid>/tags/learning/</guid>
       <description></description>
     </item>
     
     <item>
       <title>kafka</title>
-      <link>https://www.rubensanchez.dev/tags/kafka/</link>
+      <link>/tags/kafka/</link>
       <pubDate>Sat, 16 Jan 2021 19:00:12 +0000</pubDate>
       
-      <guid>https://www.rubensanchez.dev/tags/kafka/</guid>
+      <guid>/tags/kafka/</guid>
       <description></description>
     </item>
     
     <item>
       <title>rabbitmq</title>
-      <link>https://www.rubensanchez.dev/tags/rabbitmq/</link>
+      <link>/tags/rabbitmq/</link>
       <pubDate>Sat, 16 Jan 2021 19:00:12 +0000</pubDate>
       
-      <guid>https://www.rubensanchez.dev/tags/rabbitmq/</guid>
+      <guid>/tags/rabbitmq/</guid>
       <description></description>
     </item>
     
     <item>
       <title>tutorial</title>
-      <link>https://www.rubensanchez.dev/tags/tutorial/</link>
+      <link>/tags/tutorial/</link>
       <pubDate>Sat, 16 Jan 2021 19:00:12 +0000</pubDate>
       
-      <guid>https://www.rubensanchez.dev/tags/tutorial/</guid>
+      <guid>/tags/tutorial/</guid>
       <description></description>
     </item>
     
     <item>
       <title>alexa</title>
-      <link>https://www.rubensanchez.dev/tags/alexa/</link>
+      <link>/tags/alexa/</link>
       <pubDate>Tue, 08 Dec 2020 15:18:11 +0000</pubDate>
       
-      <guid>https://www.rubensanchez.dev/tags/alexa/</guid>
+      <guid>/tags/alexa/</guid>
       <description></description>
     </item>
     
     <item>
       <title>python</title>
-      <link>https://www.rubensanchez.dev/tags/python/</link>
+      <link>/tags/python/</link>
       <pubDate>Tue, 08 Dec 2020 15:18:11 +0000</pubDate>
       
-      <guid>https://www.rubensanchez.dev/tags/python/</guid>
+      <guid>/tags/python/</guid>
       <description></description>
     </item>
     
     <item>
       <title>gnu</title>
-      <link>https://www.rubensanchez.dev/tags/gnu/</link>
+      <link>/tags/gnu/</link>
       <pubDate>Sun, 18 Oct 2020 12:59:33 +0000</pubDate>
       
-      <guid>https://www.rubensanchez.dev/tags/gnu/</guid>
+      <guid>/tags/gnu/</guid>
       <description></description>
     </item>
     
     <item>
       <title>performance</title>
-      <link>https://www.rubensanchez.dev/tags/performance/</link>
+      <link>/tags/performance/</link>
       <pubDate>Sun, 18 Oct 2020 12:59:33 +0000</pubDate>
       
-      <guid>https://www.rubensanchez.dev/tags/performance/</guid>
+      <guid>/tags/performance/</guid>
       <description></description>
     </item>
     
     <item>
       <title>datascience</title>
-      <link>https://www.rubensanchez.dev/tags/datascience/</link>
+      <link>/tags/datascience/</link>
       <pubDate>Fri, 02 Oct 2020 17:52:24 +0000</pubDate>
       
-      <guid>https://www.rubensanchez.dev/tags/datascience/</guid>
+      <guid>/tags/datascience/</guid>
       <description></description>
     </item>
     
     <item>
       <title>julia</title>
-      <link>https://www.rubensanchez.dev/tags/julia/</link>
+      <link>/tags/julia/</link>
       <pubDate>Fri, 02 Oct 2020 17:52:24 +0000</pubDate>
       
-      <guid>https://www.rubensanchez.dev/tags/julia/</guid>
+      <guid>/tags/julia/</guid>
       <description></description>
     </item>
     
     <item>
       <title>beginners</title>
-      <link>https://www.rubensanchez.dev/tags/beginners/</link>
+      <link>/tags/beginners/</link>
       <pubDate>Thu, 24 Sep 2020 12:22:49 +0000</pubDate>
       
-      <guid>https://www.rubensanchez.dev/tags/beginners/</guid>
+      <guid>/tags/beginners/</guid>
       <description></description>
     </item>
     
     <item>
       <title>career</title>
-      <link>https://www.rubensanchez.dev/tags/career/</link>
+      <link>/tags/career/</link>
       <pubDate>Thu, 24 Sep 2020 12:22:49 +0000</pubDate>
       
-      <guid>https://www.rubensanchez.dev/tags/career/</guid>
+      <guid>/tags/career/</guid>
       <description></description>
     </item>
     
     <item>
       <title>productivity</title>
-      <link>https://www.rubensanchez.dev/tags/productivity/</link>
+      <link>/tags/productivity/</link>
       <pubDate>Thu, 24 Sep 2020 12:22:49 +0000</pubDate>
       
-      <guid>https://www.rubensanchez.dev/tags/productivity/</guid>
+      <guid>/tags/productivity/</guid>
       <description></description>
     </item>
     
     <item>
       <title>docker</title>
-      <link>https://www.rubensanchez.dev/tags/docker/</link>
+      <link>/tags/docker/</link>
       <pubDate>Sun, 13 Sep 2020 10:53:11 +0000</pubDate>
       
-      <guid>https://www.rubensanchez.dev/tags/docker/</guid>
+      <guid>/tags/docker/</guid>
       <description></description>
     </item>
     
     <item>
       <title>discuss</title>
-      <link>https://www.rubensanchez.dev/tags/discuss/</link>
+      <link>/tags/discuss/</link>
       <pubDate>Fri, 22 May 2020 08:49:19 +0000</pubDate>
       
-      <guid>https://www.rubensanchez.dev/tags/discuss/</guid>
+      <guid>/tags/discuss/</guid>
       <description></description>
     </item>
     
     <item>
       <title>meta</title>
-      <link>https://www.rubensanchez.dev/tags/meta/</link>
+      <link>/tags/meta/</link>
       <pubDate>Fri, 22 May 2020 08:49:19 +0000</pubDate>
       
-      <guid>https://www.rubensanchez.dev/tags/meta/</guid>
+      <guid>/tags/meta/</guid>
       <description></description>
     </item>
     
     <item>
       <title>javascript</title>
-      <link>https://www.rubensanchez.dev/tags/javascript/</link>
+      <link>/tags/javascript/</link>
       <pubDate>Thu, 21 May 2020 10:57:53 +0000</pubDate>
       
-      <guid>https://www.rubensanchez.dev/tags/javascript/</guid>
+      <guid>/tags/javascript/</guid>
       <description></description>
     </item>
     
     <item>
       <title>webassembly</title>
-      <link>https://www.rubensanchez.dev/tags/webassembly/</link>
+      <link>/tags/webassembly/</link>
       <pubDate>Thu, 21 May 2020 10:57:53 +0000</pubDate>
       
-      <guid>https://www.rubensanchez.dev/tags/webassembly/</guid>
+      <guid>/tags/webassembly/</guid>
       <description></description>
     </item>
     
     <item>
       <title>github</title>
-      <link>https://www.rubensanchez.dev/tags/github/</link>
+      <link>/tags/github/</link>
       <pubDate>Fri, 15 May 2020 14:57:59 +0000</pubDate>
       
-      <guid>https://www.rubensanchez.dev/tags/github/</guid>
+      <guid>/tags/github/</guid>
       <description></description>
     </item>
     
     <item>
       <title>codenewbie</title>
-      <link>https://www.rubensanchez.dev/tags/codenewbie/</link>
+      <link>/tags/codenewbie/</link>
       <pubDate>Fri, 10 Apr 2020 22:06:45 +0000</pubDate>
       
-      <guid>https://www.rubensanchez.dev/tags/codenewbie/</guid>
+      <guid>/tags/codenewbie/</guid>
       <description></description>
     </item>
     
     <item>
       <title>functional</title>
-      <link>https://www.rubensanchez.dev/tags/functional/</link>
+      <link>/tags/functional/</link>
       <pubDate>Fri, 10 Apr 2020 22:06:45 +0000</pubDate>
       
-      <guid>https://www.rubensanchez.dev/tags/functional/</guid>
+      <guid>/tags/functional/</guid>
       <description></description>
     </item>
     
     <item>
       <title>gamedev</title>
-      <link>https://www.rubensanchez.dev/tags/gamedev/</link>
+      <link>/tags/gamedev/</link>
       <pubDate>Mon, 23 Mar 2020 19:09:18 +0000</pubDate>
       
-      <guid>https://www.rubensanchez.dev/tags/gamedev/</guid>
+      <guid>/tags/gamedev/</guid>
       <description></description>
     </item>
     
     <item>
       <title>love2d</title>
-      <link>https://www.rubensanchez.dev/tags/love2d/</link>
+      <link>/tags/love2d/</link>
       <pubDate>Mon, 23 Mar 2020 19:09:18 +0000</pubDate>
       
-      <guid>https://www.rubensanchez.dev/tags/love2d/</guid>
+      <guid>/tags/love2d/</guid>
       <description></description>
     </item>
     
     <item>
       <title>lua</title>
-      <link>https://www.rubensanchez.dev/tags/lua/</link>
+      <link>/tags/lua/</link>
       <pubDate>Mon, 23 Mar 2020 19:09:18 +0000</pubDate>
       
-      <guid>https://www.rubensanchez.dev/tags/lua/</guid>
+      <guid>/tags/lua/</guid>
       <description></description>
     </item>
     
     <item>
       <title>colly</title>
-      <link>https://www.rubensanchez.dev/tags/colly/</link>
+      <link>/tags/colly/</link>
       <pubDate>Thu, 05 Mar 2020 09:39:29 +0000</pubDate>
       
-      <guid>https://www.rubensanchez.dev/tags/colly/</guid>
+      <guid>/tags/colly/</guid>
       <description></description>
     </item>
     
     <item>
       <title>scraping</title>
-      <link>https://www.rubensanchez.dev/tags/scraping/</link>
+      <link>/tags/scraping/</link>
       <pubDate>Thu, 05 Mar 2020 09:39:29 +0000</pubDate>
       
-      <guid>https://www.rubensanchez.dev/tags/scraping/</guid>
+      <guid>/tags/scraping/</guid>
       <description></description>
     </item>
     
     <item>
       <title>scrapy</title>
-      <link>https://www.rubensanchez.dev/tags/scrapy/</link>
+      <link>/tags/scrapy/</link>
       <pubDate>Thu, 05 Mar 2020 09:39:29 +0000</pubDate>
       
-      <guid>https://www.rubensanchez.dev/tags/scrapy/</guid>
+      <guid>/tags/scrapy/</guid>
       <description></description>
     </item>
     
     <item>
       <title>api</title>
-      <link>https://www.rubensanchez.dev/tags/api/</link>
+      <link>/tags/api/</link>
       <pubDate>Sat, 29 Feb 2020 14:59:19 +0000</pubDate>
       
-      <guid>https://www.rubensanchez.dev/tags/api/</guid>
+      <guid>/tags/api/</guid>
       <description></description>
     </item>
     
     <item>
       <title>cask</title>
-      <link>https://www.rubensanchez.dev/tags/cask/</link>
+      <link>/tags/cask/</link>
       <pubDate>Sat, 29 Feb 2020 14:59:19 +0000</pubDate>
       
-      <guid>https://www.rubensanchez.dev/tags/cask/</guid>
+      <guid>/tags/cask/</guid>
       <description></description>
     </item>
     
     <item>
       <title>scala</title>
-      <link>https://www.rubensanchez.dev/tags/scala/</link>
+      <link>/tags/scala/</link>
       <pubDate>Sat, 29 Feb 2020 14:59:19 +0000</pubDate>
       
-      <guid>https://www.rubensanchez.dev/tags/scala/</guid>
+      <guid>/tags/scala/</guid>
       <description></description>
     </item>
     

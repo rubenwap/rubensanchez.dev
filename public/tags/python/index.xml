@@ -2,46 +2,46 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>python on rubensanchez.dev</title>
-    <link>https://www.rubensanchez.dev/tags/python/</link>
+    <link>/tags/python/</link>
     <description>Recent content in python on rubensanchez.dev</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 08 Dec 2020 15:18:11 +0000</lastBuildDate><atom:link href="https://www.rubensanchez.dev/tags/python/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 08 Dec 2020 15:18:11 +0000</lastBuildDate><atom:link href="/tags/python/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Create a *useful* Alexa skill with minimal Python knowledge</title>
-      <link>https://www.rubensanchez.dev/blog/create-a-useful-alexa-skill-with-minimal-python-knowledge-man/</link>
+      <link>/blog/create-a-useful-alexa-skill-with-minimal-python-knowledge-man/</link>
       <pubDate>Tue, 08 Dec 2020 15:18:11 +0000</pubDate>
       
-      <guid>https://www.rubensanchez.dev/blog/create-a-useful-alexa-skill-with-minimal-python-knowledge-man/</guid>
+      <guid>/blog/create-a-useful-alexa-skill-with-minimal-python-knowledge-man/</guid>
       <description>I am pretty disappointed with the terrible quality of most of the &amp;ldquo;custom&amp;rdquo; stuff found in the Alexa skills shop. Lots of &amp;ldquo;tell me a joke&amp;rdquo;, &amp;ldquo;tell me a fun fact&amp;rdquo;, &amp;ldquo;tell me random facts&amp;rdquo;, &amp;ldquo;play forest sounds&amp;rdquo;, &amp;ldquo;play sea sounds&amp;rdquo;&amp;hellip; So at the end, my Echo unit ended up being used just to turn Netflix on and off and manipulate the heating temperature.
 That&amp;rsquo;s no more! It&amp;rsquo;s very easy to create custom skills with Python (or Node.</description>
     </item>
     
     <item>
       <title>Will this quick Julia lesson make you forget about Python for your data needs? </title>
-      <link>https://www.rubensanchez.dev/blog/will-this-quick-julia-lesson-make-you-forget-about-python-for-your-data-needs-4d1c/</link>
+      <link>/blog/will-this-quick-julia-lesson-make-you-forget-about-python-for-your-data-needs-4d1c/</link>
       <pubDate>Fri, 02 Oct 2020 17:52:24 +0000</pubDate>
       
-      <guid>https://www.rubensanchez.dev/blog/will-this-quick-julia-lesson-make-you-forget-about-python-for-your-data-needs-4d1c/</guid>
+      <guid>/blog/will-this-quick-julia-lesson-make-you-forget-about-python-for-your-data-needs-4d1c/</guid>
       <description>I have been a Python heavy user for some time, so when I learned about Julia I thought that the prospect it was introducing was very interesting. Simplicity in the syntax but execution power closer to C, but maybe the obstacle to beat was too high. Python already has massive adoption, there is a huge ecosystem with modules for any task you can think about and even people from the R world seem to be migrating to it.</description>
     </item>
     
     <item>
       <title>Monitor the behavior of your Python app by learning InfluxDB, Grafana and Telegraf</title>
-      <link>https://www.rubensanchez.dev/blog/monitor-the-behavior-of-your-python-app-by-learning-influxdb-grafana-and-telegraf-3ehg/</link>
+      <link>/blog/monitor-the-behavior-of-your-python-app-by-learning-influxdb-grafana-and-telegraf-3ehg/</link>
       <pubDate>Sun, 13 Sep 2020 10:53:11 +0000</pubDate>
       
-      <guid>https://www.rubensanchez.dev/blog/monitor-the-behavior-of-your-python-app-by-learning-influxdb-grafana-and-telegraf-3ehg/</guid>
+      <guid>/blog/monitor-the-behavior-of-your-python-app-by-learning-influxdb-grafana-and-telegraf-3ehg/</guid>
       <description>We will go through a tutorial where Python and Flask will be used. However, you will soon realize that Python and Flask are the less important parts here. Due to the nature of the setup (a docker-compose file) you shouldn&amp;rsquo;t have any trouble swapping the Docker for my Flask app with whatever else you want to monitor.
 So, what are we actually doing here? What is the final goal? We will create docker compose file which will instantiate the following services:</description>
     </item>
     
     <item>
       <title>Use Python in your browser client code together with JS. No server required, thanks to Web Assembly</title>
-      <link>https://www.rubensanchez.dev/blog/use-python-in-your-browser-client-code-together-with-js-no-server-required-thanks-to-web-assembly-2be2/</link>
+      <link>/blog/use-python-in-your-browser-client-code-together-with-js-no-server-required-thanks-to-web-assembly-2be2/</link>
       <pubDate>Thu, 21 May 2020 10:57:53 +0000</pubDate>
       
-      <guid>https://www.rubensanchez.dev/blog/use-python-in-your-browser-client-code-together-with-js-no-server-required-thanks-to-web-assembly-2be2/</guid>
+      <guid>/blog/use-python-in-your-browser-client-code-together-with-js-no-server-required-thanks-to-web-assembly-2be2/</guid>
       <description>Use case: Let&amp;rsquo;t say that I love Python Pandas for data manipulation, but at the same time I need to use the manipulation results in a regular client-side webpage. The classic method I would do is to have a Python backend, do my calculations in there and then send the results to the front, via an API, server rendered templates or whatever.
 I am going to present you an alternative based on Web Assembly and the Pyodide project.</description>
     </item>

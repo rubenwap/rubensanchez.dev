@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>julia on rubensanchez.dev</title>
-    <link>https://www.rubensanchez.dev/tags/julia/</link>
+    <link>/tags/julia/</link>
     <description>Recent content in julia on rubensanchez.dev</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 02 Oct 2020 17:52:24 +0000</lastBuildDate><atom:link href="https://www.rubensanchez.dev/tags/julia/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 02 Oct 2020 17:52:24 +0000</lastBuildDate><atom:link href="/tags/julia/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Will this quick Julia lesson make you forget about Python for your data needs? </title>
-      <link>https://www.rubensanchez.dev/blog/will-this-quick-julia-lesson-make-you-forget-about-python-for-your-data-needs-4d1c/</link>
+      <link>/blog/will-this-quick-julia-lesson-make-you-forget-about-python-for-your-data-needs-4d1c/</link>
       <pubDate>Fri, 02 Oct 2020 17:52:24 +0000</pubDate>
       
-      <guid>https://www.rubensanchez.dev/blog/will-this-quick-julia-lesson-make-you-forget-about-python-for-your-data-needs-4d1c/</guid>
+      <guid>/blog/will-this-quick-julia-lesson-make-you-forget-about-python-for-your-data-needs-4d1c/</guid>
       <description>I have been a Python heavy user for some time, so when I learned about Julia I thought that the prospect it was introducing was very interesting. Simplicity in the syntax but execution power closer to C, but maybe the obstacle to beat was too high. Python already has massive adoption, there is a huge ecosystem with modules for any task you can think about and even people from the R world seem to be migrating to it.</description>
     </item>
     

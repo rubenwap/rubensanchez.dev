@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>docker on rubensanchez.dev</title>
-    <link>https://www.rubensanchez.dev/tags/docker/</link>
+    <link>/tags/docker/</link>
     <description>Recent content in docker on rubensanchez.dev</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 13 Sep 2020 10:53:11 +0000</lastBuildDate><atom:link href="https://www.rubensanchez.dev/tags/docker/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 13 Sep 2020 10:53:11 +0000</lastBuildDate><atom:link href="/tags/docker/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Monitor the behavior of your Python app by learning InfluxDB, Grafana and Telegraf</title>
-      <link>https://www.rubensanchez.dev/blog/monitor-the-behavior-of-your-python-app-by-learning-influxdb-grafana-and-telegraf-3ehg/</link>
+      <link>/blog/monitor-the-behavior-of-your-python-app-by-learning-influxdb-grafana-and-telegraf-3ehg/</link>
       <pubDate>Sun, 13 Sep 2020 10:53:11 +0000</pubDate>
       
-      <guid>https://www.rubensanchez.dev/blog/monitor-the-behavior-of-your-python-app-by-learning-influxdb-grafana-and-telegraf-3ehg/</guid>
+      <guid>/blog/monitor-the-behavior-of-your-python-app-by-learning-influxdb-grafana-and-telegraf-3ehg/</guid>
       <description>We will go through a tutorial where Python and Flask will be used. However, you will soon realize that Python and Flask are the less important parts here. Due to the nature of the setup (a docker-compose file) you shouldn&amp;rsquo;t have any trouble swapping the Docker for my Flask app with whatever else you want to monitor.
 So, what are we actually doing here? What is the final goal? We will create docker compose file which will instantiate the following services:</description>
     </item>

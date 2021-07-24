@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>webassembly on rubensanchez.dev</title>
-    <link>https://www.rubensanchez.dev/tags/webassembly/</link>
+    <link>/tags/webassembly/</link>
     <description>Recent content in webassembly on rubensanchez.dev</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 21 May 2020 10:57:53 +0000</lastBuildDate><atom:link href="https://www.rubensanchez.dev/tags/webassembly/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 21 May 2020 10:57:53 +0000</lastBuildDate><atom:link href="/tags/webassembly/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Use Python in your browser client code together with JS. No server required, thanks to Web Assembly</title>
-      <link>https://www.rubensanchez.dev/blog/use-python-in-your-browser-client-code-together-with-js-no-server-required-thanks-to-web-assembly-2be2/</link>
+      <link>/blog/use-python-in-your-browser-client-code-together-with-js-no-server-required-thanks-to-web-assembly-2be2/</link>
       <pubDate>Thu, 21 May 2020 10:57:53 +0000</pubDate>
       
-      <guid>https://www.rubensanchez.dev/blog/use-python-in-your-browser-client-code-together-with-js-no-server-required-thanks-to-web-assembly-2be2/</guid>
+      <guid>/blog/use-python-in-your-browser-client-code-together-with-js-no-server-required-thanks-to-web-assembly-2be2/</guid>
       <description>Use case: Let&amp;rsquo;t say that I love Python Pandas for data manipulation, but at the same time I need to use the manipulation results in a regular client-side webpage. The classic method I would do is to have a Python backend, do my calculations in there and then send the results to the front, via an API, server rendered templates or whatever.
 I am going to present you an alternative based on Web Assembly and the Pyodide project.</description>
     </item>

@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>api on rubensanchez.dev</title>
-    <link>https://www.rubensanchez.dev/tags/api/</link>
+    <link>/tags/api/</link>
     <description>Recent content in api on rubensanchez.dev</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 29 Feb 2020 14:59:19 +0000</lastBuildDate><atom:link href="https://www.rubensanchez.dev/tags/api/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 29 Feb 2020 14:59:19 +0000</lastBuildDate><atom:link href="/tags/api/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>There is such thing as easy API development with Scala</title>
-      <link>https://www.rubensanchez.dev/blog/there-is-such-thing-as-easy-api-development-with-scala-2did/</link>
+      <link>/blog/there-is-such-thing-as-easy-api-development-with-scala-2did/</link>
       <pubDate>Sat, 29 Feb 2020 14:59:19 +0000</pubDate>
       
-      <guid>https://www.rubensanchez.dev/blog/there-is-such-thing-as-easy-api-development-with-scala-2did/</guid>
+      <guid>/blog/there-is-such-thing-as-easy-api-development-with-scala-2did/</guid>
       <description>I have to admit I am far from expert in Scala, that&amp;rsquo;s why when recently I had to prototype an API in this language, I shuddered. Frameworks like Akka HTTP or HTTP4S were far too complex for a novice in the field like me, because learning Scala is not about the syntax, but about the mindset. And it&amp;rsquo;s only logical that someone coming from the field of totally different languages such as Python or Javascript, can have a little trouble understanding concepts like the actor model or the functional proper way of using HTTP4S.</description>
     </item>
     

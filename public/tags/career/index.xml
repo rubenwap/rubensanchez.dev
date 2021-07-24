@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>career on rubensanchez.dev</title>
-    <link>https://www.rubensanchez.dev/tags/career/</link>
+    <link>/tags/career/</link>
     <description>Recent content in career on rubensanchez.dev</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 24 Sep 2020 12:22:49 +0000</lastBuildDate><atom:link href="https://www.rubensanchez.dev/tags/career/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 24 Sep 2020 12:22:49 +0000</lastBuildDate><atom:link href="/tags/career/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>I was doing bad stuff in my first dev job. Sorry! (Part II)</title>
-      <link>https://www.rubensanchez.dev/blog/i-was-doing-bad-stuff-in-my-first-dev-job-sorry-part-ii-iak/</link>
+      <link>/blog/i-was-doing-bad-stuff-in-my-first-dev-job-sorry-part-ii-iak/</link>
       <pubDate>Thu, 24 Sep 2020 12:22:49 +0000</pubDate>
       
-      <guid>https://www.rubensanchez.dev/blog/i-was-doing-bad-stuff-in-my-first-dev-job-sorry-part-ii-iak/</guid>
+      <guid>/blog/i-was-doing-bad-stuff-in-my-first-dev-job-sorry-part-ii-iak/</guid>
       <description>Glad to see you back. It means that you liked the previous part of this article. Or if you haven&amp;rsquo;t seen it yet, please check it out.
 I would like to continue the series by explaining about some more dubious techniques I was using during my first dev job. I hope you can find some advice and good tips from reading it!
 Bad dependencies So in that first job, we were very keen on researching new cool tools.</description>
@@ -20,10 +20,10 @@ Bad dependencies So in that first job, we were very keen on researching new cool
     
     <item>
       <title>I was doing bad stuff in my first dev job. Sorry! (Part I)</title>
-      <link>https://www.rubensanchez.dev/blog/i-was-doing-bad-stuff-in-my-first-dev-job-sorry-part-i-58k0/</link>
+      <link>/blog/i-was-doing-bad-stuff-in-my-first-dev-job-sorry-part-i-58k0/</link>
       <pubDate>Thu, 24 Sep 2020 11:30:17 +0000</pubDate>
       
-      <guid>https://www.rubensanchez.dev/blog/i-was-doing-bad-stuff-in-my-first-dev-job-sorry-part-i-58k0/</guid>
+      <guid>/blog/i-was-doing-bad-stuff-in-my-first-dev-job-sorry-part-i-58k0/</guid>
       <description>I got my first developer job almost by accident. I was not looking for a dev job back then, but while I was working doing something else, some tools I had developed as work side project got some traction and I was able to get an offer from the same company to move into a position to develop full time.
 That was pretty cool! But looking back, I did things that would send shivers down the spines of security professionals, devops guys and other kinds of reasonable people.</description>
     </item>
