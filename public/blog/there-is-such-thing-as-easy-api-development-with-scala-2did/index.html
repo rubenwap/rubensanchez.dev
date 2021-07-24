@@ -14,14 +14,14 @@
     "@type": "WebSite",
     "name": "rubensanchez.dev",
     
-    "url": ""
+    "url": "\/"
 }
 </script><script type="application/ld+json">
 {
   "@context": "http://schema.org",
   "@type": "Organization",
   "name": "",
-  "url": ""
+  "url": "\/"
   
   
   
@@ -36,7 +36,7 @@
         "@type": "ListItem",
         "position": 1,
         "item": {
-          "@id": "",
+          "@id": "\/",
           "name": "home"
         }
     },{
@@ -61,15 +61,15 @@
   "wordCount":  689 ,
   "datePublished" : "2020-02-29T14:59:19",
   "dateModified" : "2020-02-29T14:59:19",
-  "image" : "",
+  "image" : "\/",
   "keywords" : [ "scala, cask, api" ],
   "mainEntityOfPage" : "\/blog\/there-is-such-thing-as-easy-api-development-with-scala-2did\/",
   "publisher" : {
     "@type": "Organization",
-    "name" : "",
+    "name" : "\/",
     "logo" : {
         "@type" : "ImageObject",
-        "url" : "",
+        "url" : "\/",
         "height" :  60 ,
         "width" :  60
     }
@@ -87,10 +87,10 @@
   <meta name="twitter:description" content="I have to admit I am far from expert in Scala, that&rsquo;s why when recently I had to prototype an API in this language, I shuddered. Frameworks like Akka HTTP or HTTP4S were far too complex for a …">
   <meta name="twitter:card" content="summary" />
   <meta name="generator" content="Hugo 0.76.5" />
-  <link rel="alternate" href="index.xml" type="application/rss+xml" title="rubensanchez.dev"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css" integrity="sha384-9eLZqc9ds8eNjO3TmqPeYcDj8n+Qfa4nuSiGYa6DjLNcv9BtN69ZIulL9+8CqC9Y" crossorigin="anonymous">
+  <link rel="alternate" href="/index.xml" type="application/rss+xml" title="rubensanchez.dev"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css" integrity="sha384-9eLZqc9ds8eNjO3TmqPeYcDj8n+Qfa4nuSiGYa6DjLNcv9BtN69ZIulL9+8CqC9Y" crossorigin="anonymous">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"><link rel="stylesheet" href="css/main.css" /><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" />
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" /><link rel="stylesheet" href="css/syntax.css" /><link rel="stylesheet" href="css/codeblock.css" /><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.css" integrity="sha384-h/L2W9KefUClHWaty3SLE5F/qvc4djlyR4qY3NUV5HGQBBW7stbcfff1+I/vmsHh" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"><link rel="stylesheet" href="/css/main.css" /><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" /><link rel="stylesheet" href="/css/syntax.css" /><link rel="stylesheet" href="/css/codeblock.css" /><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.css" integrity="sha384-h/L2W9KefUClHWaty3SLE5F/qvc4djlyR4qY3NUV5HGQBBW7stbcfff1+I/vmsHh" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/default-skin/default-skin.min.css" integrity="sha384-iD0dNku6PYSIQLyfTOpB06F2KCZJAKLOThS5HRe8b3ibhdEQ6eKsFf/EeFxdOt5R" crossorigin="anonymous">
 
 
@@ -106,7 +106,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="">rubensanchez.dev</a>
+      <a class="navbar-brand" href="/">rubensanchez.dev</a>
     </div>
 
     <div class="collapse navbar-collapse" id="main-navbar">
@@ -229,23 +229,23 @@
 <h3 id="setting-up">Setting up:</h3>
 <p>The author recommends to use his own build tool called <a href="http://www.lihaoyi.com/mill/">Mill</a>. Even though I found it easy to understand, I decided to stick with SBT out of habit, since that is what I had used in the past.</p>
 <h4 id="dependencies-for-this-project">Dependencies for this project:</h4>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-scala" data-lang="scala">libraryDependencies <span style="color:#f92672">++=</span> <span style="color:#a6e22e">Seq</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;com.lihaoyi&#34;</span> <span style="color:#f92672">%%</span> <span style="color:#e6db74">&#34;cask&#34;</span> <span style="color:#f92672">%</span> <span style="color:#e6db74">&#34;0.2.9&#34;</span><span style="color:#f92672">,</span>
-  <span style="color:#e6db74">&#34;com.lihaoyi&#34;</span> <span style="color:#f92672">%%</span> <span style="color:#e6db74">&#34;utest&#34;</span> <span style="color:#f92672">%</span> <span style="color:#e6db74">&#34;0.7.4&#34;</span> <span style="color:#f92672">%</span> <span style="color:#a6e22e">Test</span><span style="color:#f92672">,</span>
-  <span style="color:#e6db74">&#34;com.lihaoyi&#34;</span> <span style="color:#f92672">%%</span> <span style="color:#e6db74">&#34;requests&#34;</span> <span style="color:#f92672">%</span> <span style="color:#e6db74">&#34;0.5.1&#34;</span><span style="color:#f92672">,</span>
-  <span style="color:#e6db74">&#34;org.postgresql&#34;</span> <span style="color:#f92672">%</span> <span style="color:#e6db74">&#34;postgresql&#34;</span> <span style="color:#f92672">%</span> <span style="color:#e6db74">&#34;42.2.8&#34;</span><span style="color:#f92672">,</span>
-  <span style="color:#e6db74">&#34;ch.qos.logback&#34;</span> <span style="color:#f92672">%</span> <span style="color:#e6db74">&#34;logback-classic&#34;</span> <span style="color:#f92672">%</span> <span style="color:#e6db74">&#34;1.2.3&#34;</span><span style="color:#f92672">,</span>
-  <span style="color:#e6db74">&#34;io.getquill&#34;</span> <span style="color:#f92672">%%</span> <span style="color:#e6db74">&#34;quill-jdbc&#34;</span> <span style="color:#f92672">%</span> <span style="color:#e6db74">&#34;3.2.0&#34;</span><span style="color:#f92672">,</span>
-  <span style="color:#e6db74">&#34;com.typesafe.scala-logging&#34;</span> <span style="color:#f92672">%%</span> <span style="color:#e6db74">&#34;scala-logging&#34;</span> <span style="color:#f92672">%</span> <span style="color:#e6db74">&#34;3.9.2&#34;</span><span style="color:#f92672">,</span>
-  <span style="color:#e6db74">&#34;com.typesafe&#34;</span> <span style="color:#f92672">%</span> <span style="color:#e6db74">&#34;config&#34;</span> <span style="color:#f92672">%</span> <span style="color:#e6db74">&#34;1.4.0&#34;</span><span style="color:#f92672">)</span>
+<div class="highlight"><pre class="chroma"><code class="language-scala" data-lang="scala"><span class="n">libraryDependencies</span> <span class="o">++=</span> <span class="nc">Seq</span><span class="o">(</span><span class="s">&#34;com.lihaoyi&#34;</span> <span class="o">%%</span> <span class="s">&#34;cask&#34;</span> <span class="o">%</span> <span class="s">&#34;0.2.9&#34;</span><span class="o">,</span>
+  <span class="s">&#34;com.lihaoyi&#34;</span> <span class="o">%%</span> <span class="s">&#34;utest&#34;</span> <span class="o">%</span> <span class="s">&#34;0.7.4&#34;</span> <span class="o">%</span> <span class="nc">Test</span><span class="o">,</span>
+  <span class="s">&#34;com.lihaoyi&#34;</span> <span class="o">%%</span> <span class="s">&#34;requests&#34;</span> <span class="o">%</span> <span class="s">&#34;0.5.1&#34;</span><span class="o">,</span>
+  <span class="s">&#34;org.postgresql&#34;</span> <span class="o">%</span> <span class="s">&#34;postgresql&#34;</span> <span class="o">%</span> <span class="s">&#34;42.2.8&#34;</span><span class="o">,</span>
+  <span class="s">&#34;ch.qos.logback&#34;</span> <span class="o">%</span> <span class="s">&#34;logback-classic&#34;</span> <span class="o">%</span> <span class="s">&#34;1.2.3&#34;</span><span class="o">,</span>
+  <span class="s">&#34;io.getquill&#34;</span> <span class="o">%%</span> <span class="s">&#34;quill-jdbc&#34;</span> <span class="o">%</span> <span class="s">&#34;3.2.0&#34;</span><span class="o">,</span>
+  <span class="s">&#34;com.typesafe.scala-logging&#34;</span> <span class="o">%%</span> <span class="s">&#34;scala-logging&#34;</span> <span class="o">%</span> <span class="s">&#34;3.9.2&#34;</span><span class="o">,</span>
+  <span class="s">&#34;com.typesafe&#34;</span> <span class="o">%</span> <span class="s">&#34;config&#34;</span> <span class="o">%</span> <span class="s">&#34;1.4.0&#34;</span><span class="o">)</span>
 </code></pre></div><h4 id="what-are-we-retrieving-in-the-api">What are we retrieving in the API</h4>
 <p>This is an API which retrieves information about movies showing in the local cinemas of my city, so the modeled data is basically a movie. We create a case class, because that is what will be used by <a href="https://getquill.io/">Quill</a> to map to the values in the Postgres table and be able to retrieve the data. So when I do:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-scala" data-lang="scala"><span style="color:#66d9ef">case</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Movies</span><span style="color:#f92672">(</span>
-                   cinema<span style="color:#66d9ef">:</span> <span style="color:#66d9ef">String</span><span style="color:#f92672">,</span>
-                   details<span style="color:#66d9ef">:</span> <span style="color:#66d9ef">String</span><span style="color:#f92672">,</span>
-                   title<span style="color:#66d9ef">:</span> <span style="color:#66d9ef">String</span><span style="color:#f92672">,</span>
-                   movie_date<span style="color:#66d9ef">:</span> <span style="color:#66d9ef">String</span><span style="color:#f92672">,</span>
-                   movie_time<span style="color:#66d9ef">:</span> <span style="color:#66d9ef">String</span>
-                 <span style="color:#f92672">)</span>
+<div class="highlight"><pre class="chroma"><code class="language-scala" data-lang="scala"><span class="k">case</span> <span class="k">class</span> <span class="nc">Movies</span><span class="o">(</span>
+                   <span class="n">cinema</span><span class="k">:</span> <span class="kt">String</span><span class="o">,</span>
+                   <span class="n">details</span><span class="k">:</span> <span class="kt">String</span><span class="o">,</span>
+                   <span class="n">title</span><span class="k">:</span> <span class="kt">String</span><span class="o">,</span>
+                   <span class="n">movie_date</span><span class="k">:</span> <span class="kt">String</span><span class="o">,</span>
+                   <span class="n">movie_time</span><span class="k">:</span> <span class="kt">String</span>
+                 <span class="o">)</span>
 </code></pre></div><p>with this I actually mean that there is a table with the name
 <code>movies</code>
 that has as fields each of the case class fields. By the way! I am aware that certain data types are not correct. Date and time should not be strings. However, this is for the moment done like this to deal with data in a database that has been scraped and does not conform to proper date format yet. Work in progress!</p>
@@ -253,13 +253,13 @@ that has as fields each of the case class fields. By the way! I am aware that ce
 <p>As simple as creating an
 <code>application.properties</code>
 file in your resources folder with the following content</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-scala" data-lang="scala">ctx<span style="color:#f92672">.</span>dataSourceClassName<span style="color:#66d9ef">=</span>org<span style="color:#f92672">.</span>postgresql<span style="color:#f92672">.</span>ds<span style="color:#f92672">.</span><span style="color:#a6e22e">PGSimpleDataSource</span>
-ctx<span style="color:#f92672">.</span>dataSource<span style="color:#f92672">.</span>user<span style="color:#66d9ef">=</span>your_user
-ctx<span style="color:#f92672">.</span>dataSource<span style="color:#f92672">.</span>password<span style="color:#66d9ef">=</span>your_password
-ctx<span style="color:#f92672">.</span>dataSource<span style="color:#f92672">.</span>databaseName<span style="color:#66d9ef">=</span>your_db_name
-ctx<span style="color:#f92672">.</span>dataSource<span style="color:#f92672">.</span>portNumber<span style="color:#66d9ef">=</span>port_<span style="color:#f92672">(</span><span style="color:#ae81ff">5432</span><span style="color:#a6e22e">_for_postgres</span><span style="color:#f92672">)</span>
-ctx<span style="color:#f92672">.</span>dataSource<span style="color:#f92672">.</span>serverName<span style="color:#66d9ef">=</span>your_server
-ctx<span style="color:#f92672">.</span>connectionTimeout<span style="color:#66d9ef">=</span>up_to_you
+<div class="highlight"><pre class="chroma"><code class="language-scala" data-lang="scala"><span class="n">ctx</span><span class="o">.</span><span class="n">dataSourceClassName</span><span class="k">=</span><span class="n">org</span><span class="o">.</span><span class="n">postgresql</span><span class="o">.</span><span class="n">ds</span><span class="o">.</span><span class="nc">PGSimpleDataSource</span>
+<span class="n">ctx</span><span class="o">.</span><span class="n">dataSource</span><span class="o">.</span><span class="n">user</span><span class="k">=</span><span class="n">your_user</span>
+<span class="n">ctx</span><span class="o">.</span><span class="n">dataSource</span><span class="o">.</span><span class="n">password</span><span class="k">=</span><span class="n">your_password</span>
+<span class="n">ctx</span><span class="o">.</span><span class="n">dataSource</span><span class="o">.</span><span class="n">databaseName</span><span class="k">=</span><span class="n">your_db_name</span>
+<span class="n">ctx</span><span class="o">.</span><span class="n">dataSource</span><span class="o">.</span><span class="n">portNumber</span><span class="k">=</span><span class="n">port_</span><span class="o">(</span><span class="mi">5432</span><span class="nc">_for_postgres</span><span class="o">)</span>
+<span class="n">ctx</span><span class="o">.</span><span class="n">dataSource</span><span class="o">.</span><span class="n">serverName</span><span class="k">=</span><span class="n">your_server</span>
+<span class="n">ctx</span><span class="o">.</span><span class="n">connectionTimeout</span><span class="k">=</span><span class="n">up_to_you</span>
 </code></pre></div><p>Of course, take the necessary precautions when dealing with version control and this file.</p>
 <h4 id="so-where-is-my-easy-api">So where is my easy API?</h4>
 <p>There you go. We do this via defining a route for
@@ -267,23 +267,23 @@ ctx<span style="color:#f92672">.</span>connectionTimeout<span style="color:#66d9
 with a function which creates a context to run the database query. See the Quill documentation for more details, but in this example we are basically doing a
 <code>SELECT * from movies</code>
 , so it couldn&rsquo;t get easier.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-scala" data-lang="scala"><span style="color:#66d9ef">object</span> <span style="color:#a6e22e">moviescrape</span> <span style="color:#66d9ef">extends</span> cask<span style="color:#f92672">.</span><span style="color:#a6e22e">MainRoutes</span> <span style="color:#66d9ef">with</span> <span style="color:#a6e22e">LazyLogging</span> <span style="color:#f92672">{</span>
-  <span style="color:#66d9ef">override</span> <span style="color:#66d9ef">def</span> port<span style="color:#66d9ef">:</span> <span style="color:#66d9ef">Int</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">8081</span>
-  <span style="color:#66d9ef">lazy</span> <span style="color:#66d9ef">val</span> ctx <span style="color:#66d9ef">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">PostgresJdbcContext</span><span style="color:#f92672">(</span><span style="color:#a6e22e">SnakeCase</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;ctx&#34;</span><span style="color:#f92672">)</span>
-  <span style="color:#66d9ef">import</span> ctx._
-  <span style="color:#a6e22e">@cask</span><span style="color:#f92672">.</span>get<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;/movies&#34;</span><span style="color:#f92672">)</span>
-  <span style="color:#66d9ef">def</span> getMovies<span style="color:#f92672">()</span> <span style="color:#66d9ef">=</span> <span style="color:#f92672">{</span>
-    <span style="color:#66d9ef">val</span> content <span style="color:#66d9ef">=</span> ctx<span style="color:#f92672">.</span>run<span style="color:#f92672">(</span>query<span style="color:#f92672">[</span><span style="color:#66d9ef">Movies</span><span style="color:#f92672">])</span>
-      <span style="color:#f92672">.</span>map<span style="color:#f92672">(</span>m <span style="color:#66d9ef">=&gt;</span> <span style="color:#f92672">{</span>ujson<span style="color:#f92672">.</span><span style="color:#a6e22e">Obj</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;cinema&#34;</span> <span style="color:#f92672">-&gt;</span> ujson<span style="color:#f92672">.</span><span style="color:#a6e22e">Str</span><span style="color:#f92672">(</span>m<span style="color:#f92672">.</span>cinema<span style="color:#f92672">),</span>
-        <span style="color:#e6db74">&#34;details&#34;</span> <span style="color:#f92672">-&gt;</span> ujson<span style="color:#f92672">.</span><span style="color:#a6e22e">Str</span><span style="color:#f92672">(</span>m<span style="color:#f92672">.</span>details<span style="color:#f92672">),</span> <span style="color:#e6db74">&#34;title&#34;</span> <span style="color:#f92672">-&gt;</span> ujson<span style="color:#f92672">.</span><span style="color:#a6e22e">Str</span><span style="color:#f92672">(</span>m<span style="color:#f92672">.</span>title<span style="color:#f92672">),</span>
-        <span style="color:#e6db74">&#34;movie_date&#34;</span> <span style="color:#f92672">-&gt;</span> ujson<span style="color:#f92672">.</span><span style="color:#a6e22e">Str</span><span style="color:#f92672">(</span>m<span style="color:#f92672">.</span>movie_date<span style="color:#f92672">),</span>
-        <span style="color:#e6db74">&#34;movie_time&#34;</span> <span style="color:#f92672">-&gt;</span> ujson<span style="color:#f92672">.</span><span style="color:#a6e22e">Str</span><span style="color:#f92672">(</span>m<span style="color:#f92672">.</span>movie_time<span style="color:#f92672">))})</span>
+<div class="highlight"><pre class="chroma"><code class="language-scala" data-lang="scala"><span class="k">object</span> <span class="nc">moviescrape</span> <span class="k">extends</span> <span class="n">cask</span><span class="o">.</span><span class="nc">MainRoutes</span> <span class="k">with</span> <span class="nc">LazyLogging</span> <span class="o">{</span>
+  <span class="k">override</span> <span class="k">def</span> <span class="n">port</span><span class="k">:</span> <span class="kt">Int</span> <span class="o">=</span> <span class="mi">8081</span>
+  <span class="k">lazy</span> <span class="k">val</span> <span class="n">ctx</span> <span class="k">=</span> <span class="k">new</span> <span class="nc">PostgresJdbcContext</span><span class="o">(</span><span class="nc">SnakeCase</span><span class="o">,</span> <span class="s">&#34;ctx&#34;</span><span class="o">)</span>
+  <span class="k">import</span> <span class="nn">ctx._</span>
+  <span class="nd">@cask</span><span class="o">.</span><span class="n">get</span><span class="o">(</span><span class="s">&#34;/movies&#34;</span><span class="o">)</span>
+  <span class="k">def</span> <span class="n">getMovies</span><span class="o">()</span> <span class="k">=</span> <span class="o">{</span>
+    <span class="k">val</span> <span class="n">content</span> <span class="k">=</span> <span class="n">ctx</span><span class="o">.</span><span class="n">run</span><span class="o">(</span><span class="n">query</span><span class="o">[</span><span class="kt">Movies</span><span class="o">])</span>
+      <span class="o">.</span><span class="n">map</span><span class="o">(</span><span class="n">m</span> <span class="k">=&gt;</span> <span class="o">{</span><span class="n">ujson</span><span class="o">.</span><span class="nc">Obj</span><span class="o">(</span><span class="s">&#34;cinema&#34;</span> <span class="o">-&gt;</span> <span class="n">ujson</span><span class="o">.</span><span class="nc">Str</span><span class="o">(</span><span class="n">m</span><span class="o">.</span><span class="n">cinema</span><span class="o">),</span>
+        <span class="s">&#34;details&#34;</span> <span class="o">-&gt;</span> <span class="n">ujson</span><span class="o">.</span><span class="nc">Str</span><span class="o">(</span><span class="n">m</span><span class="o">.</span><span class="n">details</span><span class="o">),</span> <span class="s">&#34;title&#34;</span> <span class="o">-&gt;</span> <span class="n">ujson</span><span class="o">.</span><span class="nc">Str</span><span class="o">(</span><span class="n">m</span><span class="o">.</span><span class="n">title</span><span class="o">),</span>
+        <span class="s">&#34;movie_date&#34;</span> <span class="o">-&gt;</span> <span class="n">ujson</span><span class="o">.</span><span class="nc">Str</span><span class="o">(</span><span class="n">m</span><span class="o">.</span><span class="n">movie_date</span><span class="o">),</span>
+        <span class="s">&#34;movie_time&#34;</span> <span class="o">-&gt;</span> <span class="n">ujson</span><span class="o">.</span><span class="nc">Str</span><span class="o">(</span><span class="n">m</span><span class="o">.</span><span class="n">movie_time</span><span class="o">))})</span>
 
-    upickle<span style="color:#f92672">.</span>default<span style="color:#f92672">.</span>write<span style="color:#f92672">(</span>ujson<span style="color:#f92672">.</span><span style="color:#a6e22e">Obj</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;data&#34;</span> <span style="color:#f92672">-&gt;</span> content<span style="color:#f92672">))</span>
-  <span style="color:#f92672">}</span>
+    <span class="n">upickle</span><span class="o">.</span><span class="n">default</span><span class="o">.</span><span class="n">write</span><span class="o">(</span><span class="n">ujson</span><span class="o">.</span><span class="nc">Obj</span><span class="o">(</span><span class="s">&#34;data&#34;</span> <span class="o">-&gt;</span> <span class="n">content</span><span class="o">))</span>
+  <span class="o">}</span>
 
-  initialize<span style="color:#f92672">()</span>
-<span style="color:#f92672">}</span>
+  <span class="n">initialize</span><span class="o">()</span>
+<span class="o">}</span>
 </code></pre></div><p>Things might get a bit tricky around the part of returning the proper json with the response. I tried a few different tools, such as Circe and the author&rsquo;s own Ujson and at the end I settled with the latter.</p>
 <h3 id="but-will-it-scale">But&hellip; will it scale?</h3>
 <p>I don&rsquo;t think this library is meant to handle your super scalable APIs for deployments that need to bear a load of millions of users, but if you are ever in the need of playing around with API development in Scala in order to understand the language a little better, Cask will definitely help you to get your feet wet without the headaches of jumping straight into Akka HTTP.</p>
@@ -301,11 +301,11 @@ with a function which creates a context to run the database query. See the Quill
         
           <div class="blog-tags">
             
-              <a href="/tags/scala/">scala</a>&nbsp;
+              <a href="//tags/scala/">scala</a>&nbsp;
             
-              <a href="/tags/cask/">cask</a>&nbsp;
+              <a href="//tags/cask/">cask</a>&nbsp;
             
-              <a href="/tags/api/">api</a>&nbsp;
+              <a href="//tags/api/">api</a>&nbsp;
             
           </div>
         
@@ -352,7 +352,7 @@ with a function which creates a context to run the database query. See the Quill
 
           
             &nbsp;&bull;&nbsp;
-            <a href="">rubensanchez.dev</a>
+            <a href="/">rubensanchez.dev</a>
           
         </p>
         
@@ -368,8 +368,8 @@ with a function which creates a context to run the database query. See the Quill
 <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
-<script src="js/main.js"></script><script> renderMathInElement(document.body); </script><script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.js" integrity="sha384-QELNnmcmU8IR9ZAykt67vGr9/rZJdHbiWi64V88fCPaOohUlHCqUD/unNN0BXSqy" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe-ui-default.min.js" integrity="sha384-m67o7SkQ1ALzKZIFh4CiTA8tmadaujiTa9Vu+nqPSwDOqHrDmxLezTdFln8077+q" crossorigin="anonymous"></script><script src="js/load-photoswipe.js"></script>
+<script src="/js/main.js"></script><script> renderMathInElement(document.body); </script><script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.js" integrity="sha384-QELNnmcmU8IR9ZAykt67vGr9/rZJdHbiWi64V88fCPaOohUlHCqUD/unNN0BXSqy" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe-ui-default.min.js" integrity="sha384-m67o7SkQ1ALzKZIFh4CiTA8tmadaujiTa9Vu+nqPSwDOqHrDmxLezTdFln8077+q" crossorigin="anonymous"></script><script src="/js/load-photoswipe.js"></script>
 
 
 

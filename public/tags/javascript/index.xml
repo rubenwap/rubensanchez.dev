@@ -5,7 +5,6 @@
     <link>/tags/javascript/</link>
     <description>Recent content in javascript on rubensanchez.dev</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
     <lastBuildDate>Thu, 21 May 2020 10:57:53 +0000</lastBuildDate><atom:link href="/tags/javascript/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Use Python in your browser client code together with JS. No server required, thanks to Web Assembly</title>

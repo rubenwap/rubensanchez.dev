@@ -1,5 +1,5 @@
 ---
-title: "this is the index page"
+title: "Ruben Sanchez"
 date: 2021-07-20T22:34:09+02:00
 draft: false
 ---

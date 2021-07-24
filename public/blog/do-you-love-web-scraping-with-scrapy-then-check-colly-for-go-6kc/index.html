@@ -14,14 +14,14 @@
     "@type": "WebSite",
     "name": "rubensanchez.dev",
     
-    "url": ""
+    "url": "\/"
 }
 </script><script type="application/ld+json">
 {
   "@context": "http://schema.org",
   "@type": "Organization",
   "name": "",
-  "url": ""
+  "url": "\/"
   
   
   
@@ -36,7 +36,7 @@
         "@type": "ListItem",
         "position": 1,
         "item": {
-          "@id": "",
+          "@id": "\/",
           "name": "home"
         }
     },{
@@ -61,15 +61,15 @@
   "wordCount":  1014 ,
   "datePublished" : "2020-03-05T09:39:29",
   "dateModified" : "2020-03-05T09:39:29",
-  "image" : "",
+  "image" : "\/",
   "keywords" : [ "scrapy, go, scraping, colly" ],
   "mainEntityOfPage" : "\/blog\/do-you-love-web-scraping-with-scrapy-then-check-colly-for-go-6kc\/",
   "publisher" : {
     "@type": "Organization",
-    "name" : "",
+    "name" : "\/",
     "logo" : {
         "@type" : "ImageObject",
-        "url" : "",
+        "url" : "\/",
         "height" :  60 ,
         "width" :  60
     }
@@ -87,10 +87,10 @@
   <meta name="twitter:description" content="Scrapy is the star of the web scraping world in Python. There are indeed other beautiful libraries out there, but the simplicity and power that Scrapy gives you has captured the hearts of many Python …">
   <meta name="twitter:card" content="summary" />
   <meta name="generator" content="Hugo 0.76.5" />
-  <link rel="alternate" href="index.xml" type="application/rss+xml" title="rubensanchez.dev"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css" integrity="sha384-9eLZqc9ds8eNjO3TmqPeYcDj8n+Qfa4nuSiGYa6DjLNcv9BtN69ZIulL9+8CqC9Y" crossorigin="anonymous">
+  <link rel="alternate" href="/index.xml" type="application/rss+xml" title="rubensanchez.dev"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css" integrity="sha384-9eLZqc9ds8eNjO3TmqPeYcDj8n+Qfa4nuSiGYa6DjLNcv9BtN69ZIulL9+8CqC9Y" crossorigin="anonymous">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"><link rel="stylesheet" href="css/main.css" /><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" />
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" /><link rel="stylesheet" href="css/syntax.css" /><link rel="stylesheet" href="css/codeblock.css" /><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.css" integrity="sha384-h/L2W9KefUClHWaty3SLE5F/qvc4djlyR4qY3NUV5HGQBBW7stbcfff1+I/vmsHh" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"><link rel="stylesheet" href="/css/main.css" /><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" /><link rel="stylesheet" href="/css/syntax.css" /><link rel="stylesheet" href="/css/codeblock.css" /><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.css" integrity="sha384-h/L2W9KefUClHWaty3SLE5F/qvc4djlyR4qY3NUV5HGQBBW7stbcfff1+I/vmsHh" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/default-skin/default-skin.min.css" integrity="sha384-iD0dNku6PYSIQLyfTOpB06F2KCZJAKLOThS5HRe8b3ibhdEQ6eKsFf/EeFxdOt5R" crossorigin="anonymous">
 
 
@@ -106,7 +106,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="">rubensanchez.dev</a>
+      <a class="navbar-brand" href="/">rubensanchez.dev</a>
     </div>
 
     <div class="collapse navbar-collapse" id="main-navbar">
@@ -245,39 +245,39 @@
 </li>
 </ol>
 <p>This is the basic scaffolding of our program. It initializes the Colly Collector, which is the object that will control all the other callback methods that we will use.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-golang" data-lang="golang"><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
+<div class="highlight"><pre class="chroma"><code class="language-golang" data-lang="golang"><span class="kn">package</span> <span class="nx">main</span>
 
-<span style="color:#f92672">import</span> <span style="color:#e6db74">&#34;github.com/gocolly/colly&#34;</span>
+<span class="kn">import</span> <span class="s">&#34;github.com/gocolly/colly&#34;</span>
 
-<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
-  <span style="color:#a6e22e">c</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">colly</span>.<span style="color:#a6e22e">NewCollector</span>()
-}
+<span class="kd">func</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+  <span class="nx">c</span> <span class="o">:=</span> <span class="nx">colly</span><span class="p">.</span><span class="nf">NewCollector</span><span class="p">()</span>
+<span class="p">}</span>
 </code></pre></div><p>Check <a href="http://go-colly.org/docs/introduction/start/">this page</a> for a quick start, and [this one](<a href="https://godoc.org/github.com/gocolly/colly#">https://godoc.org/github.com/gocolly/colly#</a> Collector.OnError) for a complete list of possible callbacks you can use. For this exercise, we are going to use a few of those:</p>
 <p>Let&rsquo;s add a struct, in order to store each item that we retrieve:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-golang" data-lang="golang"><span style="color:#66d9ef">type</span> <span style="color:#a6e22e">Registry</span> <span style="color:#66d9ef">struct</span> {
-	<span style="color:#a6e22e">Country</span> <span style="color:#66d9ef">string</span>
-	<span style="color:#a6e22e">URL</span>     <span style="color:#66d9ef">string</span>
-}
+<div class="highlight"><pre class="chroma"><code class="language-golang" data-lang="golang"><span class="kd">type</span> <span class="nx">Registry</span> <span class="kd">struct</span> <span class="p">{</span>
+	<span class="nx">Country</span> <span class="kt">string</span>
+	<span class="nx">URL</span>     <span class="kt">string</span>
+<span class="p">}</span>
 </code></pre></div><p>So your code becomes</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-golang" data-lang="golang"><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
+<div class="highlight"><pre class="chroma"><code class="language-golang" data-lang="golang"><span class="kn">package</span> <span class="nx">main</span>
 
-<span style="color:#f92672">import</span> <span style="color:#e6db74">&#34;github.com/gocolly/colly&#34;</span>
+<span class="kn">import</span> <span class="s">&#34;github.com/gocolly/colly&#34;</span>
 
-<span style="color:#66d9ef">type</span> <span style="color:#a6e22e">Registry</span> <span style="color:#66d9ef">struct</span> {
-	<span style="color:#a6e22e">Country</span> <span style="color:#66d9ef">string</span>
-	<span style="color:#a6e22e">URL</span>     <span style="color:#66d9ef">string</span>
-}
+<span class="kd">type</span> <span class="nx">Registry</span> <span class="kd">struct</span> <span class="p">{</span>
+	<span class="nx">Country</span> <span class="kt">string</span>
+	<span class="nx">URL</span>     <span class="kt">string</span>
+<span class="p">}</span>
 
-<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
-  <span style="color:#a6e22e">c</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">colly</span>.<span style="color:#a6e22e">NewCollector</span>()
-}
+<span class="kd">func</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+  <span class="nx">c</span> <span class="o">:=</span> <span class="nx">colly</span><span class="p">.</span><span class="nf">NewCollector</span><span class="p">()</span>
+<span class="p">}</span>
 </code></pre></div><p>Now we could use the callback
 <code>Visit</code>
 to make the collector actually visit our target website</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-golang" data-lang="golang"><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
-  <span style="color:#a6e22e">c</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">colly</span>.<span style="color:#a6e22e">NewCollector</span>()
-  <span style="color:#a6e22e">c</span>.<span style="color:#a6e22e">Visit</span>(<span style="color:#e6db74">&#34;https://www.gov.uk/government/publications/overseas-registries/overseas-registries&#34;</span>)
-}
+<div class="highlight"><pre class="chroma"><code class="language-golang" data-lang="golang"><span class="kd">func</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+  <span class="nx">c</span> <span class="o">:=</span> <span class="nx">colly</span><span class="p">.</span><span class="nf">NewCollector</span><span class="p">()</span>
+  <span class="nx">c</span><span class="p">.</span><span class="nf">Visit</span><span class="p">(</span><span class="s">&#34;https://www.gov.uk/government/publications/overseas-registries/overseas-registries&#34;</span><span class="p">)</span>
+<span class="p">}</span>
 </code></pre></div><p>However, apparently nothing would happen if you do
 <code>go run scrape.go</code></p>
 <p>If you want to really see something happening, you can tell Colly what to do
@@ -285,14 +285,14 @@ to make the collector actually visit our target website</p>
 . Note that if you print, you will need to add
 <code>&quot;fmt&quot;</code>
 to your imports</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-golang" data-lang="golang"><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
-  <span style="color:#a6e22e">c</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">colly</span>.<span style="color:#a6e22e">NewCollector</span>()
+<div class="highlight"><pre class="chroma"><code class="language-golang" data-lang="golang"><span class="kd">func</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+  <span class="nx">c</span> <span class="o">:=</span> <span class="nx">colly</span><span class="p">.</span><span class="nf">NewCollector</span><span class="p">()</span>
 
-	<span style="color:#a6e22e">c</span>.<span style="color:#a6e22e">OnRequest</span>(<span style="color:#66d9ef">func</span>(<span style="color:#a6e22e">r</span> <span style="color:#f92672">*</span><span style="color:#a6e22e">colly</span>.<span style="color:#a6e22e">Request</span>) {
-		<span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#e6db74">&#34;Visiting&#34;</span>, <span style="color:#a6e22e">r</span>.<span style="color:#a6e22e">URL</span>)
-	})
-	<span style="color:#a6e22e">c</span>.<span style="color:#a6e22e">Visit</span>(<span style="color:#e6db74">&#34;https://www.gov.uk/government/publications/overseas-registries/overseas-registries&#34;</span>)
-}
+	<span class="nx">c</span><span class="p">.</span><span class="nf">OnRequest</span><span class="p">(</span><span class="kd">func</span><span class="p">(</span><span class="nx">r</span> <span class="o">*</span><span class="nx">colly</span><span class="p">.</span><span class="nx">Request</span><span class="p">)</span> <span class="p">{</span>
+		<span class="nx">fmt</span><span class="p">.</span><span class="nf">Println</span><span class="p">(</span><span class="s">&#34;Visiting&#34;</span><span class="p">,</span> <span class="nx">r</span><span class="p">.</span><span class="nx">URL</span><span class="p">)</span>
+	<span class="p">})</span>
+	<span class="nx">c</span><span class="p">.</span><span class="nf">Visit</span><span class="p">(</span><span class="s">&#34;https://www.gov.uk/government/publications/overseas-registries/overseas-registries&#34;</span><span class="p">)</span>
+<span class="p">}</span>
 </code></pre></div><p>Ok, so we know now that Colly is indeed visiting that URL. How do we get the HTML?</p>
 <p>If we visit the page in our browser and open the console on the developer tools, we notice that all we need to retrieve our data is grabbing the
 <code>.govuk-link</code>
@@ -306,11 +306,11 @@ class. So for instance, in the console you would issue this:</p>
 , which will act on each of the elements that it finds following the pattern we specify. So for instance (remember that
 <code>Registry</code>
 was the struct we initialized a while ago):</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-golang" data-lang="golang"><span style="color:#a6e22e">c</span>.<span style="color:#a6e22e">OnHTML</span>(<span style="color:#e6db74">&#34;.govspeak .govuk-link&#34;</span>, <span style="color:#66d9ef">func</span>(<span style="color:#a6e22e">e</span> <span style="color:#f92672">*</span><span style="color:#a6e22e">colly</span>.<span style="color:#a6e22e">HTMLElement</span>) {
-		<span style="color:#a6e22e">reg</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">Registry</span>{}
-		<span style="color:#a6e22e">reg</span>.<span style="color:#a6e22e">Country</span> = <span style="color:#a6e22e">e</span>.<span style="color:#a6e22e">Text</span>
-		<span style="color:#a6e22e">reg</span>.<span style="color:#a6e22e">URL</span> = <span style="color:#a6e22e">e</span>.<span style="color:#a6e22e">Attr</span>(<span style="color:#e6db74">&#34;href&#34;</span>)
-	})
+<div class="highlight"><pre class="chroma"><code class="language-golang" data-lang="golang"><span class="nx">c</span><span class="p">.</span><span class="nf">OnHTML</span><span class="p">(</span><span class="s">&#34;.govspeak .govuk-link&#34;</span><span class="p">,</span> <span class="kd">func</span><span class="p">(</span><span class="nx">e</span> <span class="o">*</span><span class="nx">colly</span><span class="p">.</span><span class="nx">HTMLElement</span><span class="p">)</span> <span class="p">{</span>
+		<span class="nx">reg</span> <span class="o">:=</span> <span class="nx">Registry</span><span class="p">{}</span>
+		<span class="nx">reg</span><span class="p">.</span><span class="nx">Country</span> <span class="p">=</span> <span class="nx">e</span><span class="p">.</span><span class="nx">Text</span>
+		<span class="nx">reg</span><span class="p">.</span><span class="nx">URL</span> <span class="p">=</span> <span class="nx">e</span><span class="p">.</span><span class="nf">Attr</span><span class="p">(</span><span class="s">&#34;href&#34;</span><span class="p">)</span>
+	<span class="p">})</span>
 </code></pre></div><p>This means that on HTML reception, it shall grab the elements conforming the pattern
 <code>&quot;.govspeak .govuk-link&quot;</code>
 and then for each of those elements, do as the function says. In our case we populate the struct. By the way, if the pattern of the selectors look familiar, it&rsquo;s because it&rsquo;s using <a href="https://github.com/PuerkitoBio/goquery">GoQuery</a>, which aims to replicate the classic jQuery selectors for Go.</p>
@@ -322,63 +322,63 @@ and append each struct as we receive it.</p>
 , which will run after
 <code>onHTML</code>
 finishes. You could observe how it works by doing this. Of course, you could add your own steps. Here it&rsquo;s just printing the slice of structs:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-golang" data-lang="golang">	<span style="color:#a6e22e">c</span>.<span style="color:#a6e22e">OnScraped</span>(<span style="color:#66d9ef">func</span>(<span style="color:#a6e22e">r</span> <span style="color:#f92672">*</span><span style="color:#a6e22e">colly</span>.<span style="color:#a6e22e">Response</span>) {
-		<span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#e6db74">&#34;Finished. Here is your data:&#34;</span>, <span style="color:#a6e22e">registries</span>)
-	})
+<div class="highlight"><pre class="chroma"><code class="language-golang" data-lang="golang">	<span class="nx">c</span><span class="p">.</span><span class="nf">OnScraped</span><span class="p">(</span><span class="kd">func</span><span class="p">(</span><span class="nx">r</span> <span class="o">*</span><span class="nx">colly</span><span class="p">.</span><span class="nx">Response</span><span class="p">)</span> <span class="p">{</span>
+		<span class="nx">fmt</span><span class="p">.</span><span class="nf">Println</span><span class="p">(</span><span class="s">&#34;Finished. Here is your data:&#34;</span><span class="p">,</span> <span class="nx">registries</span><span class="p">)</span>
+	<span class="p">})</span>
 </code></pre></div><p>Prefer to output JSON? No problem, if you import
 <code>&quot;encoding/json&quot;</code>
 , that module has you covered.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-golang" data-lang="golang">	<span style="color:#a6e22e">c</span>.<span style="color:#a6e22e">OnScraped</span>(<span style="color:#66d9ef">func</span>(<span style="color:#a6e22e">r</span> <span style="color:#f92672">*</span><span style="color:#a6e22e">colly</span>.<span style="color:#a6e22e">Response</span>) { 
-		<span style="color:#a6e22e">data</span>, <span style="color:#a6e22e">err</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">json</span>.<span style="color:#a6e22e">Marshal</span>(<span style="color:#a6e22e">registries</span>)
-		<span style="color:#66d9ef">if</span> <span style="color:#a6e22e">err</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
-			<span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#a6e22e">err</span>)
-		} <span style="color:#66d9ef">else</span> {
-			<span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#e6db74">&#34;Finished. Here is your data:&#34;</span>, string(<span style="color:#a6e22e">data</span>))
-		}
+<div class="highlight"><pre class="chroma"><code class="language-golang" data-lang="golang">	<span class="nx">c</span><span class="p">.</span><span class="nf">OnScraped</span><span class="p">(</span><span class="kd">func</span><span class="p">(</span><span class="nx">r</span> <span class="o">*</span><span class="nx">colly</span><span class="p">.</span><span class="nx">Response</span><span class="p">)</span> <span class="p">{</span> 
+		<span class="nx">data</span><span class="p">,</span> <span class="nx">err</span> <span class="o">:=</span> <span class="nx">json</span><span class="p">.</span><span class="nf">Marshal</span><span class="p">(</span><span class="nx">registries</span><span class="p">)</span>
+		<span class="k">if</span> <span class="nx">err</span> <span class="o">!=</span> <span class="kc">nil</span> <span class="p">{</span>
+			<span class="nx">fmt</span><span class="p">.</span><span class="nf">Println</span><span class="p">(</span><span class="nx">err</span><span class="p">)</span>
+		<span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+			<span class="nx">fmt</span><span class="p">.</span><span class="nf">Println</span><span class="p">(</span><span class="s">&#34;Finished. Here is your data:&#34;</span><span class="p">,</span> <span class="nb">string</span><span class="p">(</span><span class="nx">data</span><span class="p">))</span>
+		<span class="p">}</span>
 		
-	})
+	<span class="p">})</span>
 </code></pre></div><p>The final code would look like this</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-golang" data-lang="golang"><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
+<div class="highlight"><pre class="chroma"><code class="language-golang" data-lang="golang"><span class="kn">package</span> <span class="nx">main</span>
 
-<span style="color:#f92672">import</span> (
-	<span style="color:#e6db74">&#34;fmt&#34;</span>
-	<span style="color:#e6db74">&#34;github.com/gocolly/colly&#34;</span>
-	<span style="color:#e6db74">&#34;encoding/json&#34;</span>
-)
+<span class="kn">import</span> <span class="p">(</span>
+	<span class="s">&#34;fmt&#34;</span>
+	<span class="s">&#34;github.com/gocolly/colly&#34;</span>
+	<span class="s">&#34;encoding/json&#34;</span>
+<span class="p">)</span>
 
-<span style="color:#75715e">// Registry will store the Country registration URL items
-</span><span style="color:#75715e"></span><span style="color:#66d9ef">type</span> <span style="color:#a6e22e">Registry</span> <span style="color:#66d9ef">struct</span> {
-	<span style="color:#a6e22e">Country</span> <span style="color:#66d9ef">string</span>
-	<span style="color:#a6e22e">URL</span>     <span style="color:#66d9ef">string</span>
-}
+<span class="c1">// Registry will store the Country registration URL items
+</span><span class="c1"></span><span class="kd">type</span> <span class="nx">Registry</span> <span class="kd">struct</span> <span class="p">{</span>
+	<span class="nx">Country</span> <span class="kt">string</span>
+	<span class="nx">URL</span>     <span class="kt">string</span>
+<span class="p">}</span>
 
-<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
-	<span style="color:#a6e22e">registries</span> <span style="color:#f92672">:=</span> []<span style="color:#a6e22e">Registry</span>{}
-	<span style="color:#a6e22e">c</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">colly</span>.<span style="color:#a6e22e">NewCollector</span>()
+<span class="kd">func</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+	<span class="nx">registries</span> <span class="o">:=</span> <span class="p">[]</span><span class="nx">Registry</span><span class="p">{}</span>
+	<span class="nx">c</span> <span class="o">:=</span> <span class="nx">colly</span><span class="p">.</span><span class="nf">NewCollector</span><span class="p">()</span>
 
-	<span style="color:#a6e22e">c</span>.<span style="color:#a6e22e">OnRequest</span>(<span style="color:#66d9ef">func</span>(<span style="color:#a6e22e">r</span> <span style="color:#f92672">*</span><span style="color:#a6e22e">colly</span>.<span style="color:#a6e22e">Request</span>) {
-		<span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#e6db74">&#34;Visiting&#34;</span>, <span style="color:#a6e22e">r</span>.<span style="color:#a6e22e">URL</span>)
-	})
+	<span class="nx">c</span><span class="p">.</span><span class="nf">OnRequest</span><span class="p">(</span><span class="kd">func</span><span class="p">(</span><span class="nx">r</span> <span class="o">*</span><span class="nx">colly</span><span class="p">.</span><span class="nx">Request</span><span class="p">)</span> <span class="p">{</span>
+		<span class="nx">fmt</span><span class="p">.</span><span class="nf">Println</span><span class="p">(</span><span class="s">&#34;Visiting&#34;</span><span class="p">,</span> <span class="nx">r</span><span class="p">.</span><span class="nx">URL</span><span class="p">)</span>
+	<span class="p">})</span>
 
-	<span style="color:#a6e22e">c</span>.<span style="color:#a6e22e">OnHTML</span>(<span style="color:#e6db74">&#34;.govspeak .govuk-link&#34;</span>, <span style="color:#66d9ef">func</span>(<span style="color:#a6e22e">e</span> <span style="color:#f92672">*</span><span style="color:#a6e22e">colly</span>.<span style="color:#a6e22e">HTMLElement</span>) {
-		<span style="color:#a6e22e">reg</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">Registry</span>{}
-		<span style="color:#a6e22e">reg</span>.<span style="color:#a6e22e">Country</span> = <span style="color:#a6e22e">e</span>.<span style="color:#a6e22e">Text</span>
-		<span style="color:#a6e22e">reg</span>.<span style="color:#a6e22e">URL</span> = <span style="color:#a6e22e">e</span>.<span style="color:#a6e22e">Attr</span>(<span style="color:#e6db74">&#34;href&#34;</span>)
-		<span style="color:#a6e22e">registries</span> = append(<span style="color:#a6e22e">registries</span>, <span style="color:#a6e22e">reg</span>)
-	})
+	<span class="nx">c</span><span class="p">.</span><span class="nf">OnHTML</span><span class="p">(</span><span class="s">&#34;.govspeak .govuk-link&#34;</span><span class="p">,</span> <span class="kd">func</span><span class="p">(</span><span class="nx">e</span> <span class="o">*</span><span class="nx">colly</span><span class="p">.</span><span class="nx">HTMLElement</span><span class="p">)</span> <span class="p">{</span>
+		<span class="nx">reg</span> <span class="o">:=</span> <span class="nx">Registry</span><span class="p">{}</span>
+		<span class="nx">reg</span><span class="p">.</span><span class="nx">Country</span> <span class="p">=</span> <span class="nx">e</span><span class="p">.</span><span class="nx">Text</span>
+		<span class="nx">reg</span><span class="p">.</span><span class="nx">URL</span> <span class="p">=</span> <span class="nx">e</span><span class="p">.</span><span class="nf">Attr</span><span class="p">(</span><span class="s">&#34;href&#34;</span><span class="p">)</span>
+		<span class="nx">registries</span> <span class="p">=</span> <span class="nb">append</span><span class="p">(</span><span class="nx">registries</span><span class="p">,</span> <span class="nx">reg</span><span class="p">)</span>
+	<span class="p">})</span>
 
-	<span style="color:#a6e22e">c</span>.<span style="color:#a6e22e">OnScraped</span>(<span style="color:#66d9ef">func</span>(<span style="color:#a6e22e">r</span> <span style="color:#f92672">*</span><span style="color:#a6e22e">colly</span>.<span style="color:#a6e22e">Response</span>) { 
-		<span style="color:#a6e22e">data</span>, <span style="color:#a6e22e">err</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">json</span>.<span style="color:#a6e22e">Marshal</span>(<span style="color:#a6e22e">registries</span>)
-		<span style="color:#66d9ef">if</span> <span style="color:#a6e22e">err</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
-			<span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#a6e22e">err</span>)
-		} <span style="color:#66d9ef">else</span> {
-			<span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#e6db74">&#34;Finished. Here is your data:&#34;</span>, string(<span style="color:#a6e22e">data</span>))
-		}
+	<span class="nx">c</span><span class="p">.</span><span class="nf">OnScraped</span><span class="p">(</span><span class="kd">func</span><span class="p">(</span><span class="nx">r</span> <span class="o">*</span><span class="nx">colly</span><span class="p">.</span><span class="nx">Response</span><span class="p">)</span> <span class="p">{</span> 
+		<span class="nx">data</span><span class="p">,</span> <span class="nx">err</span> <span class="o">:=</span> <span class="nx">json</span><span class="p">.</span><span class="nf">Marshal</span><span class="p">(</span><span class="nx">registries</span><span class="p">)</span>
+		<span class="k">if</span> <span class="nx">err</span> <span class="o">!=</span> <span class="kc">nil</span> <span class="p">{</span>
+			<span class="nx">fmt</span><span class="p">.</span><span class="nf">Println</span><span class="p">(</span><span class="nx">err</span><span class="p">)</span>
+		<span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+			<span class="nx">fmt</span><span class="p">.</span><span class="nf">Println</span><span class="p">(</span><span class="s">&#34;Finished. Here is your data:&#34;</span><span class="p">,</span> <span class="nb">string</span><span class="p">(</span><span class="nx">data</span><span class="p">))</span>
+		<span class="p">}</span>
 		
-	})
+	<span class="p">})</span>
 
-	<span style="color:#a6e22e">c</span>.<span style="color:#a6e22e">Visit</span>(<span style="color:#e6db74">&#34;https://www.gov.uk/government/publications/overseas-registries/overseas-registries&#34;</span>)
-}
+	<span class="nx">c</span><span class="p">.</span><span class="nf">Visit</span><span class="p">(</span><span class="s">&#34;https://www.gov.uk/government/publications/overseas-registries/overseas-registries&#34;</span><span class="p">)</span>
+<span class="p">}</span>
 
 </code></pre></div><p>Give it a try! build it with
 <code>go build scrape.go</code>
@@ -393,13 +393,13 @@ or run it with
         
           <div class="blog-tags">
             
-              <a href="/tags/scrapy/">scrapy</a>&nbsp;
+              <a href="//tags/scrapy/">scrapy</a>&nbsp;
             
-              <a href="/tags/go/">go</a>&nbsp;
+              <a href="//tags/go/">go</a>&nbsp;
             
-              <a href="/tags/scraping/">scraping</a>&nbsp;
+              <a href="//tags/scraping/">scraping</a>&nbsp;
             
-              <a href="/tags/colly/">colly</a>&nbsp;
+              <a href="//tags/colly/">colly</a>&nbsp;
             
           </div>
         
@@ -450,7 +450,7 @@ or run it with
 
           
             &nbsp;&bull;&nbsp;
-            <a href="">rubensanchez.dev</a>
+            <a href="/">rubensanchez.dev</a>
           
         </p>
         
@@ -466,8 +466,8 @@ or run it with
 <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
-<script src="js/main.js"></script><script> renderMathInElement(document.body); </script><script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.js" integrity="sha384-QELNnmcmU8IR9ZAykt67vGr9/rZJdHbiWi64V88fCPaOohUlHCqUD/unNN0BXSqy" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe-ui-default.min.js" integrity="sha384-m67o7SkQ1ALzKZIFh4CiTA8tmadaujiTa9Vu+nqPSwDOqHrDmxLezTdFln8077+q" crossorigin="anonymous"></script><script src="js/load-photoswipe.js"></script>
+<script src="/js/main.js"></script><script> renderMathInElement(document.body); </script><script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.js" integrity="sha384-QELNnmcmU8IR9ZAykt67vGr9/rZJdHbiWi64V88fCPaOohUlHCqUD/unNN0BXSqy" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe-ui-default.min.js" integrity="sha384-m67o7SkQ1ALzKZIFh4CiTA8tmadaujiTa9Vu+nqPSwDOqHrDmxLezTdFln8077+q" crossorigin="anonymous"></script><script src="/js/load-photoswipe.js"></script>
 
 
 
