@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>rabbitmq on rubensanchez.dev</title>
+    <link>https://www.rubensanchez.dev/tags/rabbitmq/</link>
+    <description>Recent content in rabbitmq on rubensanchez.dev</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 16 Jan 2021 19:00:12 +0000</lastBuildDate><atom:link href="https://www.rubensanchez.dev/tags/rabbitmq/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Go RabbitMQ to Kafka ETL with zero lines of Go!</title>
+      <link>https://www.rubensanchez.dev/blog/go-rabbitmq-to-kafka-etl-with-zero-lines-of-go-1b83/</link>
+      <pubDate>Sat, 16 Jan 2021 19:00:12 +0000</pubDate>
+      
+      <guid>https://www.rubensanchez.dev/blog/go-rabbitmq-to-kafka-etl-with-zero-lines-of-go-1b83/</guid>
+      <description>I think that for a big percentage of cases, ETL pipelines are a solved problem. Unless you have very special needs, there are many tools in the market that can remove the hassle of setting up irrelevant minutia, and let you focus on the business logic instead, because anyone can create a function that connects to a Rabbit MQ exchange, but only you can work on the task of how your business logic should handle the received messages.</description>
+    </item>
+    
+  </channel>
+</rss>

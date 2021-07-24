@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>go on rubensanchez.dev</title>
+    <link>https://www.rubensanchez.dev/tags/go/</link>
+    <description>Recent content in go on rubensanchez.dev</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 01 Apr 2021 09:14:10 +0000</lastBuildDate><atom:link href="https://www.rubensanchez.dev/tags/go/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Must-Bookmarks to become good in Go</title>
+      <link>https://www.rubensanchez.dev/blog/must-bookmarks-to-become-good-in-go-ln8/</link>
+      <pubDate>Thu, 01 Apr 2021 09:14:10 +0000</pubDate>
+      
+      <guid>https://www.rubensanchez.dev/blog/must-bookmarks-to-become-good-in-go-ln8/</guid>
+      <description>I am having some days off, so I have compiled a list of Golang resources to go through during this time, aimed to become a better Go developer. I am hoping that this can also be helpful to you. By the time we all reach the end of the list, our level of language familiarity should have increased a lot!
+Fundamentals  How to write Go code  Quick initial refresher in case you need it!</description>
+    </item>
+    
+    <item>
+      <title>Go RabbitMQ to Kafka ETL with zero lines of Go!</title>
+      <link>https://www.rubensanchez.dev/blog/go-rabbitmq-to-kafka-etl-with-zero-lines-of-go-1b83/</link>
+      <pubDate>Sat, 16 Jan 2021 19:00:12 +0000</pubDate>
+      
+      <guid>https://www.rubensanchez.dev/blog/go-rabbitmq-to-kafka-etl-with-zero-lines-of-go-1b83/</guid>
+      <description>I think that for a big percentage of cases, ETL pipelines are a solved problem. Unless you have very special needs, there are many tools in the market that can remove the hassle of setting up irrelevant minutia, and let you focus on the business logic instead, because anyone can create a function that connects to a Rabbit MQ exchange, but only you can work on the task of how your business logic should handle the received messages.</description>
+    </item>
+    
+    <item>
+      <title>Making a fast &#34;yes&#34; clone with Go</title>
+      <link>https://www.rubensanchez.dev/blog/making-a-fast-yes-clone-with-go-hom/</link>
+      <pubDate>Sun, 18 Oct 2020 12:59:33 +0000</pubDate>
+      
+      <guid>https://www.rubensanchez.dev/blog/making-a-fast-yes-clone-with-go-hom/</guid>
+      <description>Following the series on creating Go based clones of the GNU coreutils, today I wanted to do a speed experiment using yes
+What is YES? If you are using mac or linux, go to your terminal and type yes . You should get an infinite stream of y . Or you can also run it as yes yes and you will get an infinite stream of yes . Or yes no .</description>
+    </item>
+    
+    <item>
+      <title>Upskill yourself by recreating GNU Coreutils in Go</title>
+      <link>https://www.rubensanchez.dev/blog/upskill-yourself-by-recreating-gnu-coretools-in-go-9f5/</link>
+      <pubDate>Sat, 26 Sep 2020 21:10:52 +0000</pubDate>
+      
+      <guid>https://www.rubensanchez.dev/blog/upskill-yourself-by-recreating-gnu-coretools-in-go-9f5/</guid>
+      <description>Reinventing the wheel for fun One of the most popular advice to gain skills programming is to reimplement tools that already exist. For instance, if you wanted to learn how to do a CRUD API, I am pretty sure you probably practiced with a &amp;ldquo;To do&amp;rdquo; app. The point of this is not to create something new and groundbreaking, but to use well known ideas to improve what you know. Other examples you might have seen are things such as implementing a chat server to learn about websockets, a weather app, a Hacker News reader&amp;hellip;</description>
+    </item>
+    
+    <item>
+      <title>The Go way to parse strings into dates is pretty confusing unless you live in a small fraction of the world</title>
+      <link>https://www.rubensanchez.dev/blog/the-go-way-to-parse-strings-into-dates-is-pretty-confusing-unless-you-live-in-a-small-fraction-of-the-world-42o9/</link>
+      <pubDate>Mon, 18 May 2020 16:22:29 +0000</pubDate>
+      
+      <guid>https://www.rubensanchez.dev/blog/the-go-way-to-parse-strings-into-dates-is-pretty-confusing-unless-you-live-in-a-small-fraction-of-the-world-42o9/</guid>
+      <description>When it comes to date formats, there is about 640 million people who prefer to order using MDY , and more than 5000 million that are doing other ordering systems:
+https://en.wikipedia.org/wiki/Date_format_by_country
+This shouldn&amp;rsquo;t need to be an issue, really. Let&amp;rsquo;s take Python as an example and do a string to date operation both for our MDY friends and for the rest of the world too:
+from datetime import datetime datetime_mdy = datetime.</description>
+    </item>
+    
+    <item>
+      <title>Learn to properly test and auto deploy your Go app with a movie posters server project</title>
+      <link>https://www.rubensanchez.dev/blog/learn-tdd-basics-and-automated-deployments-with-go-github-actions-and-heroku-2hf3/</link>
+      <pubDate>Fri, 15 May 2020 14:57:59 +0000</pubDate>
+      
+      <guid>https://www.rubensanchez.dev/blog/learn-tdd-basics-and-automated-deployments-with-go-github-actions-and-heroku-2hf3/</guid>
+      <description>Creating a well tested application pays off by having a lot less to debug in the future, together with the peace of mind that you can refactor your application as much as you want and nothing is going to break because the tests would alert you quickly if that happened. Automating your deployment will also pay off, not only because it will save you a ton of clicks (or commands) but because it will prevent errors and your builds will be predictable.</description>
+    </item>
+    
+    <item>
+      <title>Do you love web scraping with Scrapy? Then check Colly for Go</title>
+      <link>https://www.rubensanchez.dev/blog/do-you-love-web-scraping-with-scrapy-then-check-colly-for-go-6kc/</link>
+      <pubDate>Thu, 05 Mar 2020 09:39:29 +0000</pubDate>
+      
+      <guid>https://www.rubensanchez.dev/blog/do-you-love-web-scraping-with-scrapy-then-check-colly-for-go-6kc/</guid>
+      <description>Scrapy is the star of the web scraping world in Python. There are indeed other beautiful libraries out there, but the simplicity and power that Scrapy gives you has captured the hearts of many Python developers who now have this full suite of excellent tools to perform the type of tasks that used to need more tinkering and patching. Scrapy alone will give you the actual scraping running on the Twisted engine, a shell to test your xpaths and css paths, an elegant way to specify your middleware, build a pipeline of actions easily and much more.</description>
+    </item>
+    
+  </channel>
+</rss>

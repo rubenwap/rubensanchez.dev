@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<html lang="en" itemscope itemtype="http://schema.org/WebPage">
+  <head>
+    
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+  <title>Learn to properly test and auto deploy your Go app with a movie posters server project - rubensanchez.dev</title>
+  <meta name="description" content="Creating a well tested application pays off by having a lot less to debug in the future, together with the peace of mind that you can refactor your application as much as you want and nothing is going to break because the tests would alert you quickly if that happened. Automating your deployment will also pay off, not only because it will save you a ton of clicks (or commands) but because it will prevent errors and your builds will be predictable."><script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "@type": "WebSite",
+    "name": "rubensanchez.dev",
+    
+    "url": "https:\/\/www.rubensanchez.dev"
+}
+</script><script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Organization",
+  "name": "",
+  "url": "https:\/\/www.rubensanchez.dev"
+  
+  
+  
+  
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "item": {
+          "@id": "https:\/\/www.rubensanchez.dev",
+          "name": "home"
+        }
+    },{
+        "@type": "ListItem",
+        "position": 3,
+        "item": {
+          "@id": "https:\/\/www.rubensanchez.dev\/blog\/learn-tdd-basics-and-automated-deployments-with-go-github-actions-and-heroku-2hf3\/",
+          "name": "Learn to properly test and auto deploy your go app with a movie posters server project"
+        }
+    }]
+}
+</script><script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Article",
+  "author": {
+    "name" : ""
+  },
+  "headline": "Learn to properly test and auto deploy your Go app with a movie posters server project",
+  "description" : "Creating a well tested application pays off by having a lot less to debug in the future, together with the peace of mind that you can refactor your application as much as you want and nothing is going to break because the tests would alert you quickly if that happened. Automating your deployment will also pay off, not only because it will save you a ton of clicks (or commands) but because it will prevent errors and your builds will be predictable.",
+  "inLanguage" : "en",
+  "wordCount":  2714 ,
+  "datePublished" : "2020-05-15T14:57:59",
+  "dateModified" : "2020-05-15T14:57:59",
+  "image" : "https:\/\/www.rubensanchez.dev",
+  "keywords" : [ "github, go, beginners, tutorial" ],
+  "mainEntityOfPage" : "https:\/\/www.rubensanchez.dev\/blog\/learn-tdd-basics-and-automated-deployments-with-go-github-actions-and-heroku-2hf3\/",
+  "publisher" : {
+    "@type": "Organization",
+    "name" : "https:\/\/www.rubensanchez.dev",
+    "logo" : {
+        "@type" : "ImageObject",
+        "url" : "https:\/\/www.rubensanchez.dev",
+        "height" :  60 ,
+        "width" :  60
+    }
+  }
+}
+</script>
+
+<meta property="og:title" content="Learn to properly test and auto deploy your Go app with a movie posters server project" />
+<meta property="og:description" content="Creating a well tested application pays off by having a lot less to debug in the future, together with the peace of mind that you can refactor your application as much as you want and nothing is going to break because the tests would alert you quickly if that happened. Automating your deployment will also pay off, not only because it will save you a ton of clicks (or commands) but because it will prevent errors and your builds will be predictable.">
+<meta property="og:url" content="https://www.rubensanchez.dev/blog/learn-tdd-basics-and-automated-deployments-with-go-github-actions-and-heroku-2hf3/" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="rubensanchez.dev" />
+
+  <meta name="twitter:title" content="Learn to properly test and auto deploy your Go app with a movie …" />
+  <meta name="twitter:description" content="Creating a well tested application pays off by having a lot less to debug in the future, together with the peace of mind that you can refactor your application as much as you want and nothing is going …">
+  <meta name="twitter:card" content="summary" />
+  <meta name="generator" content="Hugo 0.76.5" />
+  <link rel="alternate" href="https://www.rubensanchez.dev/index.xml" type="application/rss+xml" title="rubensanchez.dev"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css" integrity="sha384-9eLZqc9ds8eNjO3TmqPeYcDj8n+Qfa4nuSiGYa6DjLNcv9BtN69ZIulL9+8CqC9Y" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"><link rel="stylesheet" href="https://www.rubensanchez.dev/css/main.css" /><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" /><link rel="stylesheet" href="https://www.rubensanchez.dev/css/syntax.css" /><link rel="stylesheet" href="https://www.rubensanchez.dev/css/codeblock.css" /><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.css" integrity="sha384-h/L2W9KefUClHWaty3SLE5F/qvc4djlyR4qY3NUV5HGQBBW7stbcfff1+I/vmsHh" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/default-skin/default-skin.min.css" integrity="sha384-iD0dNku6PYSIQLyfTOpB06F2KCZJAKLOThS5HRe8b3ibhdEQ6eKsFf/EeFxdOt5R" crossorigin="anonymous">
+
+
+
+  </head>
+  <body>
+    <nav class="navbar navbar-default navbar-fixed-top navbar-custom">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="https://www.rubensanchez.dev">rubensanchez.dev</a>
+    </div>
+
+    <div class="collapse navbar-collapse" id="main-navbar">
+      <ul class="nav navbar-nav navbar-right">
+        
+          
+            <li>
+              <a title="Contact" href="/contact/">Contact</a>
+            </li>
+          
+        
+
+        
+
+        
+      </ul>
+    </div>
+
+    
+
+  </div>
+</nav>
+
+
+
+
+    
+
+
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+<div class="pswp__bg"></div>
+
+<div class="pswp__scroll-wrap">
+    
+    <div class="pswp__container">
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+    </div>
+    
+    <div class="pswp__ui pswp__ui--hidden">
+    <div class="pswp__top-bar">
+      
+      <div class="pswp__counter"></div>
+      <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+      <button class="pswp__button pswp__button--share" title="Share"></button>
+      <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+      <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+      
+      
+      <div class="pswp__preloader">
+        <div class="pswp__preloader__icn">
+          <div class="pswp__preloader__cut">
+            <div class="pswp__preloader__donut"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+      <div class="pswp__share-tooltip"></div>
+    </div>
+    <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+    </button>
+    <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+    </button>
+    <div class="pswp__caption">
+      <div class="pswp__caption__center"></div>
+    </div>
+    </div>
+    </div>
+</div>
+
+
+  
+  
+  
+
+
+
+
+
+
+  
+
+  <header class="header-section ">
+    
+    <div class="intro-header no-img">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+            <div class="blog-heading">
+              
+                <h1>Learn to properly test and auto deploy your Go app with a movie posters server project</h1>
+              
+              
+                <hr class="small">
+              
+              
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+
+    
+<div class="container" role="main">
+  <div class="row">
+    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+      <article role="main" class="blog-post">
+        <p><em>Creating a well tested application pays off by having a lot less to debug in the future, together with the peace of mind that you can refactor your application as much as you want and nothing is going to break because the tests would alert you quickly if that happened. Automating your deployment will also pay off, not only because it will save you a ton of clicks (or commands) but because it will prevent errors and your builds will be predictable. If they fail, it will be because they have a legitimate reason to fail, not because you forgot to type a command somewhere.</em></p>
+<p>I have created a very trivial application to showcase this. It&rsquo;s a web server where you can go to an url that includes the title of a movie, and the browser will display a basic page showing the poster for it. There is no storage. Everything is achieved via the API of OMDB, so if you want to fully recreate the exercise, you will need your own API key, which you can request here: <a href="http://omdbapi.com/">http://omdbapi.com/</a></p>
+<p><img src="https://dev-to-uploads.s3.amazonaws.com/i/3ya69ab42s7goistl8ow.png" alt="Alt Text"></p>
+<p>I am going to highlight only some important parts of the code, but you can find the full source in my repo: <a href="https://github.com/rubenwap/movie-poster-server">https://github.com/rubenwap/movie-poster-server</a></p>
+<p>Also, you can try a live version here:</p>
+<p><a href="http://movieposters.herokuapp.com/movie/apocalypto">http://movieposters.herokuapp.com/movie/apocalypto</a></p>
+<h1 id="structure-of-the-project">Structure of the project</h1>
+<p>We start initializing the project with</p>
+<pre><code>go mod init your_github_project_url
+</code></pre>
+<p>such as</p>
+<pre><code>go mod init github.com/rubenwap/omdb-client
+</code></pre>
+<p>That way, as you add more dependencies, the mod file will keep track of them and be useful for tasks such as re downloading them.</p>
+<p>The main files you are going to need to create are:</p>
+<dl>
+<dt><code>omdb.go</code></dt>
+<dd>Your main logic will live here</dd>
+<dt><code>omdb_test.go</code></dt>
+<dd>Your tests will live here</dd>
+<dt><code>cases_test.go</code></dt>
+<dd>Auxiliary data used by your tests will live here. We could include that data in
+<code>omdb_test.go</code>
+but the file would look too polluted and confusing, so let&rsquo;s have this one separated.</dd>
+</dl>
+<h1 id="a-testing-first-approach">A &ldquo;testing first&rdquo; approach</h1>
+<p>Ok, so you have made your planning and you know what do you want to achieve. You know that you need this function and that other function. In my case, I wanted to build:</p>
+<ol>
+<li>
+<p>A function to build a full url for the API call using the parameters that the user indicates (for instance, the movie title)</p>
+</li>
+<li>
+<p>A function to perform the actual API call, so you request the URL that you built in the previous step and you get a JSON with the response</p>
+</li>
+<li>
+<p>A function that takes the JSON and transforms it into a struct, so we can manipulate it in Go. Therefore, the goal is to have a function where the input is the JSON object and the output is the struct.</p>
+</li>
+<li>
+<p>A function that runs all the previous functions and displays the movie poster (taken from the struct) into a webpage</p>
+</li>
+<li>
+<p>The
+<code>main</code>
+function would only basically launch the web server</p>
+</li>
+</ol>
+<p>I am going to create tests for the first three functions.</p>
+<p>To do that, my
+<code>cases_test.go</code>
+will include slices of structs for each function with the contents:</p>
+<ol>
+<li>What is the description of the test</li>
+<li>What is the input that we pass to the function</li>
+<li>What is the output that we should expect</li>
+</ol>
+<p>For example</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">testCasesBuildParams</span> = []<span style="color:#66d9ef">struct</span> {
+	<span style="color:#a6e22e">description</span> <span style="color:#66d9ef">string</span>
+	<span style="color:#a6e22e">input</span>       <span style="color:#66d9ef">string</span>
+	<span style="color:#a6e22e">expected</span>    <span style="color:#66d9ef">string</span>
+}{
+	{
+		<span style="color:#a6e22e">description</span>: <span style="color:#e6db74">&#34;It should build correctly URL with unique word titles&#34;</span>,
+		<span style="color:#a6e22e">input</span>:       <span style="color:#e6db74">&#34;bambi&#34;</span>,
+		<span style="color:#a6e22e">expected</span>:    <span style="color:#e6db74">&#34;http://www.omdbapi.com?apikey=&#34;</span><span style="color:#f92672">+</span> <span style="color:#a6e22e">os</span>.<span style="color:#a6e22e">Getenv</span>(<span style="color:#e6db74">&#34;OMDB_KEY&#34;</span>) <span style="color:#f92672">+</span><span style="color:#e6db74">&#34;&amp;plot=full&amp;t=bambi&#34;</span>,
+	},
+	{
+		<span style="color:#a6e22e">description</span>: <span style="color:#e6db74">&#34;It should build correctly URL with multi word titles&#34;</span>,
+		<span style="color:#a6e22e">input</span>:       <span style="color:#e6db74">&#34;the dark knight&#34;</span>,
+		<span style="color:#a6e22e">expected</span>:    <span style="color:#e6db74">&#34;http://www.omdbapi.com?apikey=&#34;</span><span style="color:#f92672">+</span> <span style="color:#a6e22e">os</span>.<span style="color:#a6e22e">Getenv</span>(<span style="color:#e6db74">&#34;OMDB_KEY&#34;</span>) <span style="color:#f92672">+</span><span style="color:#e6db74">&#34;&amp;plot=full&amp;t=the+dark+knight&#34;</span>,
+	},
+}
+</code></pre></div><p>Look at the full file here:</p>
+<p><a href="https://github.com/rubenwap/movie-poster-server/blob/develop/cases_test.go">https://github.com/rubenwap/movie-poster-server/blob/develop/cases_test.go</a></p>
+<p>After I have defined the cases, I will create a test function (that by the way, will fail, because there is no real function in my
+<code>omdb.go</code>
+code yet).</p>
+<h2 id="building-the-full-url-for-the-api-call">Building the full URL for the API call</h2>
+<p>So I head into
+<code>omdb_test.go</code>
+and do:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#66d9ef">const</span> (
+	<span style="color:#a6e22e">URL</span> = <span style="color:#e6db74">&#34;http://www.omdbapi.com&#34;</span>
+)
+
+<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">TestBuildURLwithParams</span>(<span style="color:#a6e22e">t</span> <span style="color:#f92672">*</span><span style="color:#a6e22e">testing</span>.<span style="color:#a6e22e">T</span>) {
+	<span style="color:#66d9ef">for</span> <span style="color:#a6e22e">_</span>, <span style="color:#a6e22e">c</span> <span style="color:#f92672">:=</span> <span style="color:#66d9ef">range</span> <span style="color:#a6e22e">testCasesBuildParams</span> {
+		<span style="color:#a6e22e">got</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">buildURLwithParams</span>(<span style="color:#a6e22e">c</span>.<span style="color:#a6e22e">input</span>, <span style="color:#a6e22e">URL</span>)
+		<span style="color:#66d9ef">if</span> <span style="color:#a6e22e">got</span> <span style="color:#f92672">!=</span> <span style="color:#a6e22e">c</span>.<span style="color:#a6e22e">expected</span> {
+			<span style="color:#a6e22e">t</span>.<span style="color:#a6e22e">Fatalf</span>(<span style="color:#e6db74">&#34;FAIL: %q, want %q, got %q&#34;</span>, <span style="color:#a6e22e">c</span>.<span style="color:#a6e22e">input</span>, <span style="color:#a6e22e">c</span>.<span style="color:#a6e22e">expected</span>, <span style="color:#a6e22e">got</span>)
+		}
+		<span style="color:#a6e22e">t</span>.<span style="color:#a6e22e">Logf</span>(<span style="color:#e6db74">&#34;PASS: %q&#34;</span>, <span style="color:#a6e22e">c</span>.<span style="color:#a6e22e">description</span>)
+	}
+}
+</code></pre></div><p>If you analyze this test, you will realize that you can reuse this same function with minimal changes for most of the stuff you want to test, since it&rsquo;s just comparing what you are getting upon running something, against what you expect to get.</p>
+<p>More about Golang testing here: <a href="https://golang.org/pkg/testing/">https://golang.org/pkg/testing/</a></p>
+<p>If you use VSCode with the Go extension, you get handy buttons in the top of each test to click and run them. If you prefer to launch them via terminal, type:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">go test -v
+</code></pre></div><p>where the
+<code>v</code>
+parameter means that you want your output to be verbose, which I find is quite useful.</p>
+<p>Since we don&rsquo;t have function yet to use with this test, let&rsquo;s write it. In our
+<code>omdb.go</code>
+file this would look like:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#75715e">// buildURLwithParams builds the URL parameters
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">buildURLwithParams</span>(<span style="color:#a6e22e">name</span> <span style="color:#66d9ef">string</span>, <span style="color:#a6e22e">url</span> <span style="color:#66d9ef">string</span>) <span style="color:#66d9ef">string</span> {
+	<span style="color:#a6e22e">req</span>, <span style="color:#a6e22e">err</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">http</span>.<span style="color:#a6e22e">NewRequest</span>(<span style="color:#e6db74">&#34;GET&#34;</span>, <span style="color:#a6e22e">url</span>, <span style="color:#66d9ef">nil</span>)
+
+	<span style="color:#66d9ef">if</span> <span style="color:#a6e22e">err</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
+		<span style="color:#a6e22e">log</span>.<span style="color:#a6e22e">Fatalf</span>(<span style="color:#e6db74">&#34;fetch: %v&#34;</span>, <span style="color:#a6e22e">err</span>)
+	}
+
+	<span style="color:#a6e22e">q</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">req</span>.<span style="color:#a6e22e">URL</span>.<span style="color:#a6e22e">Query</span>()
+	<span style="color:#a6e22e">q</span>.<span style="color:#a6e22e">Add</span>(<span style="color:#e6db74">&#34;apikey&#34;</span>, <span style="color:#a6e22e">os</span>.<span style="color:#a6e22e">Getenv</span>(<span style="color:#e6db74">&#34;OMDB_KEY&#34;</span>))
+	<span style="color:#a6e22e">q</span>.<span style="color:#a6e22e">Add</span>(<span style="color:#e6db74">&#34;t&#34;</span>, <span style="color:#a6e22e">name</span>)
+	<span style="color:#a6e22e">q</span>.<span style="color:#a6e22e">Add</span>(<span style="color:#e6db74">&#34;plot&#34;</span>, <span style="color:#e6db74">&#34;full&#34;</span>)
+	<span style="color:#a6e22e">req</span>.<span style="color:#a6e22e">URL</span>.<span style="color:#a6e22e">RawQuery</span> = <span style="color:#a6e22e">q</span>.<span style="color:#a6e22e">Encode</span>()
+
+	<span style="color:#66d9ef">return</span> <span style="color:#a6e22e">req</span>.<span style="color:#a6e22e">URL</span>.<span style="color:#a6e22e">String</span>()
+}
+</code></pre></div><p>Note that the API key is an environment variable. We will take care of setting that up in your Heroku deployment and Github Actions a little later. In the meantime, for your local development you can set them up in macOS terminal like this:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">export OMDB_KEY<span style="color:#f92672">=</span><span style="color:#ae81ff">123</span>
+</code></pre></div><p>or if you use Windows, you can open PowerShell and do this (correct me if I am wrong, since I don&rsquo;t have a Windows computer to test!)</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$env:OMDB_KEY <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;123&#39;</span>
+</code></pre></div><p>So if we run our test at the moment, it should pass.</p>
+<h2 id="use-mocking-to-test-the-api-call-function">Use mocking to test the API call function</h2>
+<p>The test number 3 (compare that the JSON from the response equals to the struct that we expect to produce in the transformation) also follows this scheme of &ldquo;compare this value against this other value&rdquo;, so you can check the full source in the repo, but I want to stop for a moment with the test number two, since it includes an interesting technique you will need to know: <strong>Mocking a response</strong></p>
+<p>So what is mocking? Imagine that you need to test a function that does something against a third party service, in this case the OMDB API. Will you need to call the remote API every single time you need to run the test? Not a good option, not only because it will slow you down quite a bit, but also because in some cases if you are contacting a rate limited API, it might mean a big hit on your rates. Also, it&rsquo;s totally unnecessary. Is also not your job to test whether their API works. The only thing you need to know is how will your function behave once it receives the content, so you only care about the content.</p>
+<p>In order to achieve that, you will use a mocking library, which will simulate a fake response upon calling an URL. For example, you can configure it so every time your test does a request against the url
+<code>[mytestingurl.com](http://mytestingurl.com)</code>
+it receives the response
+<code>[{&quot;test&quot;:&quot;cool&quot;}]</code></p>
+<p>So look at the code for the mocking test:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">TestGetMovieResponse</span>(<span style="color:#a6e22e">t</span> <span style="color:#f92672">*</span><span style="color:#a6e22e">testing</span>.<span style="color:#a6e22e">T</span>) {
+	<span style="color:#a6e22e">httpmock</span>.<span style="color:#a6e22e">Activate</span>()
+	<span style="color:#66d9ef">for</span> <span style="color:#a6e22e">_</span>, <span style="color:#a6e22e">c</span> <span style="color:#f92672">:=</span> <span style="color:#66d9ef">range</span> <span style="color:#a6e22e">testCasesGetMovieResponse</span> {
+		<span style="color:#a6e22e">httpmock</span>.<span style="color:#a6e22e">RegisterResponder</span>(<span style="color:#e6db74">&#34;GET&#34;</span>, <span style="color:#a6e22e">c</span>.<span style="color:#a6e22e">input</span>,
+			<span style="color:#a6e22e">httpmock</span>.<span style="color:#a6e22e">NewStringResponder</span>(<span style="color:#ae81ff">200</span>, <span style="color:#a6e22e">c</span>.<span style="color:#a6e22e">expected</span>))
+		<span style="color:#a6e22e">got</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">getMovieResponse</span>(<span style="color:#a6e22e">c</span>.<span style="color:#a6e22e">input</span>)
+		<span style="color:#66d9ef">if</span> string(<span style="color:#a6e22e">got</span>) <span style="color:#f92672">!=</span> <span style="color:#a6e22e">c</span>.<span style="color:#a6e22e">expected</span> {
+			<span style="color:#a6e22e">t</span>.<span style="color:#a6e22e">Fatalf</span>(<span style="color:#e6db74">&#34;FAIL: %q, want %q, got %q&#34;</span>, <span style="color:#a6e22e">c</span>.<span style="color:#a6e22e">input</span>, <span style="color:#a6e22e">c</span>.<span style="color:#a6e22e">expected</span>, <span style="color:#a6e22e">got</span>)
+		}
+		<span style="color:#a6e22e">t</span>.<span style="color:#a6e22e">Logf</span>(<span style="color:#e6db74">&#34;PASS: %q&#34;</span>, <span style="color:#a6e22e">c</span>.<span style="color:#a6e22e">description</span>)
+	}
+}
+</code></pre></div><p>We are setting up an
+<code>httpmock</code>
+(using the <a href="http://github.com/jarcoal/httpmock">github.com/jarcoal/httpmock</a> library, although you have many other options) and we are registering that whenever we do a
+<code>GET</code>
+request against a certain url (in this case the url is defined in the
+<code>c.input</code>
+variable) then we should receive a response (which is the
+<code>c.expected</code>
+variable). To make it clearer, look at those values:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">testCasesGetMovieResponse</span> = []<span style="color:#66d9ef">struct</span> {
+	<span style="color:#a6e22e">description</span> <span style="color:#66d9ef">string</span>
+	<span style="color:#a6e22e">input</span>       <span style="color:#66d9ef">string</span>
+	<span style="color:#a6e22e">expected</span>    <span style="color:#66d9ef">string</span>
+}{
+	{
+		<span style="color:#a6e22e">description</span>: <span style="color:#e6db74">&#34;It should return a correct json response from the server&#34;</span>,
+		<span style="color:#a6e22e">input</span>:       <span style="color:#e6db74">&#34;http://www.omdbapi.com?apikey=&#34;</span><span style="color:#f92672">+</span> <span style="color:#a6e22e">os</span>.<span style="color:#a6e22e">Getenv</span>(<span style="color:#e6db74">&#34;OMDB_KEY&#34;</span>) <span style="color:#f92672">+</span><span style="color:#e6db74">&#34;&amp;plot=full&amp;t=bambi&#34;</span>,
+		<span style="color:#a6e22e">expected</span>:    <span style="color:#e6db74">`
+</span><span style="color:#e6db74">{&#34;Title&#34;:&#34;Bambi&#34;,&#34;Year&#34;:&#34;1942&#34;,&#34;Rated&#34;:&#34;G&#34;,&#34;Released&#34;:&#34;21 Aug 1942&#34;,&#34;Runtime&#34;:&#34;70 min&#34;,&#34;Genre&#34;:&#34;Animation, Drama, Family&#34;,&#34;Director&#34;:&#34;James Algar, Samuel Armstrong, David Hand, Graham Heid, Bill Roberts, Paul Satterfield, Norman Wright, Arthur Davis, Clyde Geronimi&#34;,&#34;Writer&#34;:&#34;Felix Salten (from the story by), Perce Pearce (story direction), Larry Morey (story adaptation), Vernon Stallings (story development), Mel Shaw (story development), Carl Fallberg (story development), Chuck Couch (story development), Ralph Wright (story development)&#34;,&#34;Actors&#34;:&#34;Hardie Albright, Stan Alexander, Bobette Audrey, Peter Behn&#34;,&#34;Plot&#34;:&#34;The animated story of Bambi, a young deer hailed as the &#39;Prince of the Forest&#39; at his birth. As Bambi grows, he makes friends with the other animals of the forest, learns the skills needed to survive, and even finds love. One day, however, the hunters come, and Bambi must learn to be as brave as his father if he is to lead the other deer to safety.&#34;,&#34;Language&#34;:&#34;English&#34;,&#34;Country&#34;:&#34;USA&#34;,&#34;Awards&#34;:&#34;Nominated for 3 Oscars. Another 6 wins &amp; 3 nominations.&#34;,&#34;Poster&#34;:&#34;https://m.media-amazon.com/images/M/MV5BMTY1NzM4NDg5MV5BMl5BanBnXkFtZTgwMjI1MTkzMjE@._V1_SX300.jpg&#34;,&#34;Ratings&#34;:[{&#34;Source&#34;:&#34;Internet Movie Database&#34;,&#34;Value&#34;:&#34;7.3/10&#34;},{&#34;Source&#34;:&#34;Rotten Tomatoes&#34;,&#34;Value&#34;:&#34;90%&#34;},{&#34;Source&#34;:&#34;Metacritic&#34;,&#34;Value&#34;:&#34;91/100&#34;}],&#34;Metascore&#34;:&#34;91&#34;,&#34;imdbRating&#34;:&#34;7.3&#34;,&#34;imdbVotes&#34;:&#34;125,824&#34;,&#34;imdbID&#34;:&#34;tt0034492&#34;,&#34;Type&#34;:&#34;movie&#34;,&#34;DVD&#34;:&#34;01 Mar 2005&#34;,&#34;BoxOffice&#34;:&#34;N/A&#34;,&#34;Production&#34;:&#34;RKO Radio Pictures&#34;,&#34;Website&#34;:&#34;N/A&#34;,&#34;Response&#34;:&#34;True&#34;}
+</span><span style="color:#e6db74">`</span>,
+	},
+}
+</code></pre></div><p>So, the mock is set up so whenever in the test we contact the URL in
+<code>input</code>
+, we shall receive the response in
+<code>expected</code>
+.</p>
+<h2 id="put-the-movie-contents-into-a-struct">Put the movie contents into a struct</h2>
+<p>We now have the function to build the URL, the function to make the API call and there is yet a last function, which transforms the JSON into a struct. In order to achieve that, we should have already defined a struct with the correct fields that describe a movie. This is the function. It uses
+<code>json.Unmarshal</code>
+taking as an input both your JSON, and the new variable with
+<code>Movie</code>
+type that you have created to hold the final value:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">unmarshalMovieIntoStruct</span>(<span style="color:#a6e22e">movie</span> []<span style="color:#66d9ef">byte</span>) <span style="color:#a6e22e">Movie</span> {
+	<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">m</span> <span style="color:#a6e22e">Movie</span>
+	<span style="color:#66d9ef">if</span> <span style="color:#a6e22e">err</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">json</span>.<span style="color:#a6e22e">Unmarshal</span>(<span style="color:#a6e22e">movie</span>, <span style="color:#f92672">&amp;</span><span style="color:#a6e22e">m</span>); <span style="color:#a6e22e">err</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
+		<span style="color:#a6e22e">log</span>.<span style="color:#a6e22e">Fatalf</span>(<span style="color:#e6db74">&#34;JSON unmarshaling failed: %s&#34;</span>, <span style="color:#a6e22e">err</span>)
+	}
+	<span style="color:#66d9ef">return</span> <span style="color:#a6e22e">m</span>
+}
+</code></pre></div><p>Please look at the definition of the struct here:</p>
+<p><a href="https://github.com/rubenwap/movie-poster-server/blob/develop/omdb.go">https://github.com/rubenwap/movie-poster-server/blob/develop/omdb.go</a></p>
+<p>All the previous three functions are launched via an auxiliary function which does four things:</p>
+<ol>
+<li>Builds the URL for the API call based on the movie titled passed via the browser</li>
+<li>Does the call and retrieve the JSON result</li>
+<li>Puts the JSON into a struct</li>
+<li>Takes the title, year and poster fields from the struct and write it into an HTML response:</li>
+</ol>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">handlePoster</span>(<span style="color:#a6e22e">w</span> <span style="color:#a6e22e">http</span>.<span style="color:#a6e22e">ResponseWriter</span>, <span style="color:#a6e22e">r</span> <span style="color:#f92672">*</span><span style="color:#a6e22e">http</span>.<span style="color:#a6e22e">Request</span>) {
+	<span style="color:#a6e22e">title</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">strings</span>.<span style="color:#a6e22e">TrimPrefix</span>(<span style="color:#a6e22e">r</span>.<span style="color:#a6e22e">URL</span>.<span style="color:#a6e22e">Path</span>, <span style="color:#e6db74">&#34;/movie/&#34;</span>)
+	<span style="color:#a6e22e">movieResponse</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">getMovieResponse</span>(<span style="color:#a6e22e">buildURLwithParams</span>(<span style="color:#a6e22e">title</span>, <span style="color:#a6e22e">os</span>.<span style="color:#a6e22e">Getenv</span>(<span style="color:#e6db74">&#34;OMDB_URL&#34;</span>)))
+	<span style="color:#a6e22e">movie</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">unmarshalMovieIntoStruct</span>(<span style="color:#a6e22e">movieResponse</span>)
+	<span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Fprintf</span>(<span style="color:#a6e22e">w</span>, <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Sprintf</span>(<span style="color:#e6db74">&#34;&lt;h1&gt;%s (%s)&lt;/h1&gt;&#34;</span>, <span style="color:#a6e22e">movie</span>.<span style="color:#a6e22e">Title</span>, <span style="color:#a6e22e">movie</span>.<span style="color:#a6e22e">Year</span>))
+	<span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Fprintf</span>(<span style="color:#a6e22e">w</span>, <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Sprintf</span>(<span style="color:#e6db74">&#34;&lt;img src=\&#34;%s\&#34;/&gt;&#34;</span>, <span style="color:#a6e22e">movie</span>.<span style="color:#a6e22e">Poster</span>))
+}
+</code></pre></div><p>The HTML writing via
+<code>Fprintf</code>
+could be improved via using something cleaner such as templates, but in order to build this quick proof of concept, this will do.</p>
+<p>All of the above is ran in the Go&rsquo;s
+<code>main</code>
+function via the
+<code>http</code>
+package:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
+	<span style="color:#a6e22e">log</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Sprintf</span>(<span style="color:#e6db74">&#34;Server running in port %s...&#34;</span>, <span style="color:#a6e22e">os</span>.<span style="color:#a6e22e">Getenv</span>(<span style="color:#e6db74">&#34;PORT&#34;</span>)))
+	<span style="color:#a6e22e">http</span>.<span style="color:#a6e22e">HandleFunc</span>(<span style="color:#e6db74">&#34;/movie/&#34;</span>, <span style="color:#a6e22e">handlePoster</span>)
+	<span style="color:#a6e22e">http</span>.<span style="color:#a6e22e">ListenAndServe</span>(<span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Sprintf</span>(<span style="color:#e6db74">&#34;:%s&#34;</span>, <span style="color:#a6e22e">os</span>.<span style="color:#a6e22e">Getenv</span>(<span style="color:#e6db74">&#34;PORT&#34;</span>)), <span style="color:#66d9ef">nil</span>)
+}
+</code></pre></div><h2 id="docker-that">Docker that!</h2>
+<p>If we dockerize our application, we will ensure that it can be painlessly deployed anywhere with ease. If you really really trust the process, you wouldn&rsquo;t even need to build the image yourself (since Heroku will take care of that) But if you want to give it a try:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-docker" data-lang="docker"><span style="color:#66d9ef">FROM</span><span style="color:#e6db74"> golang:latest</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#75715e"># Set the Current Working Directory inside the container</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#66d9ef">WORKDIR</span><span style="color:#e6db74"> /app/</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#75715e"># We set an environment variable with the port because that is how is called from within the app</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#66d9ef">ENV</span> PORT <span style="color:#ae81ff">8080</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#75715e"># We make sure the port is accessible</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#66d9ef">EXPOSE</span><span style="color:#e6db74"> 8080</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#75715e"># Copy the contents to the image</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#66d9ef">COPY</span> . . <span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#75715e"># Getting the dependencies</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#66d9ef">RUN</span> go mod download<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#75715e"># Building the app</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#66d9ef">RUN</span> go build -o omdb .<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#75715e"># Running it</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#66d9ef">CMD</span> [<span style="color:#e6db74">&#34;./omdb&#34;</span>]<span style="color:#960050;background-color:#1e0010">
+</span></code></pre></div><p>Like I said, you could cross your fingers and let Heroku do the build, but if you want to test it locally:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">docker build -t movieposter:0.1 .
+docker run -it -p -e OMDB_URL<span style="color:#f92672">=</span>http://www.omdbapi.com OMDB_KEY<span style="color:#f92672">=</span><span style="color:#ae81ff">1234</span> 8080:8080 movieposter:0.1
+</code></pre></div><h2 id="github-actions">GitHub Actions</h2>
+<p>You could deploy your application right now as is, we could go to Heroku and say, &ldquo;Put this online!&rdquo;, but there is an extra step we can still do which will give us an extra quality reassurance.</p>
+<p>Later when we have Heroku set up we will be able to do new builds and releases of our app simply by committing our code to the Git branch. What if we mess up? Imagine that we inadvertently make a breaking change. Wouldn&rsquo;t it be a pity to have done a &ldquo;testing first&rdquo; approach to don&rsquo;t take advantage of it now that we can?</p>
+<p>That&rsquo;s what we are going to do. We are going to set up a GitHub Action with the basic steps for a Golang workflow, and that action will run the tests in our code. Then we will configure Heroku so it will only deploy our app if the testing has gone well.</p>
+<p>You can create a new workflow in the &ldquo;Actions&rdquo; tab of your repo. This will create a new file
+<code>go.yml</code>
+which will live in your repo, so if you are creating this file via the GitHub interface, then don&rsquo;t forget to do a
+<code>git pull</code>
+from your local repo, since what  you are actually doing in the interface is committing a new file.</p>
+<p><img src="https://dev-to-uploads.s3.amazonaws.com/i/3n87h76ixkmgi00a3zn4.png" alt="Alt Text"></p>
+<p>Let&rsquo;s look at that file:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#f92672">name</span>: <span style="color:#ae81ff">Go</span>
+
+<span style="color:#f92672">on</span>:
+  <span style="color:#f92672">push</span>:
+    <span style="color:#f92672">branches</span>: [ <span style="color:#ae81ff">master, develop ]</span>
+  <span style="color:#f92672">pull_request</span>:
+    <span style="color:#f92672">branches</span>: [ <span style="color:#ae81ff">master, develop ]</span>
+
+<span style="color:#f92672">jobs</span>:
+
+  <span style="color:#f92672">build</span>:
+    <span style="color:#f92672">name</span>: <span style="color:#ae81ff">Build</span>
+    <span style="color:#f92672">runs-on</span>: <span style="color:#ae81ff">ubuntu-latest</span>
+    <span style="color:#f92672">steps</span>:
+
+    - <span style="color:#f92672">name</span>: <span style="color:#ae81ff">Set up Go 1.x</span>
+      <span style="color:#f92672">uses</span>: <span style="color:#ae81ff">actions/setup-go@v2</span>
+      <span style="color:#f92672">with</span>:
+        <span style="color:#f92672">go-version</span>: <span style="color:#ae81ff">^1.13</span>
+      <span style="color:#f92672">id</span>: <span style="color:#ae81ff">go</span>
+
+    - <span style="color:#f92672">name</span>: <span style="color:#ae81ff">Check out code into the Go module directory</span>
+      <span style="color:#f92672">uses</span>: <span style="color:#ae81ff">actions/checkout@v2</span>
+
+    - <span style="color:#f92672">name</span>: <span style="color:#ae81ff">Get dependencies</span>
+      <span style="color:#f92672">run</span>: <span style="color:#ae81ff">go mod download</span>
+
+    - <span style="color:#f92672">name</span>: <span style="color:#ae81ff">Test</span>
+      <span style="color:#f92672">env</span>: <span style="color:#75715e"># Or as an environment variable</span>
+        <span style="color:#f92672">OMDB_URL</span>: <span style="color:#ae81ff">${{ secrets.OMDB_URL }}</span>
+        <span style="color:#f92672">OMDB_KEY</span>: <span style="color:#ae81ff">${{ secrets.OMDB_KEY }}</span>
+      <span style="color:#f92672">run</span>: <span style="color:#ae81ff">go test -v .</span>
+
+    - <span style="color:#f92672">name</span>: <span style="color:#ae81ff">Build</span>
+      <span style="color:#f92672">run</span>: <span style="color:#ae81ff">go build -v .</span>
+</code></pre></div><p>If you look at the original file created by GitHub, you will realize that I have modified very little. You need to change the
+<code>branches</code>
+value depending on your needs, since this is telling us in which branches this action should trigger. Then I have also added two environment variables that are needed for the tests to run.  I have added them both as secrets, even though the URL one is not really secret (but the KEY one definitely is!)</p>
+<p><img src="https://dev-to-uploads.s3.amazonaws.com/i/6gn3ycsvjf3ys0zc4gf7.png" alt="Alt Text"></p>
+<p>You add the secrets in the GitHub repo page, in the &ldquo;settings&rdquo; page for your repo, there is a &ldquo;secrets&rdquo; option in the menu.</p>
+<h2 id="heroku-deployment-finally">Heroku deployment, finally</h2>
+<p>So now we will deploy this. Open a Heroku account if you don&rsquo;t have one, since it&rsquo;s a really cool way to get your small side projects online without a lot of hassle and on a low budget (free, in fact). If you get a lot of usage and you need to upgrade to a paid option, there are many different options which can be discussed in another moment.</p>
+<ol>
+<li>
+<p>Create a new app: <a href="https://dashboard.heroku.com/new-app?org=personal-apps">https://dashboard.heroku.com/new-app?org=personal-apps</a></p>
+</li>
+<li>
+<p>You have several options to pick the origin for the deployments. In my case, I have chosen to link my GitHub account and select the appropriate repo in the &ldquo;deploy&rdquo; screen</p>
+</li>
+</ol>
+<p><img src="https://dev-to-uploads.s3.amazonaws.com/i/w3do2i717ieg7f0rcr42.png" alt="Alt Text"></p>
+<ol start="3">
+<li>It&rsquo;s very important that you don&rsquo;t forget to set your environment variables in the &ldquo;settings screen&rdquo;, in our case remember it was the
+<code>OMDB_URL</code>
+and
+<code>OMDB_KEY</code></li>
+</ol>
+<p><img src="https://dev-to-uploads.s3.amazonaws.com/i/0xftf6x6yb30xeyvhcq9.png" alt="Alt Text"></p>
+<p>Having done this, your next commit probably won&rsquo;t create a working deployment yet. We need two tiny files in the repo that are required by the Heroku process. The
+<code>Procfile</code>
+and the
+<code>heroku.yml</code>
+files:</p>
+<p>Procfile (<a href="https://devcenter.heroku.com/articles/procfile">https://devcenter.heroku.com/articles/procfile</a>):</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#f92672">web</span>: <span style="color:#ae81ff">./omdb</span>
+</code></pre></div><p>heroku.yml (<a href="https://devcenter.heroku.com/articles/build-docker-images-heroku-yml">https://devcenter.heroku.com/articles/build-docker-images-heroku-yml</a>):</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#f92672">build</span>:
+  <span style="color:#f92672">docker</span>:
+    <span style="color:#f92672">web</span>: <span style="color:#ae81ff">Dockerfile</span>
+</code></pre></div><h1 id="tada">TADA!</h1>
+<p>That was the last step, so now, hopefully if you commit those two files to the repo, it will pass the GitHub Actions step (all tests will be ok) and then it will trigger a build in Heroku.</p>
+<p>If it doesn&rsquo;t work, look at the common causes:</p>
+<ol>
+<li>Is your GitHub actions step passing? Perhaps you have a failing test in  your code</li>
+<li>Can you build your Dockerfile manually? Perhaps there is an issue with it</li>
+<li>Can you run and execute the local Docker container correctly? Does it work as expected?</li>
+</ol>
+<p>If all those three steps are affirmative, the Heroku deployment should also be fine, but don&rsquo;t forget to look at the Heroku logs in order to double check there is no issue in that side! Most common issues are timeouts or applications crashing, but they are almost never because of Heroku, but more often than not, because of an issue of the three common causes that you should test first.</p>
+<p>I hope this was a useful guide. My goal is not so much that you build the very same exact thing I built, but that my steps can help you to understand what are the steps that you need in your own project. Please leave a comment if you have any doubt!</p>
+<p><em><a href="https://dev.to/rubenwap/learn-tdd-basics-and-automated-deployments-with-go-github-actions-and-heroku-2hf3">This post is also available on DEV.</a></em></p>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+
+
+        
+          <div class="blog-tags">
+            
+              <a href="https://www.rubensanchez.dev/tags/github/">github</a>&nbsp;
+            
+              <a href="https://www.rubensanchez.dev/tags/go/">go</a>&nbsp;
+            
+              <a href="https://www.rubensanchez.dev/tags/beginners/">beginners</a>&nbsp;
+            
+              <a href="https://www.rubensanchez.dev/tags/tutorial/">tutorial</a>&nbsp;
+            
+          </div>
+        
+
+        
+
+        
+      </article>
+
+      
+        <ul class="pager blog-pager">
+          
+            <li class="previous">
+              <a href="https://www.rubensanchez.dev/blog/should-you-learn-functional-programming-3flp/" data-toggle="tooltip" data-placement="top" title="Should you learn Functional Programming?">&larr; Previous Post</a>
+            </li>
+          
+          
+            <li class="next">
+              <a href="https://www.rubensanchez.dev/blog/the-go-way-to-parse-strings-into-dates-is-pretty-confusing-unless-you-live-in-a-small-fraction-of-the-world-42o9/" data-toggle="tooltip" data-placement="top" title="The Go way to parse strings into dates is pretty confusing unless you live in a small fraction of the world">Next Post &rarr;</a>
+            </li>
+          
+        </ul>
+      
+
+
+      
+
+    </div>
+  </div>
+</div>
+
+      
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <ul class="list-inline text-center footer-links">
+          
+          
+        </ul>
+        <p class="credits copyright text-muted">
+          
+
+          &nbsp;&bull;&nbsp;&copy;
+          
+            2021
+          
+
+          
+            &nbsp;&bull;&nbsp;
+            <a href="https://www.rubensanchez.dev">rubensanchez.dev</a>
+          
+        </p>
+        
+        <p class="credits theme-by text-muted">
+          <a href="https://gohugo.io">Hugo v0.76.5</a> powered &nbsp;&bull;&nbsp; Theme <a href="https://github.com/halogenica/beautifulhugo">Beautiful Hugo</a> adapted from <a href="https://deanattali.com/beautiful-jekyll/">Beautiful Jekyll</a>
+          
+        </p>
+      </div>
+    </div>
+  </div>
+</footer><script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.js" integrity="sha384-K3vbOmF2BtaVai+Qk37uypf7VrgBubhQreNQe9aGsz9lB63dIFiQVlJbr92dw2Lx" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/contrib/auto-render.min.js" integrity="sha384-kmZOZB5ObwgQnS/DuDg6TScgOiWWBiVt0plIRkZCmE6rDZGrEOQeHM5PcHi+nyqe" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+<script src="https://www.rubensanchez.dev/js/main.js"></script><script> renderMathInElement(document.body); </script><script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.js" integrity="sha384-QELNnmcmU8IR9ZAykt67vGr9/rZJdHbiWi64V88fCPaOohUlHCqUD/unNN0BXSqy" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe-ui-default.min.js" integrity="sha384-m67o7SkQ1ALzKZIFh4CiTA8tmadaujiTa9Vu+nqPSwDOqHrDmxLezTdFln8077+q" crossorigin="anonymous"></script><script src="https://www.rubensanchez.dev/js/load-photoswipe.js"></script>
+
+
+
+
+
+
+
+
+
+    
+  </body>
+</html>
+

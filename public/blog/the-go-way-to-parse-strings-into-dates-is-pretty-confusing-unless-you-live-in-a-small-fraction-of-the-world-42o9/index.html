@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en" itemscope itemtype="http://schema.org/WebPage">
+  <head>
+    
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+  <title>The Go way to parse strings into dates is pretty confusing unless you live in a small fraction of the world - rubensanchez.dev</title>
+  <meta name="description" content="When it comes to date formats, there is about 640 million people who prefer to order using MDY , and more than 5000 million that are doing other ordering systems:
+https://en.wikipedia.org/wiki/Date_format_by_country
+This shouldn&rsquo;t need to be an issue, really. Let&rsquo;s take Python as an example and do a string to date operation both for our MDY friends and for the rest of the world too:
+from datetime import datetime datetime_mdy = datetime."><script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "@type": "WebSite",
+    "name": "rubensanchez.dev",
+    
+    "url": "https:\/\/www.rubensanchez.dev"
+}
+</script><script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Organization",
+  "name": "",
+  "url": "https:\/\/www.rubensanchez.dev"
+  
+  
+  
+  
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "item": {
+          "@id": "https:\/\/www.rubensanchez.dev",
+          "name": "home"
+        }
+    },{
+        "@type": "ListItem",
+        "position": 3,
+        "item": {
+          "@id": "https:\/\/www.rubensanchez.dev\/blog\/the-go-way-to-parse-strings-into-dates-is-pretty-confusing-unless-you-live-in-a-small-fraction-of-the-world-42o9\/",
+          "name": "The go way to parse strings into dates is pretty confusing unless you live in a small fraction of the world"
+        }
+    }]
+}
+</script><script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Article",
+  "author": {
+    "name" : ""
+  },
+  "headline": "The Go way to parse strings into dates is pretty confusing unless you live in a small fraction of the world",
+  "description" : "When it comes to date formats, there is about 640 million people who prefer to order using MDY , and more than 5000 million that are doing other ordering systems:\nhttps:\/\/en.wikipedia.org\/wiki\/Date_format_by_country\nThis shouldn\u0026rsquo;t need to be an issue, really. Let\u0026rsquo;s take Python as an example and do a string to date operation both for our MDY friends and for the rest of the world too:\nfrom datetime import datetime datetime_mdy = datetime.",
+  "inLanguage" : "en",
+  "wordCount":  416 ,
+  "datePublished" : "2020-05-18T16:22:29",
+  "dateModified" : "2020-05-18T16:22:29",
+  "image" : "https:\/\/www.rubensanchez.dev",
+  "keywords" : [ "go" ],
+  "mainEntityOfPage" : "https:\/\/www.rubensanchez.dev\/blog\/the-go-way-to-parse-strings-into-dates-is-pretty-confusing-unless-you-live-in-a-small-fraction-of-the-world-42o9\/",
+  "publisher" : {
+    "@type": "Organization",
+    "name" : "https:\/\/www.rubensanchez.dev",
+    "logo" : {
+        "@type" : "ImageObject",
+        "url" : "https:\/\/www.rubensanchez.dev",
+        "height" :  60 ,
+        "width" :  60
+    }
+  }
+}
+</script>
+
+<meta property="og:title" content="The Go way to parse strings into dates is pretty confusing unless you live in a small fraction of the world" />
+<meta property="og:description" content="When it comes to date formats, there is about 640 million people who prefer to order using MDY , and more than 5000 million that are doing other ordering systems:
+https://en.wikipedia.org/wiki/Date_format_by_country
+This shouldn&rsquo;t need to be an issue, really. Let&rsquo;s take Python as an example and do a string to date operation both for our MDY friends and for the rest of the world too:
+from datetime import datetime datetime_mdy = datetime.">
+<meta property="og:url" content="https://www.rubensanchez.dev/blog/the-go-way-to-parse-strings-into-dates-is-pretty-confusing-unless-you-live-in-a-small-fraction-of-the-world-42o9/" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="rubensanchez.dev" />
+
+  <meta name="twitter:title" content="The Go way to parse strings into dates is pretty confusing unless you …" />
+  <meta name="twitter:description" content="When it comes to date formats, there is about 640 million people who prefer to order using MDY , and more than 5000 million that are doing other ordering systems: …">
+  <meta name="twitter:card" content="summary" />
+  <meta name="generator" content="Hugo 0.76.5" />
+  <link rel="alternate" href="https://www.rubensanchez.dev/index.xml" type="application/rss+xml" title="rubensanchez.dev"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css" integrity="sha384-9eLZqc9ds8eNjO3TmqPeYcDj8n+Qfa4nuSiGYa6DjLNcv9BtN69ZIulL9+8CqC9Y" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"><link rel="stylesheet" href="https://www.rubensanchez.dev/css/main.css" /><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" /><link rel="stylesheet" href="https://www.rubensanchez.dev/css/syntax.css" /><link rel="stylesheet" href="https://www.rubensanchez.dev/css/codeblock.css" /><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.css" integrity="sha384-h/L2W9KefUClHWaty3SLE5F/qvc4djlyR4qY3NUV5HGQBBW7stbcfff1+I/vmsHh" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/default-skin/default-skin.min.css" integrity="sha384-iD0dNku6PYSIQLyfTOpB06F2KCZJAKLOThS5HRe8b3ibhdEQ6eKsFf/EeFxdOt5R" crossorigin="anonymous">
+
+
+
+  </head>
+  <body>
+    <nav class="navbar navbar-default navbar-fixed-top navbar-custom">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="https://www.rubensanchez.dev">rubensanchez.dev</a>
+    </div>
+
+    <div class="collapse navbar-collapse" id="main-navbar">
+      <ul class="nav navbar-nav navbar-right">
+        
+          
+            <li>
+              <a title="Contact" href="/contact/">Contact</a>
+            </li>
+          
+        
+
+        
+
+        
+      </ul>
+    </div>
+
+    
+
+  </div>
+</nav>
+
+
+
+
+    
+
+
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+<div class="pswp__bg"></div>
+
+<div class="pswp__scroll-wrap">
+    
+    <div class="pswp__container">
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+    </div>
+    
+    <div class="pswp__ui pswp__ui--hidden">
+    <div class="pswp__top-bar">
+      
+      <div class="pswp__counter"></div>
+      <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+      <button class="pswp__button pswp__button--share" title="Share"></button>
+      <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+      <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+      
+      
+      <div class="pswp__preloader">
+        <div class="pswp__preloader__icn">
+          <div class="pswp__preloader__cut">
+            <div class="pswp__preloader__donut"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+      <div class="pswp__share-tooltip"></div>
+    </div>
+    <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+    </button>
+    <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+    </button>
+    <div class="pswp__caption">
+      <div class="pswp__caption__center"></div>
+    </div>
+    </div>
+    </div>
+</div>
+
+
+  
+  
+  
+
+
+
+
+
+
+  
+
+  <header class="header-section ">
+    
+    <div class="intro-header no-img">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+            <div class="blog-heading">
+              
+                <h1>The Go way to parse strings into dates is pretty confusing unless you live in a small fraction of the world</h1>
+              
+              
+                <hr class="small">
+              
+              
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+
+    
+<div class="container" role="main">
+  <div class="row">
+    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+      <article role="main" class="blog-post">
+        <p>When it comes to date formats, there is about 640 million people who prefer to order using
+<code>MDY</code>
+, and more than 5000 million that are doing other ordering systems:</p>
+<p><a href="https://en.wikipedia.org/wiki/Date_format_by_country">https://en.wikipedia.org/wiki/Date_format_by_country</a></p>
+<p>This shouldn&rsquo;t need to be an issue, really. Let&rsquo;s take Python as an example and do a string to date operation both for our
+<code>MDY</code>
+friends and for the rest of the world too:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">    <span style="color:#f92672">from</span> datetime <span style="color:#f92672">import</span> datetime
+
+    datetime_mdy <span style="color:#f92672">=</span> datetime<span style="color:#f92672">.</span>strptime(<span style="color:#e6db74">&#39;11/22/1980&#39;</span>, <span style="color:#e6db74">&#39;%m/</span><span style="color:#e6db74">%d</span><span style="color:#e6db74">/%Y&#39;</span>)
+    datetime_dmy <span style="color:#f92672">=</span> datetime<span style="color:#f92672">.</span>strptime(<span style="color:#e6db74">&#39;22/11/1980&#39;</span>, <span style="color:#e6db74">&#39;</span><span style="color:#e6db74">%d</span><span style="color:#e6db74">/%m/%Y&#39;</span>)
+    datetime_ymd <span style="color:#f92672">=</span> datetime<span style="color:#f92672">.</span>strptime(<span style="color:#e6db74">&#39;1980/11/22&#39;</span>, <span style="color:#e6db74">&#39;%Y/%m/</span><span style="color:#e6db74">%d</span><span style="color:#e6db74">&#39;</span>)
+</code></pre></div><p>No big issue. All operations output the exact same date. The formatting template is easy to check in <a href="https://strftime.org/">https://strftime.org/</a> and multiple other resources.</p>
+<p>Enter Golang:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
+	<span style="color:#a6e22e">dateMdy</span>, <span style="color:#a6e22e">err</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">time</span>.<span style="color:#a6e22e">Parse</span>(<span style="color:#e6db74">&#34;01/02/2006&#34;</span>, <span style="color:#e6db74">&#34;11/22/1980&#34;</span>)
+	<span style="color:#66d9ef">if</span> <span style="color:#a6e22e">err</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
+		panic(<span style="color:#a6e22e">err</span>)
+	}
+	<span style="color:#a6e22e">dateDmy</span>, <span style="color:#a6e22e">err</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">time</span>.<span style="color:#a6e22e">Parse</span>(<span style="color:#e6db74">&#34;02/01/2006&#34;</span>, <span style="color:#e6db74">&#34;22/11/1980&#34;</span>)
+	<span style="color:#66d9ef">if</span> <span style="color:#a6e22e">err</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
+		panic(<span style="color:#a6e22e">err</span>)
+	}
+
+
+	<span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#a6e22e">dateMdy</span>)
+	<span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#a6e22e">dateDmy</span>)
+}
+
+</code></pre></div><p>As you see, the parsing introduces a &ldquo;magic date&rdquo; which you need to use to refer to the part of the date you need. That magic date is</p>
+<pre><code>Mon Jan 2 15:04:05 -0700 MST 2006
+</code></pre>
+<p>You are supposed to remember this, because if you live in the minority of the world that does
+<code>MDY</code>
+, then Jan=1, so we can say something like:</p>
+<pre><code>01/02 03:04:05 PM '06 -0700
+</code></pre>
+<p>Do you think this is easier? I think it might be for people used to think in
+<code>MDY</code>
+, but there is some confusing parts. For instance,
+<code>Monday</code>
+is not part of the magic number (
+<code>1 2 3...</code>
+) so it&rsquo;s hard to remember how to fit it in. Also, non
+<code>MDY</code>
+folks will trip often in the Day vs Month.</p>
+<p>Additionally I think this makes the code way less readable. I specially think here it&rsquo;s pretty bad:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go">    <span style="color:#a6e22e">time</span>.<span style="color:#a6e22e">Parse</span>(<span style="color:#e6db74">&#34;01/02/2006&#34;</span>, <span style="color:#e6db74">&#34;11/22/1980&#34;</span>)
+</code></pre></div><p>Unless you know Go, you cannot know what is this parsing function doing and how.</p>
+<p><a href="https://www.pauladamsmith.com/blog/2011/05/go_time.html">This</a> blog post states that this is done like this to avoid context switching, but I have to disagree. I know we also have the format constants, but I don&rsquo;t think is that much more intuitive to discern whether you need
+<code>RFC850</code>
+, perhaps
+<code>RFC1123</code>
+or maybe you would be better off using
+<code>RFC822</code>
+.</p>
+<p>My conclusion is that there are many Go programmers that have created libraries to parse dates in the &ldquo;old style&rdquo;. That could speak about the usefulness of that system and how people were disappointed with the current official way.</p>
+<p><a href="https://github.com/vigneshuvi/GoDateFormat">https://github.com/vigneshuvi/GoDateFormat</a>
+<a href="https://github.com/bykof/gostradamus">https://github.com/bykof/gostradamus</a>
+<a href="https://github.com/takmongwai/go-strftime">https://github.com/takmongwai/go-strftime</a></p>
+<p>Last, this post wouldn&rsquo;t be complete without concluding with this classic meme:</p>
+<p><img src="https://dev-to-uploads.s3.amazonaws.com/i/6gnzyh285b31v6n202fg.png" alt="DD/MM/YYYY is the best date format!"></p>
+<p><em><a href="https://dev.to/rubenwap/the-go-way-to-parse-strings-into-dates-is-pretty-confusing-unless-you-live-in-a-small-fraction-of-the-world-42o9">This post is also available on DEV.</a></em></p>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+
+
+        
+          <div class="blog-tags">
+            
+              <a href="https://www.rubensanchez.dev/tags/go/">go</a>&nbsp;
+            
+          </div>
+        
+
+        
+
+        
+      </article>
+
+      
+        <ul class="pager blog-pager">
+          
+            <li class="previous">
+              <a href="https://www.rubensanchez.dev/blog/learn-tdd-basics-and-automated-deployments-with-go-github-actions-and-heroku-2hf3/" data-toggle="tooltip" data-placement="top" title="Learn to properly test and auto deploy your Go app with a movie posters server project">&larr; Previous Post</a>
+            </li>
+          
+          
+            <li class="next">
+              <a href="https://www.rubensanchez.dev/blog/use-python-in-your-browser-client-code-together-with-js-no-server-required-thanks-to-web-assembly-2be2/" data-toggle="tooltip" data-placement="top" title="Use Python in your browser client code together with JS. No server required, thanks to Web Assembly">Next Post &rarr;</a>
+            </li>
+          
+        </ul>
+      
+
+
+      
+
+    </div>
+  </div>
+</div>
+
+      
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <ul class="list-inline text-center footer-links">
+          
+          
+        </ul>
+        <p class="credits copyright text-muted">
+          
+
+          &nbsp;&bull;&nbsp;&copy;
+          
+            2021
+          
+
+          
+            &nbsp;&bull;&nbsp;
+            <a href="https://www.rubensanchez.dev">rubensanchez.dev</a>
+          
+        </p>
+        
+        <p class="credits theme-by text-muted">
+          <a href="https://gohugo.io">Hugo v0.76.5</a> powered &nbsp;&bull;&nbsp; Theme <a href="https://github.com/halogenica/beautifulhugo">Beautiful Hugo</a> adapted from <a href="https://deanattali.com/beautiful-jekyll/">Beautiful Jekyll</a>
+          
+        </p>
+      </div>
+    </div>
+  </div>
+</footer><script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.js" integrity="sha384-K3vbOmF2BtaVai+Qk37uypf7VrgBubhQreNQe9aGsz9lB63dIFiQVlJbr92dw2Lx" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/contrib/auto-render.min.js" integrity="sha384-kmZOZB5ObwgQnS/DuDg6TScgOiWWBiVt0plIRkZCmE6rDZGrEOQeHM5PcHi+nyqe" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+<script src="https://www.rubensanchez.dev/js/main.js"></script><script> renderMathInElement(document.body); </script><script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.js" integrity="sha384-QELNnmcmU8IR9ZAykt67vGr9/rZJdHbiWi64V88fCPaOohUlHCqUD/unNN0BXSqy" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe-ui-default.min.js" integrity="sha384-m67o7SkQ1ALzKZIFh4CiTA8tmadaujiTa9Vu+nqPSwDOqHrDmxLezTdFln8077+q" crossorigin="anonymous"></script><script src="https://www.rubensanchez.dev/js/load-photoswipe.js"></script>
+
+
+
+
+
+
+
+
+
+    
+  </body>
+</html>
+

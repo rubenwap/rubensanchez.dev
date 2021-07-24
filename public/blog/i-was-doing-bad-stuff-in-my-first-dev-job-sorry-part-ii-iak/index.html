@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en" itemscope itemtype="http://schema.org/WebPage">
+  <head>
+    
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+  <title>I was doing bad stuff in my first dev job. Sorry! (Part II) - rubensanchez.dev</title>
+  <meta name="description" content="Glad to see you back. It means that you liked the previous part of this article. Or if you haven&rsquo;t seen it yet, please check it out.
+I would like to continue the series by explaining about some more dubious techniques I was using during my first dev job. I hope you can find some advice and good tips from reading it!
+Bad dependencies So in that first job, we were very keen on researching new cool tools."><script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "@type": "WebSite",
+    "name": "rubensanchez.dev",
+    
+    "url": "https:\/\/www.rubensanchez.dev"
+}
+</script><script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Organization",
+  "name": "",
+  "url": "https:\/\/www.rubensanchez.dev"
+  
+  
+  
+  
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "item": {
+          "@id": "https:\/\/www.rubensanchez.dev",
+          "name": "home"
+        }
+    },{
+        "@type": "ListItem",
+        "position": 3,
+        "item": {
+          "@id": "https:\/\/www.rubensanchez.dev\/blog\/i-was-doing-bad-stuff-in-my-first-dev-job-sorry-part-ii-iak\/",
+          "name": "I was doing bad stuff in my first dev job. sorry! ( part i i)"
+        }
+    }]
+}
+</script><script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Article",
+  "author": {
+    "name" : ""
+  },
+  "headline": "I was doing bad stuff in my first dev job. Sorry! (Part II)",
+  "description" : "Glad to see you back. It means that you liked the previous part of this article. Or if you haven\u0026rsquo;t seen it yet, please check it out.\nI would like to continue the series by explaining about some more dubious techniques I was using during my first dev job. I hope you can find some advice and good tips from reading it!\nBad dependencies So in that first job, we were very keen on researching new cool tools.",
+  "inLanguage" : "en",
+  "wordCount":  985 ,
+  "datePublished" : "2020-09-24T12:22:49",
+  "dateModified" : "2020-09-24T12:22:49",
+  "image" : "https:\/\/www.rubensanchez.dev",
+  "keywords" : [ "beginners, career, productivity" ],
+  "mainEntityOfPage" : "https:\/\/www.rubensanchez.dev\/blog\/i-was-doing-bad-stuff-in-my-first-dev-job-sorry-part-ii-iak\/",
+  "publisher" : {
+    "@type": "Organization",
+    "name" : "https:\/\/www.rubensanchez.dev",
+    "logo" : {
+        "@type" : "ImageObject",
+        "url" : "https:\/\/www.rubensanchez.dev",
+        "height" :  60 ,
+        "width" :  60
+    }
+  }
+}
+</script>
+
+<meta property="og:title" content="I was doing bad stuff in my first dev job. Sorry! (Part II)" />
+<meta property="og:description" content="Glad to see you back. It means that you liked the previous part of this article. Or if you haven&rsquo;t seen it yet, please check it out.
+I would like to continue the series by explaining about some more dubious techniques I was using during my first dev job. I hope you can find some advice and good tips from reading it!
+Bad dependencies So in that first job, we were very keen on researching new cool tools.">
+<meta property="og:url" content="https://www.rubensanchez.dev/blog/i-was-doing-bad-stuff-in-my-first-dev-job-sorry-part-ii-iak/" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="rubensanchez.dev" />
+
+  <meta name="twitter:title" content="I was doing bad stuff in my first dev job. Sorry! (Part II)" />
+  <meta name="twitter:description" content="Glad to see you back. It means that you liked the previous part of this article. Or if you haven&rsquo;t seen it yet, please check it out.
+I would like to continue the series by explaining about some …">
+  <meta name="twitter:card" content="summary" />
+  <meta name="generator" content="Hugo 0.76.5" />
+  <link rel="alternate" href="https://www.rubensanchez.dev/index.xml" type="application/rss+xml" title="rubensanchez.dev"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css" integrity="sha384-9eLZqc9ds8eNjO3TmqPeYcDj8n+Qfa4nuSiGYa6DjLNcv9BtN69ZIulL9+8CqC9Y" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"><link rel="stylesheet" href="https://www.rubensanchez.dev/css/main.css" /><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" /><link rel="stylesheet" href="https://www.rubensanchez.dev/css/syntax.css" /><link rel="stylesheet" href="https://www.rubensanchez.dev/css/codeblock.css" /><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.css" integrity="sha384-h/L2W9KefUClHWaty3SLE5F/qvc4djlyR4qY3NUV5HGQBBW7stbcfff1+I/vmsHh" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/default-skin/default-skin.min.css" integrity="sha384-iD0dNku6PYSIQLyfTOpB06F2KCZJAKLOThS5HRe8b3ibhdEQ6eKsFf/EeFxdOt5R" crossorigin="anonymous">
+
+
+
+  </head>
+  <body>
+    <nav class="navbar navbar-default navbar-fixed-top navbar-custom">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="https://www.rubensanchez.dev">rubensanchez.dev</a>
+    </div>
+
+    <div class="collapse navbar-collapse" id="main-navbar">
+      <ul class="nav navbar-nav navbar-right">
+        
+          
+            <li>
+              <a title="Contact" href="/contact/">Contact</a>
+            </li>
+          
+        
+
+        
+
+        
+      </ul>
+    </div>
+
+    
+
+  </div>
+</nav>
+
+
+
+
+    
+
+
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+<div class="pswp__bg"></div>
+
+<div class="pswp__scroll-wrap">
+    
+    <div class="pswp__container">
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+    </div>
+    
+    <div class="pswp__ui pswp__ui--hidden">
+    <div class="pswp__top-bar">
+      
+      <div class="pswp__counter"></div>
+      <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+      <button class="pswp__button pswp__button--share" title="Share"></button>
+      <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+      <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+      
+      
+      <div class="pswp__preloader">
+        <div class="pswp__preloader__icn">
+          <div class="pswp__preloader__cut">
+            <div class="pswp__preloader__donut"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+      <div class="pswp__share-tooltip"></div>
+    </div>
+    <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+    </button>
+    <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+    </button>
+    <div class="pswp__caption">
+      <div class="pswp__caption__center"></div>
+    </div>
+    </div>
+    </div>
+</div>
+
+
+  
+  
+  
+
+
+
+
+
+
+  
+
+  <header class="header-section ">
+    
+    <div class="intro-header no-img">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+            <div class="blog-heading">
+              
+                <h1>I was doing bad stuff in my first dev job. Sorry! (Part II)</h1>
+              
+              
+                <hr class="small">
+              
+              
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+
+    
+<div class="container" role="main">
+  <div class="row">
+    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+      <article role="main" class="blog-post">
+        <p>Glad to see you back. It means that you liked the previous part of this article. Or if you haven&rsquo;t seen it yet, <a href="https://dev.to/rubenwap/i-was-doing-bad-stuff-in-my-first-dev-job-sorry-part-i-58k0">please check it out</a>.</p>
+<p>I would like to continue the series by explaining about some more dubious techniques I was using during my first dev job. I hope you can find some advice and good tips from reading it!</p>
+<h2 id="bad-dependencies">Bad dependencies</h2>
+<p>So in that first job, we were very keen on researching new cool tools. I specially remember a case where we had to use a famous library for Python, but for some reason I stumbled upon a another library that was internally using the previous library to accomplish the very same thing, but with a couple of nice improvements on top.</p>
+<p>The outcome of the story? I lost quite a long time because shortly after implementing it in my project, things started to fail and initially it wasn&rsquo;t obvious that it was because of the library (if you remember the first part of the article, I wasn&rsquo;t fond of logging important stuff back then). When I finally realized that this was the cause, it also took quite a bit of time to find out about the specific reason that caused the problem. After spending all that time, we realized the wrapper was not even maintained very frequently, so a pull request that someone had done with that fix just stayed in the PR limbo lingering forever.</p>
+<!-- raw HTML omitted -->
+<p>Choosing dependencies is not a trivial task. Is not enough with finding something that does what you want. You also have to consider whether it will be maintained or perhaps it will be abandoned and issues forgotten forever. It&rsquo;s true that open source software has tools to fix that (you can usually fork and fix the stuff yourself if nobody is caring about the main repo), but you have to analyze your cost/benefit if you are doing this.</p>
+<p>Also, in some cases you have to consider about whether you really need a dependency. Have you read about the <a href="https://www.davidhaney.io/npm-left-pad-have-we-forgotten-how-to-program/">Left pad debacle?</a> Please go ahead and read it, it&rsquo;s very interesting.</p>
+<h2 id="structure-and-discipline">Structure and discipline</h2>
+<p>So, consider this, you work in a team of 3 people and you all work in the same language (let&rsquo;s say Python). Jim likes to bootstrap his projects with <a href="https://pipenv.pypa.io/en/latest/">Pipenv</a>. Mike uses <a href="https://python-poetry.org/">Poetry</a> and Scott just uses the Python global environment. Mike adds a <a href="https://stackoverflow.com/questions/1471994/what-is-setup-py">setup.py</a>, Jim likes to keep all the files in the root folder and Scott puts as much code as possible inside a single file, so it&rsquo;s easier to find later. Mike builds his Docker based projects with the official Python full image. Jim uses Python slim and Scott uses the Ubuntu image.</p>
+<!-- raw HTML omitted -->
+<p>Now, the manager has notified the guys that Brandon will join the team next Monday and would like the team to give him an overview on how to build Python projects. What&rsquo;s the next step here?</p>
+<p>The existing members of the team have to agree on a unified way to work. And the way they need to do it is ensuring that Brandon can navigate the projects easily and intuitively from day one. You need a project structure in which placements of the parts are obvious. You shouldn&rsquo;t need people to tell you where things are.</p>
+<p>If you cannot agree, you can use well established public layouts such as:</p>
+<ul>
+<li><a href="https://github.com/golang-standards/project-layout">Golang</a></li>
+<li><a href="https://docs.python-guide.org/writing/structure/">Python</a></li>
+</ul>
+<h2 id="github-is-not-a-storage-room">GitHub is not a storage room</h2>
+<p>By the time I discovered about version control, I ran into the usual issues that beginners encounter when starting to use it.</p>
+<ul>
+<li>Not using branches: I realized quickly that juggling different attempts for features plus fixes for the current version inside the master branch was going to develop into a tragic mess of
+<code>revert</code>
+commands. Please use branches.</li>
+<li>Not learning beyond the basics: So your muscle memory can already do
+<code>git status</code></li>
+</ul>
+<p><code>git add -A</code></p>
+<p><code>git commit -m &quot;Changes&quot;</code>
+and
+<code>git push origin master</code>
+. Nice, but that is the happy path. I advise to learn about how to react when problems arise (merge conflicts) so you are used to work with things like
+<code>git mergetool</code>
+and understanding how can you revert to previous commits.</p>
+<!-- raw HTML omitted -->
+<p>However, the most striking error when using Git and GitHub, is the fact that some beginner developers would treat it as the final storage area where you stick your finished projects. So then your code is not in GitHub because &ldquo;is not ready&rdquo;. Well, that&rsquo;s the whole point of GitHub. When you bake a cake you put it in the fridge when you are finished, but your code is not a cake and GitHub is not a fridge. In fact we could say that GitHub is the kitchen itself. Please, commit early and commit often.</p>
+<h2 id="dont-learn-this">Don&rsquo;t learn this</h2>
+<p>Surprisingly I found out that knowing how to do something is not really a very interesting skill. Let&rsquo;s say you work with Python. Well, knowing how to open a CSV file is not interesting. Anyone can Google how to do that. Knowing how to connect to a database is not interesting. Same as before, all those are just skills taken from the instructions manual of certain libraries. Can you create a dataframe out of json data? Very few people will care. Specific skills (how to use this or that library to accomplish this or that task) are not very valuable. If you don&rsquo;t know them today and you need them, just read the documentation.</p>
+<p>However, the really powerful thing is to take all what you have read in the docs and put it together in a way that accomplishes what I describe in this series of articles. That will indeed leave a good footprint and make you a well rounded developer. To be able to &ldquo;use Python&rdquo; is not as amazing as the fact of being able to use it well and efficiently. It will really make a difference.</p>
+<p><em><a href="https://dev.to/rubenwap/i-was-doing-bad-stuff-in-my-first-dev-job-sorry-part-ii-iak">This post is also available on DEV.</a></em></p>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+
+
+        
+          <div class="blog-tags">
+            
+              <a href="https://www.rubensanchez.dev/tags/beginners/">beginners</a>&nbsp;
+            
+              <a href="https://www.rubensanchez.dev/tags/career/">career</a>&nbsp;
+            
+              <a href="https://www.rubensanchez.dev/tags/productivity/">productivity</a>&nbsp;
+            
+          </div>
+        
+
+        
+
+        
+      </article>
+
+      
+        <ul class="pager blog-pager">
+          
+            <li class="previous">
+              <a href="https://www.rubensanchez.dev/blog/i-was-doing-bad-stuff-in-my-first-dev-job-sorry-part-i-58k0/" data-toggle="tooltip" data-placement="top" title="I was doing bad stuff in my first dev job. Sorry! (Part I)">&larr; Previous Post</a>
+            </li>
+          
+          
+            <li class="next">
+              <a href="https://www.rubensanchez.dev/blog/upskill-yourself-by-recreating-gnu-coretools-in-go-9f5/" data-toggle="tooltip" data-placement="top" title="Upskill yourself by recreating GNU Coreutils in Go">Next Post &rarr;</a>
+            </li>
+          
+        </ul>
+      
+
+
+      
+
+    </div>
+  </div>
+</div>
+
+      
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <ul class="list-inline text-center footer-links">
+          
+          
+        </ul>
+        <p class="credits copyright text-muted">
+          
+
+          &nbsp;&bull;&nbsp;&copy;
+          
+            2021
+          
+
+          
+            &nbsp;&bull;&nbsp;
+            <a href="https://www.rubensanchez.dev">rubensanchez.dev</a>
+          
+        </p>
+        
+        <p class="credits theme-by text-muted">
+          <a href="https://gohugo.io">Hugo v0.76.5</a> powered &nbsp;&bull;&nbsp; Theme <a href="https://github.com/halogenica/beautifulhugo">Beautiful Hugo</a> adapted from <a href="https://deanattali.com/beautiful-jekyll/">Beautiful Jekyll</a>
+          
+        </p>
+      </div>
+    </div>
+  </div>
+</footer><script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.js" integrity="sha384-K3vbOmF2BtaVai+Qk37uypf7VrgBubhQreNQe9aGsz9lB63dIFiQVlJbr92dw2Lx" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/contrib/auto-render.min.js" integrity="sha384-kmZOZB5ObwgQnS/DuDg6TScgOiWWBiVt0plIRkZCmE6rDZGrEOQeHM5PcHi+nyqe" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+<script src="https://www.rubensanchez.dev/js/main.js"></script><script> renderMathInElement(document.body); </script><script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.js" integrity="sha384-QELNnmcmU8IR9ZAykt67vGr9/rZJdHbiWi64V88fCPaOohUlHCqUD/unNN0BXSqy" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe-ui-default.min.js" integrity="sha384-m67o7SkQ1ALzKZIFh4CiTA8tmadaujiTa9Vu+nqPSwDOqHrDmxLezTdFln8077+q" crossorigin="anonymous"></script><script src="https://www.rubensanchez.dev/js/load-photoswipe.js"></script>
+
+
+
+
+
+
+
+
+
+    
+  </body>
+</html>
+

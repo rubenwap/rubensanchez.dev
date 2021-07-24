@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>alexa on rubensanchez.dev</title>
+    <link>https://www.rubensanchez.dev/tags/alexa/</link>
+    <description>Recent content in alexa on rubensanchez.dev</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 08 Dec 2020 15:18:11 +0000</lastBuildDate><atom:link href="https://www.rubensanchez.dev/tags/alexa/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Create a *useful* Alexa skill with minimal Python knowledge</title>
+      <link>https://www.rubensanchez.dev/blog/create-a-useful-alexa-skill-with-minimal-python-knowledge-man/</link>
+      <pubDate>Tue, 08 Dec 2020 15:18:11 +0000</pubDate>
+      
+      <guid>https://www.rubensanchez.dev/blog/create-a-useful-alexa-skill-with-minimal-python-knowledge-man/</guid>
+      <description>I am pretty disappointed with the terrible quality of most of the &amp;ldquo;custom&amp;rdquo; stuff found in the Alexa skills shop. Lots of &amp;ldquo;tell me a joke&amp;rdquo;, &amp;ldquo;tell me a fun fact&amp;rdquo;, &amp;ldquo;tell me random facts&amp;rdquo;, &amp;ldquo;play forest sounds&amp;rdquo;, &amp;ldquo;play sea sounds&amp;rdquo;&amp;hellip; So at the end, my Echo unit ended up being used just to turn Netflix on and off and manipulate the heating temperature.
+That&amp;rsquo;s no more! It&amp;rsquo;s very easy to create custom skills with Python (or Node.</description>
+    </item>
+    
+  </channel>
+</rss>

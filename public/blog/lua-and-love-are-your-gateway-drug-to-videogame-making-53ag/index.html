@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en" itemscope itemtype="http://schema.org/WebPage">
+  <head>
+    
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+  <title>Lua and Löve are your gateway drug to videogame making - rubensanchez.dev</title>
+  <meta name="description" content="So I admit it, I always wanted to create a game, but I have been too easily scared by the amount of work that seemed to be required to delve into something like Unity. I did some easy attempts at HTML canvas based Javascript games, but nothing impressive enough. Although if you are so inclined, do check the great PhysicsJS library and you might end up creating something cool.
+Then my quest had a clear goal: Be able to make a cool game with the most minimal amount of effort possible."><script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "@type": "WebSite",
+    "name": "rubensanchez.dev",
+    
+    "url": "https:\/\/www.rubensanchez.dev"
+}
+</script><script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Organization",
+  "name": "",
+  "url": "https:\/\/www.rubensanchez.dev"
+  
+  
+  
+  
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "item": {
+          "@id": "https:\/\/www.rubensanchez.dev",
+          "name": "home"
+        }
+    },{
+        "@type": "ListItem",
+        "position": 3,
+        "item": {
+          "@id": "https:\/\/www.rubensanchez.dev\/blog\/lua-and-love-are-your-gateway-drug-to-videogame-making-53ag\/",
+          "name": "Lua and löve are your gateway drug to videogame making"
+        }
+    }]
+}
+</script><script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Article",
+  "author": {
+    "name" : ""
+  },
+  "headline": "Lua and Löve are your gateway drug to videogame making",
+  "description" : "So I admit it, I always wanted to create a game, but I have been too easily scared by the amount of work that seemed to be required to delve into something like Unity. I did some easy attempts at HTML canvas based Javascript games, but nothing impressive enough. Although if you are so inclined, do check the great PhysicsJS library and you might end up creating something cool.\nThen my quest had a clear goal: Be able to make a cool game with the most minimal amount of effort possible.",
+  "inLanguage" : "en",
+  "wordCount":  647 ,
+  "datePublished" : "2020-03-23T19:09:18",
+  "dateModified" : "2020-03-23T19:09:18",
+  "image" : "https:\/\/www.rubensanchez.dev",
+  "keywords" : [ "lua, love2d, gamedev" ],
+  "mainEntityOfPage" : "https:\/\/www.rubensanchez.dev\/blog\/lua-and-love-are-your-gateway-drug-to-videogame-making-53ag\/",
+  "publisher" : {
+    "@type": "Organization",
+    "name" : "https:\/\/www.rubensanchez.dev",
+    "logo" : {
+        "@type" : "ImageObject",
+        "url" : "https:\/\/www.rubensanchez.dev",
+        "height" :  60 ,
+        "width" :  60
+    }
+  }
+}
+</script>
+
+<meta property="og:title" content="Lua and Löve are your gateway drug to videogame making" />
+<meta property="og:description" content="So I admit it, I always wanted to create a game, but I have been too easily scared by the amount of work that seemed to be required to delve into something like Unity. I did some easy attempts at HTML canvas based Javascript games, but nothing impressive enough. Although if you are so inclined, do check the great PhysicsJS library and you might end up creating something cool.
+Then my quest had a clear goal: Be able to make a cool game with the most minimal amount of effort possible.">
+<meta property="og:url" content="https://www.rubensanchez.dev/blog/lua-and-love-are-your-gateway-drug-to-videogame-making-53ag/" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="rubensanchez.dev" />
+
+  <meta name="twitter:title" content="Lua and Löve are your gateway drug to videogame making" />
+  <meta name="twitter:description" content="So I admit it, I always wanted to create a game, but I have been too easily scared by the amount of work that seemed to be required to delve into something like Unity. I did some easy attempts at HTML …">
+  <meta name="twitter:card" content="summary" />
+  <meta name="generator" content="Hugo 0.76.5" />
+  <link rel="alternate" href="https://www.rubensanchez.dev/index.xml" type="application/rss+xml" title="rubensanchez.dev"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css" integrity="sha384-9eLZqc9ds8eNjO3TmqPeYcDj8n+Qfa4nuSiGYa6DjLNcv9BtN69ZIulL9+8CqC9Y" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"><link rel="stylesheet" href="https://www.rubensanchez.dev/css/main.css" /><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" /><link rel="stylesheet" href="https://www.rubensanchez.dev/css/syntax.css" /><link rel="stylesheet" href="https://www.rubensanchez.dev/css/codeblock.css" /><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.css" integrity="sha384-h/L2W9KefUClHWaty3SLE5F/qvc4djlyR4qY3NUV5HGQBBW7stbcfff1+I/vmsHh" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/default-skin/default-skin.min.css" integrity="sha384-iD0dNku6PYSIQLyfTOpB06F2KCZJAKLOThS5HRe8b3ibhdEQ6eKsFf/EeFxdOt5R" crossorigin="anonymous">
+
+
+
+  </head>
+  <body>
+    <nav class="navbar navbar-default navbar-fixed-top navbar-custom">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="https://www.rubensanchez.dev">rubensanchez.dev</a>
+    </div>
+
+    <div class="collapse navbar-collapse" id="main-navbar">
+      <ul class="nav navbar-nav navbar-right">
+        
+          
+            <li>
+              <a title="Contact" href="/contact/">Contact</a>
+            </li>
+          
+        
+
+        
+
+        
+      </ul>
+    </div>
+
+    
+
+  </div>
+</nav>
+
+
+
+
+    
+
+
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+<div class="pswp__bg"></div>
+
+<div class="pswp__scroll-wrap">
+    
+    <div class="pswp__container">
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+    </div>
+    
+    <div class="pswp__ui pswp__ui--hidden">
+    <div class="pswp__top-bar">
+      
+      <div class="pswp__counter"></div>
+      <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+      <button class="pswp__button pswp__button--share" title="Share"></button>
+      <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+      <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+      
+      
+      <div class="pswp__preloader">
+        <div class="pswp__preloader__icn">
+          <div class="pswp__preloader__cut">
+            <div class="pswp__preloader__donut"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+      <div class="pswp__share-tooltip"></div>
+    </div>
+    <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+    </button>
+    <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+    </button>
+    <div class="pswp__caption">
+      <div class="pswp__caption__center"></div>
+    </div>
+    </div>
+    </div>
+</div>
+
+
+  
+  
+  
+
+
+
+
+
+
+  
+
+  <header class="header-section ">
+    
+    <div class="intro-header no-img">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+            <div class="blog-heading">
+              
+                <h1>Lua and Löve are your gateway drug to videogame making</h1>
+              
+              
+                <hr class="small">
+              
+              
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+
+    
+<div class="container" role="main">
+  <div class="row">
+    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+      <article role="main" class="blog-post">
+        <p>So I admit it, I always wanted to create a game, but I have been too easily scared by the amount of work that seemed to be required to delve into something like Unity. I did some easy attempts at HTML canvas based Javascript games, but nothing impressive enough. Although if you are so inclined, do check the great <a href="http://wellcaffeinated.net/PhysicsJS/">PhysicsJS</a> library and you might end up creating something cool.</p>
+<p>Then my quest had a clear goal: Be able to make a cool game with the most minimal amount of effort possible. That&rsquo;s where Lua and Löve come in.</p>
+<p><img src="https://dev-to-uploads.s3.amazonaws.com/i/ap46ifd0u9w3sdq47va8.png" alt="Love"></p>
+<p><a href="https://www.lua.org/">Lua</a> is a very lightweight language which is used often to be embedded and extend other programs, but it&rsquo;s also absolutely standalone in its own right. In the scenario that we are seeing today, it will be complemented by the <a href="https://love2d.org/">Löve 2D engine</a> for a perfect combination of easy to learn and great results.</p>
+<p><em>Note:</em> This post is intended as a super lightweight introduction to create games this way, so you won&rsquo;t end up with a complete example, but you will learn about some basic techniques that can get you started.</p>
+<h2 id="requirements">Requirements:</h2>
+<ul>
+<li>Lua installed in your system. I am using macOS, so I can skip this step because it already comes installed by default. If you are using Windows, you probably want <a href="http://luadist.org/">this</a></li>
+<li>Löve installed in your system. Download it from <a href="https://love2d.org/">their site</a> picking the package that fits your operative system.</li>
+</ul>
+<h2 id="get-something-up-and-running">Get something up and running</h2>
+<h3 id="create-files">Create files:</h3>
+<p>There is not a very strict requirement on what your folder structure should look like. Let&rsquo;s create a folder called
+<code>love-tutorial</code>
+and inside, a file called
+<code>main.lua</code></p>
+<p>If you open your terminal in that folder, in mac you can do:</p>
+<pre><code>$ open -n -a love .
+</code></pre>
+<p>Which means &ldquo;run
+<code>love</code>
+with all contents of the current folder. Since you need to give Löve a folder rather than a single file.</p>
+<h3 id="the-code">The code</h3>
+<p>Roughly speaking, Löve is based on three big callback functions. There are many more, but the following three are crucial:</p>
+<ul>
+<li>LOAD</li>
+</ul>
+<p>This function is called at the start and it&rsquo;s supposed to load all your data and variables. For instance, you could initialize a table (similar to what would be a Python dict or a JS object) with the data about a character:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-lua" data-lang="lua"><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">love</span>.<span style="color:#a6e22e">load</span>()
+
+    hero <span style="color:#f92672">=</span> {}
+    hero.name <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Ruben&#34;</span>
+    hero.health <span style="color:#f92672">=</span> <span style="color:#ae81ff">100</span>
+    hero.alive <span style="color:#f92672">=</span> <span style="color:#66d9ef">true</span>
+
+    score <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
+
+<span style="color:#66d9ef">end</span>
+</code></pre></div><ul>
+<li>UPDATE</li>
+</ul>
+<p>This function is running repeatedly once and again during the duration of your session.
+<code>dt</code>
+is the time passed since the last run. You can use this to update your data.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-lua" data-lang="lua"><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">love</span>.<span style="color:#a6e22e">update</span>(dt)
+
+    <span style="color:#66d9ef">if</span> hero.health <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">1</span> <span style="color:#66d9ef">then</span>
+        hero.alive <span style="color:#f92672">=</span> <span style="color:#66d9ef">false</span>
+    <span style="color:#66d9ef">end</span>
+
+    <span style="color:#66d9ef">if</span> enemy.dead <span style="color:#66d9ef">then</span>
+        score <span style="color:#f92672">=</span> score <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>
+    <span style="color:#66d9ef">end</span>
+
+<span style="color:#66d9ef">end</span>
+</code></pre></div><ul>
+<li>DRAW</li>
+</ul>
+<p>Like
+<code>update</code>
+, this function is also called continuously, but rather than calculate the values, its mission is to draw on screen all the game elements. For instance:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-lua" data-lang="lua"><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">love</span>.<span style="color:#a6e22e">draw</span>()
+    
+    love.graphics.print(score, <span style="color:#ae81ff">400</span>, <span style="color:#ae81ff">300</span>)   
+
+<span style="color:#66d9ef">end</span>
+</code></pre></div><p>So you can see how the value being printed
+<code>score</code>
+would constantly be redrawn, but since we are also updating the value of it in the
+<code>update</code>
+function, on every redraw we would get the most updated value.</p>
+<h3 id="beyond-the-super-basics">Beyond the super basics</h3>
+<p>Ok, you have seen the principle of how a Love game works, but this is not even the beginning of the beginning. There is a lot of ground to cover. For instance, movements:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-lua" data-lang="lua"><span style="color:#66d9ef">if</span> love.keyboard.isDown(<span style="color:#e6db74">&#34;right&#34;</span>) <span style="color:#66d9ef">then</span>
+    hero.x <span style="color:#f92672">=</span> hero.x <span style="color:#f92672">+</span> hero.speed <span style="color:#f92672">*</span> dt
+<span style="color:#66d9ef">end</span>
+
+</code></pre></div><p>Or actually drawing elements:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-lua" data-lang="lua">love.graphics.rectangle(<span style="color:#e6db74">&#34;line&#34;</span>, <span style="color:#ae81ff">400</span>, <span style="color:#ae81ff">300</span>, <span style="color:#ae81ff">100</span>, <span style="color:#ae81ff">100</span>)
+</code></pre></div><p>Which could become an image with a small change:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-lua" data-lang="lua">love.graphics.draw(<span style="color:#e6db74">&#34;path to img&#34;</span>, <span style="color:#ae81ff">400</span>, <span style="color:#ae81ff">300</span>, <span style="color:#ae81ff">100</span>, <span style="color:#ae81ff">100</span>)
+</code></pre></div><h2 id="conclusion">Conclusion</h2>
+<p>Rather than a game making tutorial, this article was geared towards encouraging you to explore Lua and Love, since the learning curve is relatively small (compared to other alternatives) and can get you enjoying your own games in very little time.</p>
+<p><em><a href="https://dev.to/rubenwap/lua-and-love-are-your-gateway-drug-to-videogame-making-53ag">This post is also available on DEV.</a></em></p>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+
+
+        
+          <div class="blog-tags">
+            
+              <a href="https://www.rubensanchez.dev/tags/lua/">lua</a>&nbsp;
+            
+              <a href="https://www.rubensanchez.dev/tags/love2d/">love2d</a>&nbsp;
+            
+              <a href="https://www.rubensanchez.dev/tags/gamedev/">gamedev</a>&nbsp;
+            
+          </div>
+        
+
+        
+
+        
+      </article>
+
+      
+        <ul class="pager blog-pager">
+          
+            <li class="previous">
+              <a href="https://www.rubensanchez.dev/blog/do-you-love-web-scraping-with-scrapy-then-check-colly-for-go-6kc/" data-toggle="tooltip" data-placement="top" title="Do you love web scraping with Scrapy? Then check Colly for Go">&larr; Previous Post</a>
+            </li>
+          
+          
+            <li class="next">
+              <a href="https://www.rubensanchez.dev/blog/should-you-learn-functional-programming-3flp/" data-toggle="tooltip" data-placement="top" title="Should you learn Functional Programming?">Next Post &rarr;</a>
+            </li>
+          
+        </ul>
+      
+
+
+      
+
+    </div>
+  </div>
+</div>
+
+      
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <ul class="list-inline text-center footer-links">
+          
+          
+        </ul>
+        <p class="credits copyright text-muted">
+          
+
+          &nbsp;&bull;&nbsp;&copy;
+          
+            2021
+          
+
+          
+            &nbsp;&bull;&nbsp;
+            <a href="https://www.rubensanchez.dev">rubensanchez.dev</a>
+          
+        </p>
+        
+        <p class="credits theme-by text-muted">
+          <a href="https://gohugo.io">Hugo v0.76.5</a> powered &nbsp;&bull;&nbsp; Theme <a href="https://github.com/halogenica/beautifulhugo">Beautiful Hugo</a> adapted from <a href="https://deanattali.com/beautiful-jekyll/">Beautiful Jekyll</a>
+          
+        </p>
+      </div>
+    </div>
+  </div>
+</footer><script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.js" integrity="sha384-K3vbOmF2BtaVai+Qk37uypf7VrgBubhQreNQe9aGsz9lB63dIFiQVlJbr92dw2Lx" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/contrib/auto-render.min.js" integrity="sha384-kmZOZB5ObwgQnS/DuDg6TScgOiWWBiVt0plIRkZCmE6rDZGrEOQeHM5PcHi+nyqe" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+<script src="https://www.rubensanchez.dev/js/main.js"></script><script> renderMathInElement(document.body); </script><script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.js" integrity="sha384-QELNnmcmU8IR9ZAykt67vGr9/rZJdHbiWi64V88fCPaOohUlHCqUD/unNN0BXSqy" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe-ui-default.min.js" integrity="sha384-m67o7SkQ1ALzKZIFh4CiTA8tmadaujiTa9Vu+nqPSwDOqHrDmxLezTdFln8077+q" crossorigin="anonymous"></script><script src="https://www.rubensanchez.dev/js/load-photoswipe.js"></script>
+
+
+
+
+
+
+
+
+
+    
+  </body>
+</html>
+

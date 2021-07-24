@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en" itemscope itemtype="http://schema.org/WebPage">
+  <head>
+    
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+  <title>Use Python in your browser client code together with JS. No server required, thanks to Web Assembly - rubensanchez.dev</title>
+  <meta name="description" content="Use case: Let&rsquo;t say that I love Python Pandas for data manipulation, but at the same time I need to use the manipulation results in a regular client-side webpage. The classic method I would do is to have a Python backend, do my calculations in there and then send the results to the front, via an API, server rendered templates or whatever.
+I am going to present you an alternative based on Web Assembly and the Pyodide project."><script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "@type": "WebSite",
+    "name": "rubensanchez.dev",
+    
+    "url": "https:\/\/www.rubensanchez.dev"
+}
+</script><script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Organization",
+  "name": "",
+  "url": "https:\/\/www.rubensanchez.dev"
+  
+  
+  
+  
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "item": {
+          "@id": "https:\/\/www.rubensanchez.dev",
+          "name": "home"
+        }
+    },{
+        "@type": "ListItem",
+        "position": 3,
+        "item": {
+          "@id": "https:\/\/www.rubensanchez.dev\/blog\/use-python-in-your-browser-client-code-together-with-js-no-server-required-thanks-to-web-assembly-2be2\/",
+          "name": "Use python in your browser client code together with j s. no server required, thanks to web assembly"
+        }
+    }]
+}
+</script><script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Article",
+  "author": {
+    "name" : ""
+  },
+  "headline": "Use Python in your browser client code together with JS. No server required, thanks to Web Assembly",
+  "description" : "Use case: Let\u0026rsquo;t say that I love Python Pandas for data manipulation, but at the same time I need to use the manipulation results in a regular client-side webpage. The classic method I would do is to have a Python backend, do my calculations in there and then send the results to the front, via an API, server rendered templates or whatever.\nI am going to present you an alternative based on Web Assembly and the Pyodide project.",
+  "inLanguage" : "en",
+  "wordCount":  585 ,
+  "datePublished" : "2020-05-21T10:57:53",
+  "dateModified" : "2020-05-21T10:57:53",
+  "image" : "https:\/\/www.rubensanchez.dev",
+  "keywords" : [ "python, javascript, webassembly, tutorial" ],
+  "mainEntityOfPage" : "https:\/\/www.rubensanchez.dev\/blog\/use-python-in-your-browser-client-code-together-with-js-no-server-required-thanks-to-web-assembly-2be2\/",
+  "publisher" : {
+    "@type": "Organization",
+    "name" : "https:\/\/www.rubensanchez.dev",
+    "logo" : {
+        "@type" : "ImageObject",
+        "url" : "https:\/\/www.rubensanchez.dev",
+        "height" :  60 ,
+        "width" :  60
+    }
+  }
+}
+</script>
+
+<meta property="og:title" content="Use Python in your browser client code together with JS. No server required, thanks to Web Assembly" />
+<meta property="og:description" content="Use case: Let&rsquo;t say that I love Python Pandas for data manipulation, but at the same time I need to use the manipulation results in a regular client-side webpage. The classic method I would do is to have a Python backend, do my calculations in there and then send the results to the front, via an API, server rendered templates or whatever.
+I am going to present you an alternative based on Web Assembly and the Pyodide project.">
+<meta property="og:url" content="https://www.rubensanchez.dev/blog/use-python-in-your-browser-client-code-together-with-js-no-server-required-thanks-to-web-assembly-2be2/" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="rubensanchez.dev" />
+
+  <meta name="twitter:title" content="Use Python in your browser client code together with JS. No server …" />
+  <meta name="twitter:description" content="Use case: Let&rsquo;t say that I love Python Pandas for data manipulation, but at the same time I need to use the manipulation results in a regular client-side webpage. The classic method I would do …">
+  <meta name="twitter:card" content="summary" />
+  <meta name="generator" content="Hugo 0.76.5" />
+  <link rel="alternate" href="https://www.rubensanchez.dev/index.xml" type="application/rss+xml" title="rubensanchez.dev"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css" integrity="sha384-9eLZqc9ds8eNjO3TmqPeYcDj8n+Qfa4nuSiGYa6DjLNcv9BtN69ZIulL9+8CqC9Y" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"><link rel="stylesheet" href="https://www.rubensanchez.dev/css/main.css" /><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" /><link rel="stylesheet" href="https://www.rubensanchez.dev/css/syntax.css" /><link rel="stylesheet" href="https://www.rubensanchez.dev/css/codeblock.css" /><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.css" integrity="sha384-h/L2W9KefUClHWaty3SLE5F/qvc4djlyR4qY3NUV5HGQBBW7stbcfff1+I/vmsHh" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/default-skin/default-skin.min.css" integrity="sha384-iD0dNku6PYSIQLyfTOpB06F2KCZJAKLOThS5HRe8b3ibhdEQ6eKsFf/EeFxdOt5R" crossorigin="anonymous">
+
+
+
+  </head>
+  <body>
+    <nav class="navbar navbar-default navbar-fixed-top navbar-custom">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="https://www.rubensanchez.dev">rubensanchez.dev</a>
+    </div>
+
+    <div class="collapse navbar-collapse" id="main-navbar">
+      <ul class="nav navbar-nav navbar-right">
+        
+          
+            <li>
+              <a title="Contact" href="/contact/">Contact</a>
+            </li>
+          
+        
+
+        
+
+        
+      </ul>
+    </div>
+
+    
+
+  </div>
+</nav>
+
+
+
+
+    
+
+
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+<div class="pswp__bg"></div>
+
+<div class="pswp__scroll-wrap">
+    
+    <div class="pswp__container">
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+    </div>
+    
+    <div class="pswp__ui pswp__ui--hidden">
+    <div class="pswp__top-bar">
+      
+      <div class="pswp__counter"></div>
+      <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+      <button class="pswp__button pswp__button--share" title="Share"></button>
+      <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+      <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+      
+      
+      <div class="pswp__preloader">
+        <div class="pswp__preloader__icn">
+          <div class="pswp__preloader__cut">
+            <div class="pswp__preloader__donut"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+      <div class="pswp__share-tooltip"></div>
+    </div>
+    <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+    </button>
+    <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+    </button>
+    <div class="pswp__caption">
+      <div class="pswp__caption__center"></div>
+    </div>
+    </div>
+    </div>
+</div>
+
+
+  
+  
+  
+
+
+
+
+
+
+  
+
+  <header class="header-section ">
+    
+    <div class="intro-header no-img">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+            <div class="blog-heading">
+              
+                <h1>Use Python in your browser client code together with JS. No server required, thanks to Web Assembly</h1>
+              
+              
+                <hr class="small">
+              
+              
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+
+    
+<div class="container" role="main">
+  <div class="row">
+    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+      <article role="main" class="blog-post">
+        <p><em>Use case: Let&rsquo;t say that I love Python Pandas for data manipulation, but at the same time I need to use the manipulation results in a regular client-side webpage. The classic method I would do is to have a Python backend, do my calculations in there and then send the results to the front, via an API, server rendered templates or whatever.</em></p>
+<p><strong>I am going to present you an alternative based on Web Assembly and the Pyodide project.</strong></p>
+<p>Web Assembly is a standard (supported in all major browsers) that roughly speaking says &ldquo;This is how executable binaries should look like and here is how they should interact with the host&rdquo; (the host in this case being the browser). That opens the door to client side applications written in a wide variety of languages. Take a look at this repo with the list of available languages:</p>
+<p><a href="https://github.com/appcypher/awesome-wasm-langs">https://github.com/appcypher/awesome-wasm-langs</a></p>
+<p>One of the fruits of this project has been
+<code>Pyodide</code>
+, which allows you to execute real Python code in the browser. Do not mistake this with other projects that allow you to write Python and then transpile it into Javascript so it can run in the browser. Here what is running is the actual Python code.</p>
+<p>We can do a quick demo and then I walk you through what just happened:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="color:#75715e">&lt;!DOCTYPE html&gt;</span>
+&lt;<span style="color:#f92672">html</span>&gt;
+&lt;<span style="color:#f92672">head</span>&gt;
+    &lt;<span style="color:#f92672">script</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;text/javascript&#34;</span>&gt;
+        window.<span style="color:#a6e22e">languagePluginUrl</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;https://pyodide-cdn2.iodide.io/v0.15.0/full/&#39;</span>;
+    &lt;/<span style="color:#f92672">script</span>&gt;
+    &lt;<span style="color:#f92672">script</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;https://pyodide-cdn2.iodide.io/v0.15.0/full/pyodide.js&#34;</span>&gt;&lt;/<span style="color:#f92672">script</span>&gt;
+&lt;/<span style="color:#f92672">head</span>&gt;
+&lt;<span style="color:#f92672">body</span>&gt;
+    Pass JS data to Python pandas (fully in-browser) and returns results back to JS
+    &lt;<span style="color:#f92672">script</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;text/javascript&#34;</span>&gt;
+        <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">data</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">JSON</span>.<span style="color:#a6e22e">stringify</span>([{ <span style="color:#e6db74">&#34;name&#34;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;Ruben&#34;</span>, <span style="color:#e6db74">&#34;surname&#34;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;Sanchez&#34;</span> }, 
+        { <span style="color:#e6db74">&#34;name&#34;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;Michael&#34;</span>, <span style="color:#e6db74">&#34;surname&#34;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;Johnson&#34;</span> }, 
+        { <span style="color:#e6db74">&#34;name&#34;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;John&#34;</span>, <span style="color:#e6db74">&#34;surname&#34;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;Smith&#34;</span> }])
+        <span style="color:#a6e22e">languagePluginLoader</span>.<span style="color:#a6e22e">then</span>(<span style="color:#66d9ef">function</span> () {
+            <span style="color:#a6e22e">pyodide</span>.<span style="color:#a6e22e">loadPackage</span>([<span style="color:#e6db74">&#39;pandas&#39;</span>]).<span style="color:#a6e22e">then</span>(() =&gt; {
+                <span style="color:#a6e22e">pyodide</span>.<span style="color:#a6e22e">runPython</span>(<span style="color:#e6db74">`
+</span><span style="color:#e6db74">
+</span><span style="color:#e6db74">                import pandas as pd
+</span><span style="color:#e6db74">                df = pd.DataFrame(</span><span style="color:#e6db74">${</span><span style="color:#a6e22e">data</span><span style="color:#e6db74">}</span><span style="color:#e6db74">)
+</span><span style="color:#e6db74">                count = df[&#34;name&#34;].count()
+</span><span style="color:#e6db74">               
+</span><span style="color:#e6db74">`</span>)
+                <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">pyodide</span>.<span style="color:#a6e22e">pyimport</span>(<span style="color:#e6db74">&#39;count&#39;</span>))
+            });
+        });
+    &lt;/<span style="color:#f92672">script</span>&gt;
+&lt;/<span style="color:#f92672">body</span>&gt;
+</code></pre></div><p>Save that snippet in a new html file or run it from this CodePen <a href="https://codepen.io/rubenwap/pen/yLYZORW">https://codepen.io/rubenwap/pen/yLYZORW</a> Note that the results you are looking for will be in the
+<code>console</code>
+tab! last
+<code>console.log</code>
+in the code should print
+<code>3</code>
+, and that is the value we have taken from Python.</p>
+<p>Overall, We have done three nice things:</p>
+<h3 id="1-we-have-defined-js-data-to-be-used-inside-our-python-script"> 1) We have defined JS data to be used inside our Python script</h3>
+<p>Your starting point for this mix&rsquo;n&rsquo;match session can be regular Javascript data that you have obtained in any way you like:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"> <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">data</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">JSON</span>.<span style="color:#a6e22e">stringify</span>([{ <span style="color:#e6db74">&#34;name&#34;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;Ruben&#34;</span>, <span style="color:#e6db74">&#34;surname&#34;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;Sanchez&#34;</span> }, 
+        { <span style="color:#e6db74">&#34;name&#34;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;Michael&#34;</span>, <span style="color:#e6db74">&#34;surname&#34;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;Johnson&#34;</span> }, 
+        { <span style="color:#e6db74">&#34;name&#34;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;John&#34;</span>, <span style="color:#e6db74">&#34;surname&#34;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;Smith&#34;</span> }])
+</code></pre></div><h3 id="2-we-have-executed-actual-python-code-in-the-browser-including-pandas">2) We have executed actual Python code in the browser, including Pandas!</h3>
+<p>Don&rsquo;t be fooled by the ugly way in which you need to specify your Python code (as string inside the
+<code>runPython</code>
+method). You could write an actual nice
+<code>.py</code>
+file and then import the text contents via Ajax, so it would look nicer.</p>
+<p>Note that here,
+<code>loadPackage</code>
+is acting somehow like an installation of that package. If you try to import pandas without having loaded it first, it won&rsquo;t work.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js">
+ <span style="color:#a6e22e">pyodide</span>.<span style="color:#a6e22e">loadPackage</span>([<span style="color:#e6db74">&#39;pandas&#39;</span>]).<span style="color:#a6e22e">then</span>(() =&gt; {
+                <span style="color:#a6e22e">pyodide</span>.<span style="color:#a6e22e">runPython</span>(<span style="color:#e6db74">`
+</span><span style="color:#e6db74">
+</span><span style="color:#e6db74">                import pandas as pd
+</span><span style="color:#e6db74">                df = pd.DataFrame(</span><span style="color:#e6db74">${</span><span style="color:#a6e22e">data</span><span style="color:#e6db74">}</span><span style="color:#e6db74">)
+</span><span style="color:#e6db74">                count = df[&#34;name&#34;].count()
+</span><span style="color:#e6db74">               
+</span><span style="color:#e6db74">`</span>)
+</code></pre></div><h3 id="3-we-have-taken-the-results-of-our-python-scripts-and-sent-them-back-to-javascript">3) We have taken the results of our Python scripts and sent them back to Javascript</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js">    <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">pyodide</span>.<span style="color:#a6e22e">pyimport</span>(<span style="color:#e6db74">&#39;count&#39;</span>))
+</code></pre></div><p>I think this is pretty cool, the fact that you can run something in a totally different language and have it available in Javascript without having to go back and forth with API requests.</p>
+<p>If you found this interesting, don&rsquo;t forget to explore their docs:
+<a href="https://pyodide.readthedocs.io/en/latest/#">https://pyodide.readthedocs.io/en/latest/#</a></p>
+<p>And generally, WASM docs, specially if you code in any of the other compatible languages:
+<a href="https://webassembly.org/getting-started/developers-guide/">https://webassembly.org/getting-started/developers-guide/</a></p>
+<p><em><a href="https://dev.to/rubenwap/use-python-in-your-browser-client-code-together-with-js-no-server-required-thanks-to-web-assembly-2be2">This post is also available on DEV.</a></em></p>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+
+
+        
+          <div class="blog-tags">
+            
+              <a href="https://www.rubensanchez.dev/tags/python/">python</a>&nbsp;
+            
+              <a href="https://www.rubensanchez.dev/tags/javascript/">javascript</a>&nbsp;
+            
+              <a href="https://www.rubensanchez.dev/tags/webassembly/">webassembly</a>&nbsp;
+            
+              <a href="https://www.rubensanchez.dev/tags/tutorial/">tutorial</a>&nbsp;
+            
+          </div>
+        
+
+        
+
+        
+      </article>
+
+      
+        <ul class="pager blog-pager">
+          
+            <li class="previous">
+              <a href="https://www.rubensanchez.dev/blog/the-go-way-to-parse-strings-into-dates-is-pretty-confusing-unless-you-live-in-a-small-fraction-of-the-world-42o9/" data-toggle="tooltip" data-placement="top" title="The Go way to parse strings into dates is pretty confusing unless you live in a small fraction of the world">&larr; Previous Post</a>
+            </li>
+          
+          
+            <li class="next">
+              <a href="https://www.rubensanchez.dev/blog/how-do-you-approach-your-dev-reading-list-1l28/" data-toggle="tooltip" data-placement="top" title="How do you approach your DEV &#34;Reading List&#34;?">Next Post &rarr;</a>
+            </li>
+          
+        </ul>
+      
+
+
+      
+
+    </div>
+  </div>
+</div>
+
+      
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <ul class="list-inline text-center footer-links">
+          
+          
+        </ul>
+        <p class="credits copyright text-muted">
+          
+
+          &nbsp;&bull;&nbsp;&copy;
+          
+            2021
+          
+
+          
+            &nbsp;&bull;&nbsp;
+            <a href="https://www.rubensanchez.dev">rubensanchez.dev</a>
+          
+        </p>
+        
+        <p class="credits theme-by text-muted">
+          <a href="https://gohugo.io">Hugo v0.76.5</a> powered &nbsp;&bull;&nbsp; Theme <a href="https://github.com/halogenica/beautifulhugo">Beautiful Hugo</a> adapted from <a href="https://deanattali.com/beautiful-jekyll/">Beautiful Jekyll</a>
+          
+        </p>
+      </div>
+    </div>
+  </div>
+</footer><script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.js" integrity="sha384-K3vbOmF2BtaVai+Qk37uypf7VrgBubhQreNQe9aGsz9lB63dIFiQVlJbr92dw2Lx" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/contrib/auto-render.min.js" integrity="sha384-kmZOZB5ObwgQnS/DuDg6TScgOiWWBiVt0plIRkZCmE6rDZGrEOQeHM5PcHi+nyqe" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+<script src="https://www.rubensanchez.dev/js/main.js"></script><script> renderMathInElement(document.body); </script><script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.js" integrity="sha384-QELNnmcmU8IR9ZAykt67vGr9/rZJdHbiWi64V88fCPaOohUlHCqUD/unNN0BXSqy" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe-ui-default.min.js" integrity="sha384-m67o7SkQ1ALzKZIFh4CiTA8tmadaujiTa9Vu+nqPSwDOqHrDmxLezTdFln8077+q" crossorigin="anonymous"></script><script src="https://www.rubensanchez.dev/js/load-photoswipe.js"></script>
+
+
+
+
+
+
+
+
+
+    
+  </body>
+</html>
+

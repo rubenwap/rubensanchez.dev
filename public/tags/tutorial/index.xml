@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>tutorial on rubensanchez.dev</title>
+    <link>https://www.rubensanchez.dev/tags/tutorial/</link>
+    <description>Recent content in tutorial on rubensanchez.dev</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 16 Jan 2021 19:00:12 +0000</lastBuildDate><atom:link href="https://www.rubensanchez.dev/tags/tutorial/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Go RabbitMQ to Kafka ETL with zero lines of Go!</title>
+      <link>https://www.rubensanchez.dev/blog/go-rabbitmq-to-kafka-etl-with-zero-lines-of-go-1b83/</link>
+      <pubDate>Sat, 16 Jan 2021 19:00:12 +0000</pubDate>
+      
+      <guid>https://www.rubensanchez.dev/blog/go-rabbitmq-to-kafka-etl-with-zero-lines-of-go-1b83/</guid>
+      <description>I think that for a big percentage of cases, ETL pipelines are a solved problem. Unless you have very special needs, there are many tools in the market that can remove the hassle of setting up irrelevant minutia, and let you focus on the business logic instead, because anyone can create a function that connects to a Rabbit MQ exchange, but only you can work on the task of how your business logic should handle the received messages.</description>
+    </item>
+    
+    <item>
+      <title>Create a *useful* Alexa skill with minimal Python knowledge</title>
+      <link>https://www.rubensanchez.dev/blog/create-a-useful-alexa-skill-with-minimal-python-knowledge-man/</link>
+      <pubDate>Tue, 08 Dec 2020 15:18:11 +0000</pubDate>
+      
+      <guid>https://www.rubensanchez.dev/blog/create-a-useful-alexa-skill-with-minimal-python-knowledge-man/</guid>
+      <description>I am pretty disappointed with the terrible quality of most of the &amp;ldquo;custom&amp;rdquo; stuff found in the Alexa skills shop. Lots of &amp;ldquo;tell me a joke&amp;rdquo;, &amp;ldquo;tell me a fun fact&amp;rdquo;, &amp;ldquo;tell me random facts&amp;rdquo;, &amp;ldquo;play forest sounds&amp;rdquo;, &amp;ldquo;play sea sounds&amp;rdquo;&amp;hellip; So at the end, my Echo unit ended up being used just to turn Netflix on and off and manipulate the heating temperature.
+That&amp;rsquo;s no more! It&amp;rsquo;s very easy to create custom skills with Python (or Node.</description>
+    </item>
+    
+    <item>
+      <title>Making a fast &#34;yes&#34; clone with Go</title>
+      <link>https://www.rubensanchez.dev/blog/making-a-fast-yes-clone-with-go-hom/</link>
+      <pubDate>Sun, 18 Oct 2020 12:59:33 +0000</pubDate>
+      
+      <guid>https://www.rubensanchez.dev/blog/making-a-fast-yes-clone-with-go-hom/</guid>
+      <description>Following the series on creating Go based clones of the GNU coreutils, today I wanted to do a speed experiment using yes
+What is YES? If you are using mac or linux, go to your terminal and type yes . You should get an infinite stream of y . Or you can also run it as yes yes and you will get an infinite stream of yes . Or yes no .</description>
+    </item>
+    
+    <item>
+      <title>Upskill yourself by recreating GNU Coreutils in Go</title>
+      <link>https://www.rubensanchez.dev/blog/upskill-yourself-by-recreating-gnu-coretools-in-go-9f5/</link>
+      <pubDate>Sat, 26 Sep 2020 21:10:52 +0000</pubDate>
+      
+      <guid>https://www.rubensanchez.dev/blog/upskill-yourself-by-recreating-gnu-coretools-in-go-9f5/</guid>
+      <description>Reinventing the wheel for fun One of the most popular advice to gain skills programming is to reimplement tools that already exist. For instance, if you wanted to learn how to do a CRUD API, I am pretty sure you probably practiced with a &amp;ldquo;To do&amp;rdquo; app. The point of this is not to create something new and groundbreaking, but to use well known ideas to improve what you know. Other examples you might have seen are things such as implementing a chat server to learn about websockets, a weather app, a Hacker News reader&amp;hellip;</description>
+    </item>
+    
+    <item>
+      <title>Monitor the behavior of your Python app by learning InfluxDB, Grafana and Telegraf</title>
+      <link>https://www.rubensanchez.dev/blog/monitor-the-behavior-of-your-python-app-by-learning-influxdb-grafana-and-telegraf-3ehg/</link>
+      <pubDate>Sun, 13 Sep 2020 10:53:11 +0000</pubDate>
+      
+      <guid>https://www.rubensanchez.dev/blog/monitor-the-behavior-of-your-python-app-by-learning-influxdb-grafana-and-telegraf-3ehg/</guid>
+      <description>We will go through a tutorial where Python and Flask will be used. However, you will soon realize that Python and Flask are the less important parts here. Due to the nature of the setup (a docker-compose file) you shouldn&amp;rsquo;t have any trouble swapping the Docker for my Flask app with whatever else you want to monitor.
+So, what are we actually doing here? What is the final goal? We will create docker compose file which will instantiate the following services:</description>
+    </item>
+    
+    <item>
+      <title>Use Python in your browser client code together with JS. No server required, thanks to Web Assembly</title>
+      <link>https://www.rubensanchez.dev/blog/use-python-in-your-browser-client-code-together-with-js-no-server-required-thanks-to-web-assembly-2be2/</link>
+      <pubDate>Thu, 21 May 2020 10:57:53 +0000</pubDate>
+      
+      <guid>https://www.rubensanchez.dev/blog/use-python-in-your-browser-client-code-together-with-js-no-server-required-thanks-to-web-assembly-2be2/</guid>
+      <description>Use case: Let&amp;rsquo;t say that I love Python Pandas for data manipulation, but at the same time I need to use the manipulation results in a regular client-side webpage. The classic method I would do is to have a Python backend, do my calculations in there and then send the results to the front, via an API, server rendered templates or whatever.
+I am going to present you an alternative based on Web Assembly and the Pyodide project.</description>
+    </item>
+    
+    <item>
+      <title>Learn to properly test and auto deploy your Go app with a movie posters server project</title>
+      <link>https://www.rubensanchez.dev/blog/learn-tdd-basics-and-automated-deployments-with-go-github-actions-and-heroku-2hf3/</link>
+      <pubDate>Fri, 15 May 2020 14:57:59 +0000</pubDate>
+      
+      <guid>https://www.rubensanchez.dev/blog/learn-tdd-basics-and-automated-deployments-with-go-github-actions-and-heroku-2hf3/</guid>
+      <description>Creating a well tested application pays off by having a lot less to debug in the future, together with the peace of mind that you can refactor your application as much as you want and nothing is going to break because the tests would alert you quickly if that happened. Automating your deployment will also pay off, not only because it will save you a ton of clicks (or commands) but because it will prevent errors and your builds will be predictable.</description>
+    </item>
+    
+  </channel>
+</rss>

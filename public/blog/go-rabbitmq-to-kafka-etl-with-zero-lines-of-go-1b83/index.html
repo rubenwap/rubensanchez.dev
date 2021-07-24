@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en" itemscope itemtype="http://schema.org/WebPage">
+  <head>
+    
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+  <title>Go RabbitMQ to Kafka ETL with zero lines of Go! - rubensanchez.dev</title>
+  <meta name="description" content="I think that for a big percentage of cases, ETL pipelines are a solved problem. Unless you have very special needs, there are many tools in the market that can remove the hassle of setting up irrelevant minutia, and let you focus on the business logic instead, because anyone can create a function that connects to a Rabbit MQ exchange, but only you can work on the task of how your business logic should handle the received messages."><script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "@type": "WebSite",
+    "name": "rubensanchez.dev",
+    
+    "url": "https:\/\/www.rubensanchez.dev"
+}
+</script><script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Organization",
+  "name": "",
+  "url": "https:\/\/www.rubensanchez.dev"
+  
+  
+  
+  
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "item": {
+          "@id": "https:\/\/www.rubensanchez.dev",
+          "name": "home"
+        }
+    },{
+        "@type": "ListItem",
+        "position": 3,
+        "item": {
+          "@id": "https:\/\/www.rubensanchez.dev\/blog\/go-rabbitmq-to-kafka-etl-with-zero-lines-of-go-1b83\/",
+          "name": "Go rabbit m q to kafka e t l with zero lines of go!"
+        }
+    }]
+}
+</script><script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Article",
+  "author": {
+    "name" : ""
+  },
+  "headline": "Go RabbitMQ to Kafka ETL with zero lines of Go!",
+  "description" : "I think that for a big percentage of cases, ETL pipelines are a solved problem. Unless you have very special needs, there are many tools in the market that can remove the hassle of setting up irrelevant minutia, and let you focus on the business logic instead, because anyone can create a function that connects to a Rabbit MQ exchange, but only you can work on the task of how your business logic should handle the received messages.",
+  "inLanguage" : "en",
+  "wordCount":  861 ,
+  "datePublished" : "2021-01-16T19:00:12",
+  "dateModified" : "2021-01-16T19:00:12",
+  "image" : "https:\/\/www.rubensanchez.dev",
+  "keywords" : [ "tutorial, go, kafka, rabbitmq" ],
+  "mainEntityOfPage" : "https:\/\/www.rubensanchez.dev\/blog\/go-rabbitmq-to-kafka-etl-with-zero-lines-of-go-1b83\/",
+  "publisher" : {
+    "@type": "Organization",
+    "name" : "https:\/\/www.rubensanchez.dev",
+    "logo" : {
+        "@type" : "ImageObject",
+        "url" : "https:\/\/www.rubensanchez.dev",
+        "height" :  60 ,
+        "width" :  60
+    }
+  }
+}
+</script>
+
+<meta property="og:title" content="Go RabbitMQ to Kafka ETL with zero lines of Go!" />
+<meta property="og:description" content="I think that for a big percentage of cases, ETL pipelines are a solved problem. Unless you have very special needs, there are many tools in the market that can remove the hassle of setting up irrelevant minutia, and let you focus on the business logic instead, because anyone can create a function that connects to a Rabbit MQ exchange, but only you can work on the task of how your business logic should handle the received messages.">
+<meta property="og:url" content="https://www.rubensanchez.dev/blog/go-rabbitmq-to-kafka-etl-with-zero-lines-of-go-1b83/" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="rubensanchez.dev" />
+
+  <meta name="twitter:title" content="Go RabbitMQ to Kafka ETL with zero lines of Go!" />
+  <meta name="twitter:description" content="I think that for a big percentage of cases, ETL pipelines are a solved problem. Unless you have very special needs, there are many tools in the market that can remove the hassle of setting up …">
+  <meta name="twitter:card" content="summary" />
+  <meta name="generator" content="Hugo 0.76.5" />
+  <link rel="alternate" href="https://www.rubensanchez.dev/index.xml" type="application/rss+xml" title="rubensanchez.dev"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css" integrity="sha384-9eLZqc9ds8eNjO3TmqPeYcDj8n+Qfa4nuSiGYa6DjLNcv9BtN69ZIulL9+8CqC9Y" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"><link rel="stylesheet" href="https://www.rubensanchez.dev/css/main.css" /><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" /><link rel="stylesheet" href="https://www.rubensanchez.dev/css/syntax.css" /><link rel="stylesheet" href="https://www.rubensanchez.dev/css/codeblock.css" /><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.css" integrity="sha384-h/L2W9KefUClHWaty3SLE5F/qvc4djlyR4qY3NUV5HGQBBW7stbcfff1+I/vmsHh" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/default-skin/default-skin.min.css" integrity="sha384-iD0dNku6PYSIQLyfTOpB06F2KCZJAKLOThS5HRe8b3ibhdEQ6eKsFf/EeFxdOt5R" crossorigin="anonymous">
+
+
+
+  </head>
+  <body>
+    <nav class="navbar navbar-default navbar-fixed-top navbar-custom">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="https://www.rubensanchez.dev">rubensanchez.dev</a>
+    </div>
+
+    <div class="collapse navbar-collapse" id="main-navbar">
+      <ul class="nav navbar-nav navbar-right">
+        
+          
+            <li>
+              <a title="Contact" href="/contact/">Contact</a>
+            </li>
+          
+        
+
+        
+
+        
+      </ul>
+    </div>
+
+    
+
+  </div>
+</nav>
+
+
+
+
+    
+
+
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+<div class="pswp__bg"></div>
+
+<div class="pswp__scroll-wrap">
+    
+    <div class="pswp__container">
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+    </div>
+    
+    <div class="pswp__ui pswp__ui--hidden">
+    <div class="pswp__top-bar">
+      
+      <div class="pswp__counter"></div>
+      <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+      <button class="pswp__button pswp__button--share" title="Share"></button>
+      <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+      <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+      
+      
+      <div class="pswp__preloader">
+        <div class="pswp__preloader__icn">
+          <div class="pswp__preloader__cut">
+            <div class="pswp__preloader__donut"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+      <div class="pswp__share-tooltip"></div>
+    </div>
+    <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+    </button>
+    <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+    </button>
+    <div class="pswp__caption">
+      <div class="pswp__caption__center"></div>
+    </div>
+    </div>
+    </div>
+</div>
+
+
+  
+  
+  
+
+
+
+
+
+
+  
+
+  <header class="header-section ">
+    
+    <div class="intro-header no-img">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+            <div class="blog-heading">
+              
+                <h1>Go RabbitMQ to Kafka ETL with zero lines of Go!</h1>
+              
+              
+                <hr class="small">
+              
+              
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+
+    
+<div class="container" role="main">
+  <div class="row">
+    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+      <article role="main" class="blog-post">
+        <p>I think that for a big percentage of cases, ETL pipelines are a solved problem. Unless you have very special needs, there are many tools in the market that can remove the hassle of setting up irrelevant minutia, and let you focus on the business logic instead, because anyone can create a function that connects to a Rabbit MQ exchange, but only you can work on the task of how your business logic should handle the received messages. However, I am aware of the value that &ldquo;reinventing the wheel&rdquo; might have in some business aspects, when the off the shelf tools won&rsquo;t cut it. But in the event that off the shelf tools are good for you, let me introduce you to <a href="https://www.benthos.dev/">Benthos</a>.</p>
+<p><img src="https://dev-to-uploads.s3.amazonaws.com/i/t70wz42de323klyv34ov.png" alt="Captura de pantalla 2021-01-16 a las 19.40.18"></p>
+<h2 id="what-is-benthos">What is Benthos</h2>
+<p>Benthos it&rsquo;s a tool that can perform streaming ETL tasks, so to speak, it can grab your stream source (Extract), apply some transformations (Transform) and send it to your desired sink/destination (Load). It&rsquo;s written in Go, and sorry for the clickbait title, sure it has a lot of Golang lines of code! But the whole point of this exercise is that it doesn&rsquo;t require you to write any in order to set your pipelines. It uses a yaml config file which is executed by the main binary.</p>
+<p>Benthos handles for you some boring stuff such as parallelism, or creation of metrics in Prometheus, Influx, Cloudwatch, etc.. We are going to see how it behaves with the following task:</p>
+<ul>
+<li>Getting a message from a Rabbit queue</li>
+<li>Manipulating the payload</li>
+<li>Sending the new payload to a Kafka topic</li>
+</ul>
+<h2 id="getting-started">Getting started</h2>
+<p>For this exercise I have needed a docker-compose file so I could test Rabbit and Kafka in my local environment. If you were to deploy a Benthos job in an environment with an already existing instance of Rabbit and Kafka, you wouldn&rsquo;t worry about this, but let me share my
+<code>docker-compose.yml</code>
+file just in case</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yml" data-lang="yml"><span style="color:#f92672">version</span>: <span style="color:#e6db74">&#34;3.6&#34;</span>
+<span style="color:#f92672">services</span>:
+  
+  <span style="color:#f92672">rabbitmq</span>:
+    <span style="color:#f92672">image</span>: <span style="color:#e6db74">&#39;rabbitmq:3.7-management-alpine&#39;</span>
+    <span style="color:#f92672">hostname</span>: <span style="color:#ae81ff">rabbitmq</span>
+    <span style="color:#f92672">expose</span>:
+      - <span style="color:#ae81ff">5672</span>
+      - <span style="color:#ae81ff">15672</span>
+    <span style="color:#f92672">ports</span>:
+      - <span style="color:#e6db74">&#34;5672:5672&#34;</span>
+      - <span style="color:#e6db74">&#34;15672:15672&#34;</span>
+    <span style="color:#f92672">environment</span>:
+      <span style="color:#f92672">RABBITMQ_DEFAULT_USER</span>: <span style="color:#e6db74">&#34;guest&#34;</span>
+      <span style="color:#f92672">RABBITMQ_DEFAULT_PASS</span>: <span style="color:#e6db74">&#34;guest&#34;</span>
+   
+
+  <span style="color:#f92672">zoo1</span>:
+    <span style="color:#f92672">image</span>: <span style="color:#ae81ff">zookeeper:3.4.9</span>
+    <span style="color:#f92672">hostname</span>: <span style="color:#ae81ff">zoo1</span>
+    <span style="color:#f92672">ports</span>:
+      - <span style="color:#e6db74">&#34;2181:2181&#34;</span>
+    <span style="color:#f92672">environment</span>:
+        <span style="color:#f92672">ZOO_MY_ID</span>: <span style="color:#ae81ff">1</span>
+        <span style="color:#f92672">ZOO_PORT</span>: <span style="color:#ae81ff">2181</span>
+        <span style="color:#f92672">ZOO_SERVERS</span>: <span style="color:#ae81ff">server.1=zoo1:2888:3888</span>
+    
+
+  <span style="color:#f92672">kafka1</span>:
+    <span style="color:#f92672">image</span>: <span style="color:#ae81ff">confluentinc/cp-kafka:5.5.1</span>
+    <span style="color:#f92672">hostname</span>: <span style="color:#ae81ff">kafka1</span>
+    <span style="color:#f92672">ports</span>:
+      - <span style="color:#e6db74">&#34;9091:9091&#34;</span>
+    <span style="color:#f92672">environment</span>:
+      <span style="color:#f92672">KAFKA_ADVERTISED_LISTENERS</span>: <span style="color:#ae81ff">LISTENER_DOCKER_INTERNAL://kafka1:19091,LISTENER_DOCKER_EXTERNAL://${DOCKER_HOST_IP:-127.0.0.1}:9091</span>
+      <span style="color:#f92672">KAFKA_LISTENER_SECURITY_PROTOCOL_MAP</span>: <span style="color:#ae81ff">LISTENER_DOCKER_INTERNAL:PLAINTEXT,LISTENER_DOCKER_EXTERNAL:PLAINTEXT</span>
+      <span style="color:#f92672">KAFKA_INTER_BROKER_LISTENER_NAME</span>: <span style="color:#ae81ff">LISTENER_DOCKER_INTERNAL</span>
+      <span style="color:#f92672">KAFKA_ZOOKEEPER_CONNECT</span>: <span style="color:#e6db74">&#34;zoo1:2181&#34;</span>
+      <span style="color:#f92672">KAFKA_BROKER_ID</span>: <span style="color:#ae81ff">1</span>
+      <span style="color:#f92672">KAFKA_LOG4J_LOGGERS</span>: <span style="color:#e6db74">&#34;kafka.controller=INFO,kafka.producer.async.DefaultEventHandler=INFO,state.change.logger=INFO&#34;</span>
+      <span style="color:#f92672">KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR</span>: <span style="color:#ae81ff">1</span>
+    <span style="color:#f92672">depends_on</span>:
+      - <span style="color:#ae81ff">zoo1</span>
+
+  <span style="color:#f92672">kafdrop</span>:
+    <span style="color:#f92672">image</span>: <span style="color:#ae81ff">obsidiandynamics/kafdrop</span>
+    <span style="color:#f92672">restart</span>: <span style="color:#e6db74">&#34;no&#34;</span>
+    <span style="color:#f92672">ports</span>:
+      - <span style="color:#e6db74">&#34;9000:9000&#34;</span>
+    <span style="color:#f92672">environment</span>:
+      <span style="color:#f92672">KAFKA_BROKERCONNECT</span>: <span style="color:#e6db74">&#34;kafka1:19091&#34;</span>
+    <span style="color:#f92672">depends_on</span>:
+      - <span style="color:#ae81ff">kafka1</span>
+
+  <span style="color:#f92672">benthos</span>:
+    <span style="color:#f92672">image</span>: <span style="color:#ae81ff">jeffail/benthos</span>
+    <span style="color:#f92672">expose</span>:
+      - <span style="color:#ae81ff">4195</span>
+    <span style="color:#f92672">ports</span>:
+      - <span style="color:#e6db74">&#34;4195:4195&#34;</span>
+    <span style="color:#f92672">volumes</span>:
+      - <span style="color:#ae81ff">./pipeline:/pipeline</span>
+</code></pre></div><p>Do a
+<code>docker-compose up -d</code>
+and let it start as long as needed, Rabbit is notoriously slow starting off. In the meantime let&rsquo;s create our Benthos pipeline.</p>
+<h2 id="the-pipeline">The pipeline</h2>
+<p>You might have seen how in the previous docker compose file we mounted
+<code>./pipeline:/pipeline</code>
+in the Benthos image. This is just because that&rsquo;s where I am going to store my pipeline file. Feel free to mount a different directory if you need.</p>
+<p>So here are the contents of
+<code>pipeline/benthos.yml</code></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yml" data-lang="yml"><span style="color:#f92672">input</span>:
+  <span style="color:#f92672">amqp_0_9</span>:
+    <span style="color:#f92672">url</span>: <span style="color:#ae81ff">amqp://guest:guest@rabbitmq:5672</span>
+    <span style="color:#f92672">queue</span>: <span style="color:#e6db74">&#34;ruben&#34;</span>
+
+<span style="color:#f92672">pipeline</span>:
+  <span style="color:#f92672">processors</span>:
+    - <span style="color:#f92672">sleep</span>:
+        <span style="color:#f92672">duration</span>: <span style="color:#ae81ff">500ms</span>
+    - <span style="color:#f92672">bloblang</span>: |<span style="color:#e6db74">
+</span><span style="color:#e6db74">        root.original_event = this
+</span><span style="color:#e6db74">        root.new_attr = &#34;abc&#34;
+</span><span style="color:#e6db74">        root.new_attr2 = 123</span>        
+
+<span style="color:#f92672">output</span>:
+  <span style="color:#f92672">kafka</span>:
+    <span style="color:#f92672">addresses</span>:
+      - <span style="color:#ae81ff">kafka1:19091</span>
+    <span style="color:#f92672">topic</span>: <span style="color:#ae81ff">ruben</span>
+    <span style="color:#f92672">client_id</span>: <span style="color:#ae81ff">benthos_kafka_output</span>
+    <span style="color:#f92672">key</span>: <span style="color:#e6db74">&#34;&#34;</span>
+    <span style="color:#f92672">partitioner</span>: <span style="color:#ae81ff">fnv1a_hash</span>
+    <span style="color:#f92672">compression</span>: <span style="color:#ae81ff">none</span>
+    <span style="color:#f92672">static_headers</span>: {}
+    <span style="color:#f92672">max_in_flight</span>: <span style="color:#ae81ff">1</span>
+    <span style="color:#f92672">batching</span>:
+      <span style="color:#f92672">count</span>: <span style="color:#ae81ff">0</span>
+      <span style="color:#f92672">byte_size</span>: <span style="color:#ae81ff">0</span>
+      <span style="color:#f92672">period</span>: <span style="color:#e6db74">&#34;&#34;</span>
+      <span style="color:#f92672">check</span>: <span style="color:#e6db74">&#34;&#34;</span>
+</code></pre></div><p>The input and output sections are self explanatory, they just define the configuration of the brokers we are using. The middle section (
+<code>pipeline</code>
+) is a bit more involved, because it requires the usage of the custom Benthos components to manipulate messages. See <a href="https://www.benthos.dev/docs/components/processors/about">all the available processors here</a></p>
+<p>In my case, I am using the
+<code>bloblang</code>
+processor. You can see the details <a href="https://www.benthos.dev/docs/guides/bloblang/about">here.</a> I am getting the input messages and applying a manipulation to their payload.</p>
+<p>So that&rsquo;s it, that&rsquo;s the pipeline. I understand this is a toy example, but if you look at the documentation you can see how Benthos seems to be ready to tackle pretty serious cases.</p>
+<h2 id="running-the-example">Running the example</h2>
+<p>Let&rsquo;s start with Rabbit. I didn&rsquo;t really add a custom json configuration to this docker compose stack, so there are no custom queues when initializing. We can simply go to http://0.0.0.0:15672/# /queues and create one (in my example, it&rsquo;s called
+<code>ruben</code>
+, as you can see in the
+<code>benthos.yml</code>
+file)</p>
+<p><img src="https://dev-to-uploads.s3.amazonaws.com/i/rffqcqtnsw51kmaawvnl.png" alt="Captura de pantalla 2021-01-16 a las 19.43.12"></p>
+<p>Now we can do the same in Kafka. Open Kafdrop at http://0.0.0.0:9000/topic/create and create a topic (I also named it
+<code>ruben</code>
+)</p>
+<p><img src="https://dev-to-uploads.s3.amazonaws.com/i/9qsmn3znjd6fifqfenaf.png" alt="Captura de pantalla 2021-01-16 a las 19.44.17"></p>
+<p>Now we can now run Benthos with our config file:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">docker-compose run benthos -c ./pipeline/benthos.yml
+</code></pre></div><p>If everything goes well, Benthos will start listening. Now,
+send a message (or as many as you want) via the Rabbit interface. Remember that your processor in Benthos is now ready to handle json objects.</p>
+<p><img src="https://dev-to-uploads.s3.amazonaws.com/i/o4d8601lkoimixs4lrck.png" alt="Captura de pantalla 2021-01-16 a las 19.47.47"></p>
+<p>Go to the Kafdrop interface and observe your messages arriving. Indeed, you have the original message, plus the two extra attributes that we have defined in our pipeline.</p>
+<p><img src="https://dev-to-uploads.s3.amazonaws.com/i/lscpd6rj0k11jts8e0jw.png" alt="Captura de pantalla 2021-01-16 a las 19.48.51"></p>
+<h2 id="conclusion">Conclusion</h2>
+<p>While perhaps it doesn&rsquo;t match everyone&rsquo;s use case, Benthos looks like a pretty nice and easy to use alternative to create ETL pipelines in the Golang universe.</p>
+<p>The entirety of the code is in this article, but if you need it to be in a GitHub repo, here it is <a href="https://github.com/rubenwap/poc-benthos">https://github.com/rubenwap/poc-benthos</a></p>
+<p><em><a href="https://dev.to/rubenwap/go-rabbitmq-to-kafka-etl-with-zero-lines-of-go-1b83">This post is also available on DEV.</a></em></p>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+
+
+        
+          <div class="blog-tags">
+            
+              <a href="https://www.rubensanchez.dev/tags/tutorial/">tutorial</a>&nbsp;
+            
+              <a href="https://www.rubensanchez.dev/tags/go/">go</a>&nbsp;
+            
+              <a href="https://www.rubensanchez.dev/tags/kafka/">kafka</a>&nbsp;
+            
+              <a href="https://www.rubensanchez.dev/tags/rabbitmq/">rabbitmq</a>&nbsp;
+            
+          </div>
+        
+
+        
+
+        
+      </article>
+
+      
+        <ul class="pager blog-pager">
+          
+            <li class="previous">
+              <a href="https://www.rubensanchez.dev/blog/create-a-useful-alexa-skill-with-minimal-python-knowledge-man/" data-toggle="tooltip" data-placement="top" title="Create a *useful* Alexa skill with minimal Python knowledge">&larr; Previous Post</a>
+            </li>
+          
+          
+            <li class="next">
+              <a href="https://www.rubensanchez.dev/blog/must-bookmarks-to-become-good-in-go-ln8/" data-toggle="tooltip" data-placement="top" title="Must-Bookmarks to become good in Go">Next Post &rarr;</a>
+            </li>
+          
+        </ul>
+      
+
+
+      
+
+    </div>
+  </div>
+</div>
+
+      
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <ul class="list-inline text-center footer-links">
+          
+          
+        </ul>
+        <p class="credits copyright text-muted">
+          
+
+          &nbsp;&bull;&nbsp;&copy;
+          
+            2021
+          
+
+          
+            &nbsp;&bull;&nbsp;
+            <a href="https://www.rubensanchez.dev">rubensanchez.dev</a>
+          
+        </p>
+        
+        <p class="credits theme-by text-muted">
+          <a href="https://gohugo.io">Hugo v0.76.5</a> powered &nbsp;&bull;&nbsp; Theme <a href="https://github.com/halogenica/beautifulhugo">Beautiful Hugo</a> adapted from <a href="https://deanattali.com/beautiful-jekyll/">Beautiful Jekyll</a>
+          
+        </p>
+      </div>
+    </div>
+  </div>
+</footer><script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.js" integrity="sha384-K3vbOmF2BtaVai+Qk37uypf7VrgBubhQreNQe9aGsz9lB63dIFiQVlJbr92dw2Lx" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/contrib/auto-render.min.js" integrity="sha384-kmZOZB5ObwgQnS/DuDg6TScgOiWWBiVt0plIRkZCmE6rDZGrEOQeHM5PcHi+nyqe" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+<script src="https://www.rubensanchez.dev/js/main.js"></script><script> renderMathInElement(document.body); </script><script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.js" integrity="sha384-QELNnmcmU8IR9ZAykt67vGr9/rZJdHbiWi64V88fCPaOohUlHCqUD/unNN0BXSqy" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe-ui-default.min.js" integrity="sha384-m67o7SkQ1ALzKZIFh4CiTA8tmadaujiTa9Vu+nqPSwDOqHrDmxLezTdFln8077+q" crossorigin="anonymous"></script><script src="https://www.rubensanchez.dev/js/load-photoswipe.js"></script>
+
+
+
+
+
+
+
+
+
+    
+  </body>
+</html>
+

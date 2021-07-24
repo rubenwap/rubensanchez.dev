@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>gnu on rubensanchez.dev</title>
+    <link>https://www.rubensanchez.dev/tags/gnu/</link>
+    <description>Recent content in gnu on rubensanchez.dev</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 18 Oct 2020 12:59:33 +0000</lastBuildDate><atom:link href="https://www.rubensanchez.dev/tags/gnu/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Making a fast &#34;yes&#34; clone with Go</title>
+      <link>https://www.rubensanchez.dev/blog/making-a-fast-yes-clone-with-go-hom/</link>
+      <pubDate>Sun, 18 Oct 2020 12:59:33 +0000</pubDate>
+      
+      <guid>https://www.rubensanchez.dev/blog/making-a-fast-yes-clone-with-go-hom/</guid>
+      <description>Following the series on creating Go based clones of the GNU coreutils, today I wanted to do a speed experiment using yes
+What is YES? If you are using mac or linux, go to your terminal and type yes . You should get an infinite stream of y . Or you can also run it as yes yes and you will get an infinite stream of yes . Or yes no .</description>
+    </item>
+    
+  </channel>
+</rss>

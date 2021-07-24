@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en" itemscope itemtype="http://schema.org/WebPage">
+  <head>
+    
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+  <title>Create a *useful* Alexa skill with minimal Python knowledge - rubensanchez.dev</title>
+  <meta name="description" content="I am pretty disappointed with the terrible quality of most of the &ldquo;custom&rdquo; stuff found in the Alexa skills shop. Lots of &ldquo;tell me a joke&rdquo;, &ldquo;tell me a fun fact&rdquo;, &ldquo;tell me random facts&rdquo;, &ldquo;play forest sounds&rdquo;, &ldquo;play sea sounds&rdquo;&hellip; So at the end, my Echo unit ended up being used just to turn Netflix on and off and manipulate the heating temperature.
+That&rsquo;s no more! It&rsquo;s very easy to create custom skills with Python (or Node."><script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "@type": "WebSite",
+    "name": "rubensanchez.dev",
+    
+    "url": "https:\/\/www.rubensanchez.dev"
+}
+</script><script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Organization",
+  "name": "",
+  "url": "https:\/\/www.rubensanchez.dev"
+  
+  
+  
+  
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "item": {
+          "@id": "https:\/\/www.rubensanchez.dev",
+          "name": "home"
+        }
+    },{
+        "@type": "ListItem",
+        "position": 3,
+        "item": {
+          "@id": "https:\/\/www.rubensanchez.dev\/blog\/create-a-useful-alexa-skill-with-minimal-python-knowledge-man\/",
+          "name": "Create a *useful* alexa skill with minimal python knowledge"
+        }
+    }]
+}
+</script><script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Article",
+  "author": {
+    "name" : ""
+  },
+  "headline": "Create a *useful* Alexa skill with minimal Python knowledge",
+  "description" : "I am pretty disappointed with the terrible quality of most of the \u0026ldquo;custom\u0026rdquo; stuff found in the Alexa skills shop. Lots of \u0026ldquo;tell me a joke\u0026rdquo;, \u0026ldquo;tell me a fun fact\u0026rdquo;, \u0026ldquo;tell me random facts\u0026rdquo;, \u0026ldquo;play forest sounds\u0026rdquo;, \u0026ldquo;play sea sounds\u0026rdquo;\u0026hellip; So at the end, my Echo unit ended up being used just to turn Netflix on and off and manipulate the heating temperature.\nThat\u0026rsquo;s no more! It\u0026rsquo;s very easy to create custom skills with Python (or Node.",
+  "inLanguage" : "en",
+  "wordCount":  1020 ,
+  "datePublished" : "2020-12-08T15:18:11",
+  "dateModified" : "2020-12-08T15:18:11",
+  "image" : "https:\/\/www.rubensanchez.dev",
+  "keywords" : [ "python, alexa, tutorial" ],
+  "mainEntityOfPage" : "https:\/\/www.rubensanchez.dev\/blog\/create-a-useful-alexa-skill-with-minimal-python-knowledge-man\/",
+  "publisher" : {
+    "@type": "Organization",
+    "name" : "https:\/\/www.rubensanchez.dev",
+    "logo" : {
+        "@type" : "ImageObject",
+        "url" : "https:\/\/www.rubensanchez.dev",
+        "height" :  60 ,
+        "width" :  60
+    }
+  }
+}
+</script>
+
+<meta property="og:title" content="Create a *useful* Alexa skill with minimal Python knowledge" />
+<meta property="og:description" content="I am pretty disappointed with the terrible quality of most of the &ldquo;custom&rdquo; stuff found in the Alexa skills shop. Lots of &ldquo;tell me a joke&rdquo;, &ldquo;tell me a fun fact&rdquo;, &ldquo;tell me random facts&rdquo;, &ldquo;play forest sounds&rdquo;, &ldquo;play sea sounds&rdquo;&hellip; So at the end, my Echo unit ended up being used just to turn Netflix on and off and manipulate the heating temperature.
+That&rsquo;s no more! It&rsquo;s very easy to create custom skills with Python (or Node.">
+<meta property="og:url" content="https://www.rubensanchez.dev/blog/create-a-useful-alexa-skill-with-minimal-python-knowledge-man/" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="rubensanchez.dev" />
+
+  <meta name="twitter:title" content="Create a *useful* Alexa skill with minimal Python knowledge" />
+  <meta name="twitter:description" content="I am pretty disappointed with the terrible quality of most of the &ldquo;custom&rdquo; stuff found in the Alexa skills shop. Lots of &ldquo;tell me a joke&rdquo;, &ldquo;tell me a fun fact&rdquo;, …">
+  <meta name="twitter:card" content="summary" />
+  <meta name="generator" content="Hugo 0.76.5" />
+  <link rel="alternate" href="https://www.rubensanchez.dev/index.xml" type="application/rss+xml" title="rubensanchez.dev"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css" integrity="sha384-9eLZqc9ds8eNjO3TmqPeYcDj8n+Qfa4nuSiGYa6DjLNcv9BtN69ZIulL9+8CqC9Y" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"><link rel="stylesheet" href="https://www.rubensanchez.dev/css/main.css" /><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" /><link rel="stylesheet" href="https://www.rubensanchez.dev/css/syntax.css" /><link rel="stylesheet" href="https://www.rubensanchez.dev/css/codeblock.css" /><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.css" integrity="sha384-h/L2W9KefUClHWaty3SLE5F/qvc4djlyR4qY3NUV5HGQBBW7stbcfff1+I/vmsHh" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/default-skin/default-skin.min.css" integrity="sha384-iD0dNku6PYSIQLyfTOpB06F2KCZJAKLOThS5HRe8b3ibhdEQ6eKsFf/EeFxdOt5R" crossorigin="anonymous">
+
+
+
+  </head>
+  <body>
+    <nav class="navbar navbar-default navbar-fixed-top navbar-custom">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="https://www.rubensanchez.dev">rubensanchez.dev</a>
+    </div>
+
+    <div class="collapse navbar-collapse" id="main-navbar">
+      <ul class="nav navbar-nav navbar-right">
+        
+          
+            <li>
+              <a title="Contact" href="/contact/">Contact</a>
+            </li>
+          
+        
+
+        
+
+        
+      </ul>
+    </div>
+
+    
+
+  </div>
+</nav>
+
+
+
+
+    
+
+
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+<div class="pswp__bg"></div>
+
+<div class="pswp__scroll-wrap">
+    
+    <div class="pswp__container">
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+    </div>
+    
+    <div class="pswp__ui pswp__ui--hidden">
+    <div class="pswp__top-bar">
+      
+      <div class="pswp__counter"></div>
+      <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+      <button class="pswp__button pswp__button--share" title="Share"></button>
+      <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+      <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+      
+      
+      <div class="pswp__preloader">
+        <div class="pswp__preloader__icn">
+          <div class="pswp__preloader__cut">
+            <div class="pswp__preloader__donut"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+      <div class="pswp__share-tooltip"></div>
+    </div>
+    <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+    </button>
+    <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+    </button>
+    <div class="pswp__caption">
+      <div class="pswp__caption__center"></div>
+    </div>
+    </div>
+    </div>
+</div>
+
+
+  
+  
+  
+
+
+
+
+
+
+  
+
+  <header class="header-section ">
+    
+    <div class="intro-header no-img">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+            <div class="blog-heading">
+              
+                <h1>Create a *useful* Alexa skill with minimal Python knowledge</h1>
+              
+              
+                <hr class="small">
+              
+              
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+
+    
+<div class="container" role="main">
+  <div class="row">
+    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+      <article role="main" class="blog-post">
+        <p>I am pretty disappointed with the terrible quality of most of the &ldquo;custom&rdquo; stuff found in the Alexa skills shop. Lots of &ldquo;tell me a joke&rdquo;, &ldquo;tell me a fun fact&rdquo;, &ldquo;tell me random facts&rdquo;, &ldquo;play forest sounds&rdquo;, &ldquo;play sea sounds&rdquo;&hellip; So at the end, my Echo unit ended up being used just to turn Netflix on and off and manipulate the heating temperature.</p>
+<p>That&rsquo;s no more! It&rsquo;s very easy to create custom skills with Python (or Node.js) which can actually be useful so you find yourself triggering them often. Because after all, how many times can you play &ldquo;random facts&rdquo;?</p>
+<h2 id="how-to-find-out-what-is-actually-useful">How to find out what is actually useful</h2>
+<p>In my case, I focused on trying to remember small actions that I might have repeated day after day using either my phone or the computer. Mechanical tasks that might not be pleasurable or be considered as leisure, but you need to do them anyhow. Consider if you find yourself often checking the same bit of information.</p>
+<h2 id="bike-hire-status">Bike hire status</h2>
+<p>I live in Barcelona and here we have a public bike hire system called Bicing. Nowadays with working from home I don&rsquo;t use it that much, but when I need it, I used to open the app in my phone before leaving home in order to find out whether there are available bikes in the station near my home. Bicing has a <a href="https://api.bsmsa.eu/ext/api/bsm/gbfs/v2/en/station_status">live status page in JSON format</a>, so that was the perfect candidate for my Alexa Skill.</p>
+<h2 id="getting-started">Getting started</h2>
+<p>First you must create an free account if you don&rsquo;t already have one, and log in to the <a href="https://developer.amazon.com/alexa/console/ask">Skills dashboard</a></p>
+<p><img src="https://dev-to-uploads.s3.amazonaws.com/i/6dpwg32o0kjnlevdaihm.png" alt="Captura de pantalla 2020-12-08 a las 15.09.07"></p>
+<p>Click on &ldquo;Create Skill&rdquo; when you are ready and follow the steps to create a custom skill from scratch with Python (you can select Node.js, although the example on this tutorial will be Python)</p>
+<p>You should end up with an empty skill in your dashboard</p>
+<p><img src="https://dev-to-uploads.s3.amazonaws.com/i/2hotmiei4c0gjsppoefk.png" alt="Captura de pantalla 2020-12-08 a las 15.15.04"></p>
+<h2 id="configuring-the-skill">Configuring the skill</h2>
+<p>There are two critical items you should understand:</p>
+<ul>
+<li>INVOCATION</li>
+</ul>
+<p>Invocation is what name or phrase should you tell Alexa so she understands that you want to communicate with your skill.</p>
+<p>For example, I have a skill to control my heating temperature, so in the sentence &ldquo;Alexa, tell <em>the heating</em> to lower the temperature one degree&rdquo;, <em>the heating</em> (or <em>heating</em>, since Alexa seems pretty flexible with grammar particles) is the Invocation. Or &ldquo;Alexa, tell Xbox to play Grand Theft Auto&rdquo;. <em>Xbox</em> would be the Invocation.</p>
+<p><img src="https://dev-to-uploads.s3.amazonaws.com/i/qtdc42i8yn0wkav54zc9.png" alt="Captura de pantalla 2020-12-08 a las 15.15.25"></p>
+<p>So in my case I am using <em>Estación de bicing</em>, which translates to &ldquo;bicing station&rdquo; (I am creating the skill in Spanish).</p>
+<ul>
+<li>INTENT</li>
+</ul>
+<p>So, how many actions do you intend your skill to handle? example intents would be (for my heating) &ldquo;set temperature&rdquo;, &ldquo;switch on and off&rdquo;, &ldquo;change mode&rdquo;&hellip; For my bike hire status skill I am just going to do one intent &ldquo;AreThereBikes&rdquo;?</p>
+<p>Add as many intents as you want in the dashboard</p>
+<p><img src="https://dev-to-uploads.s3.amazonaws.com/i/k8azy687lq5gwpsjc2cw.png" alt="Captura de pantalla 2020-12-08 a las 15.15.37"></p>
+<p>And for every intent, you need to add the sentences that would trigger it. In my case I have put a list of sentences such as &ldquo;Are there bikes&rdquo;, &ldquo;are there bicycles&rdquo;, &ldquo;are there available bikes&rdquo;&hellip; and son on. Think of the possibilities.</p>
+<p><img src="https://dev-to-uploads.s3.amazonaws.com/i/5i79c0egqbn1aebigdfa.png" alt="Captura de pantalla 2020-12-08 a las 15.15.45"></p>
+<h2 id="adding-your-code">Adding your code</h2>
+<p>Once your code is configured with Invocation and Intent, do save and build the language model. You can find those buttons in the Intent screen. You need to rebuild every time you make changes to it.</p>
+<p>Click on the &ldquo;Code&rdquo; tab in the upper part of the page. You can edit your code here. You can also do it in VSCode or your favourite local editor, but the set up is a bit longer, so we will stick here.</p>
+<p>I have added this class to the
+<code>lambda_function.py</code>
+file:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">HayBicisIntentHandler</span>(AbstractRequestHandler):
+    <span style="color:#e6db74">&#34;&#34;&#34;Handler for HayBicis Intent.&#34;&#34;&#34;</span>
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">can_handle</span>(self, handler_input):
+        <span style="color:#75715e"># type: (HandlerInput) -&gt; bool</span>
+        <span style="color:#66d9ef">return</span> ask_utils<span style="color:#f92672">.</span>is_intent_name(<span style="color:#e6db74">&#34;HayBicis&#34;</span>)(handler_input)
+
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">handle</span>(self, handler_input):
+        <span style="color:#75715e"># type: (HandlerInput) -&gt; Response</span>
+        bikes_available <span style="color:#f92672">=</span> get_bikes(<span style="color:#ae81ff">244</span>)
+        speak_output <span style="color:#f92672">=</span> bikes_available
+
+        <span style="color:#66d9ef">return</span> (
+            handler_input<span style="color:#f92672">.</span>response_builder
+                <span style="color:#f92672">.</span>speak(speak_output)
+                <span style="color:#f92672">.</span>response
+        )
+
+</code></pre></div><p>The structure of the class will be done for you automatically. You just need to change a couple of things. In my case, I have put the proper intent name:</p>
+<pre><code>return ask_utils.is_intent_name(&quot;HayBicis&quot;)
+</code></pre><p>and have defined that my
+<code>handle</code>
+method should respond with the
+<code>speak_output</code>
+created by:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">bikes_available <span style="color:#f92672">=</span> get_bikes(<span style="color:#ae81ff">244</span>)
+speak_output <span style="color:#f92672">=</span> bikes_available
+</code></pre></div><p>So what is this
+<code>get_bikes(244)</code>
+function? This is the very simple custom code I have included in the skill. It makes a request to the Bicing JSON live status and returns a string with the information I want Alexa to repeat.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">get_bikes</span>(station_id):
+    resp <span style="color:#f92672">=</span> requests<span style="color:#f92672">.</span>get(<span style="color:#e6db74">&#34;https://api.bsmsa.eu/ext/api/bsm/gbfs/v2/en/station_status&#34;</span>)
+    available_bikes <span style="color:#f92672">=</span> list(filter(<span style="color:#66d9ef">lambda</span> item: item[<span style="color:#e6db74">&#34;station_id&#34;</span>] <span style="color:#f92672">==</span> station_id, resp<span style="color:#f92672">.</span>json()[<span style="color:#e6db74">&#34;data&#34;</span>][<span style="color:#e6db74">&#34;stations&#34;</span>]))[<span style="color:#ae81ff">0</span>][<span style="color:#e6db74">&#34;num_bikes_available_types&#34;</span>]
+    <span style="color:#66d9ef">return</span> f<span style="color:#e6db74">&#34;&#34;&#34;Hay {available_bikes[&#34;mechanical&#34;]} bicis mecánicas y {available_bikes[&#34;ebike&#34;]} eléctricas.&#34;&#34;&#34;</span>
+
+</code></pre></div><p>The code retrieves the json and then, filters the response so it only uses the stations where the station_id matches with the id we have provided. Out of that selected station, it grabs the amount of available bikes.</p>
+<p>Last point, don&rsquo;t forget to register your intent at the bottom of the file, as such:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">sb <span style="color:#f92672">=</span> SkillBuilder()
+
+sb<span style="color:#f92672">.</span>add_request_handler(LaunchRequestHandler())
+sb<span style="color:#f92672">.</span>add_request_handler(HayBicisIntentHandler())
+sb<span style="color:#f92672">.</span>add_request_handler(HelpIntentHandler())
+sb<span style="color:#f92672">.</span>add_request_handler(CancelOrStopIntentHandler())
+sb<span style="color:#f92672">.</span>add_request_handler(SessionEndedRequestHandler())
+</code></pre></div><h2 id="testing">Testing</h2>
+<p>So that&rsquo;s the full story. Of course we still need to add some other niceties, such as persisting user settings so anyone could select their own station (right now it&rsquo;s hardcoded to the station where I live!) But we can go step by step in future tutorials.</p>
+<p>Now is time to test. After you have saved your code, make sure you click on the &ldquo;Deploy&rdquo; button in the upper right side of the code editor, and then click on the &ldquo;Test&rdquo; tab.</p>
+<p>Here you can choose whether using your microphone or simply type the questions. With this testing you will see if Alexa reacts as you would expect:</p>
+<p><img src="https://dev-to-uploads.s3.amazonaws.com/i/gd744780qpefeqnz8rz7.png" alt="Captura de pantalla 2020-12-08 a las 15.38.29"></p>
+<p>Great! That is exactly the outcome we wanted. We now have a working Alexa skill which we have made in barely a few minutes.</p>
+<h2 id="deploying-to-the-alexa-store">Deploying to the Alexa store</h2>
+<p>I won&rsquo;t deploy this project to the store yet, as it&rsquo;s missing a crucial part for it to be useful for someone else (setting your own station). But if you were inclined to deploy your skills,  you can click on the &ldquo;Distribution&rdquo; tab and get started with the process. Good luck!</p>
+<h2 id="github-repo">GitHub repo</h2>
+<p><a href="https://github.com/rubenwap/haybicis">https://github.com/rubenwap/haybicis</a></p>
+<p><em><a href="https://dev.to/rubenwap/create-a-useful-alexa-skill-with-minimal-python-knowledge-man">This post is also available on DEV.</a></em></p>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+
+
+        
+          <div class="blog-tags">
+            
+              <a href="https://www.rubensanchez.dev/tags/python/">python</a>&nbsp;
+            
+              <a href="https://www.rubensanchez.dev/tags/alexa/">alexa</a>&nbsp;
+            
+              <a href="https://www.rubensanchez.dev/tags/tutorial/">tutorial</a>&nbsp;
+            
+          </div>
+        
+
+        
+
+        
+      </article>
+
+      
+        <ul class="pager blog-pager">
+          
+            <li class="previous">
+              <a href="https://www.rubensanchez.dev/blog/making-a-fast-yes-clone-with-go-hom/" data-toggle="tooltip" data-placement="top" title="Making a fast &#34;yes&#34; clone with Go">&larr; Previous Post</a>
+            </li>
+          
+          
+            <li class="next">
+              <a href="https://www.rubensanchez.dev/blog/go-rabbitmq-to-kafka-etl-with-zero-lines-of-go-1b83/" data-toggle="tooltip" data-placement="top" title="Go RabbitMQ to Kafka ETL with zero lines of Go!">Next Post &rarr;</a>
+            </li>
+          
+        </ul>
+      
+
+
+      
+
+    </div>
+  </div>
+</div>
+
+      
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <ul class="list-inline text-center footer-links">
+          
+          
+        </ul>
+        <p class="credits copyright text-muted">
+          
+
+          &nbsp;&bull;&nbsp;&copy;
+          
+            2021
+          
+
+          
+            &nbsp;&bull;&nbsp;
+            <a href="https://www.rubensanchez.dev">rubensanchez.dev</a>
+          
+        </p>
+        
+        <p class="credits theme-by text-muted">
+          <a href="https://gohugo.io">Hugo v0.76.5</a> powered &nbsp;&bull;&nbsp; Theme <a href="https://github.com/halogenica/beautifulhugo">Beautiful Hugo</a> adapted from <a href="https://deanattali.com/beautiful-jekyll/">Beautiful Jekyll</a>
+          
+        </p>
+      </div>
+    </div>
+  </div>
+</footer><script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.js" integrity="sha384-K3vbOmF2BtaVai+Qk37uypf7VrgBubhQreNQe9aGsz9lB63dIFiQVlJbr92dw2Lx" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/contrib/auto-render.min.js" integrity="sha384-kmZOZB5ObwgQnS/DuDg6TScgOiWWBiVt0plIRkZCmE6rDZGrEOQeHM5PcHi+nyqe" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+<script src="https://www.rubensanchez.dev/js/main.js"></script><script> renderMathInElement(document.body); </script><script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.js" integrity="sha384-QELNnmcmU8IR9ZAykt67vGr9/rZJdHbiWi64V88fCPaOohUlHCqUD/unNN0BXSqy" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe-ui-default.min.js" integrity="sha384-m67o7SkQ1ALzKZIFh4CiTA8tmadaujiTa9Vu+nqPSwDOqHrDmxLezTdFln8077+q" crossorigin="anonymous"></script><script src="https://www.rubensanchez.dev/js/load-photoswipe.js"></script>
+
+
+
+
+
+
+
+
+
+    
+  </body>
+</html>
+

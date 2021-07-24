@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en" itemscope itemtype="http://schema.org/WebPage">
+  <head>
+    
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+  <title>There is such thing as easy API development with Scala - rubensanchez.dev</title>
+  <meta name="description" content="I have to admit I am far from expert in Scala, that&rsquo;s why when recently I had to prototype an API in this language, I shuddered. Frameworks like Akka HTTP or HTTP4S were far too complex for a novice in the field like me, because learning Scala is not about the syntax, but about the mindset. And it&rsquo;s only logical that someone coming from the field of totally different languages such as Python or Javascript, can have a little trouble understanding concepts like the actor model or the functional proper way of using HTTP4S."><script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "@type": "WebSite",
+    "name": "rubensanchez.dev",
+    
+    "url": "https:\/\/www.rubensanchez.dev"
+}
+</script><script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Organization",
+  "name": "",
+  "url": "https:\/\/www.rubensanchez.dev"
+  
+  
+  
+  
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "item": {
+          "@id": "https:\/\/www.rubensanchez.dev",
+          "name": "home"
+        }
+    },{
+        "@type": "ListItem",
+        "position": 3,
+        "item": {
+          "@id": "https:\/\/www.rubensanchez.dev\/blog\/there-is-such-thing-as-easy-api-development-with-scala-2did\/",
+          "name": "There is such thing as easy a p i development with scala"
+        }
+    }]
+}
+</script><script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Article",
+  "author": {
+    "name" : ""
+  },
+  "headline": "There is such thing as easy API development with Scala",
+  "description" : "I have to admit I am far from expert in Scala, that\u0026rsquo;s why when recently I had to prototype an API in this language, I shuddered. Frameworks like Akka HTTP or HTTP4S were far too complex for a novice in the field like me, because learning Scala is not about the syntax, but about the mindset. And it\u0026rsquo;s only logical that someone coming from the field of totally different languages such as Python or Javascript, can have a little trouble understanding concepts like the actor model or the functional proper way of using HTTP4S.",
+  "inLanguage" : "en",
+  "wordCount":  689 ,
+  "datePublished" : "2020-02-29T14:59:19",
+  "dateModified" : "2020-02-29T14:59:19",
+  "image" : "https:\/\/www.rubensanchez.dev",
+  "keywords" : [ "scala, cask, api" ],
+  "mainEntityOfPage" : "https:\/\/www.rubensanchez.dev\/blog\/there-is-such-thing-as-easy-api-development-with-scala-2did\/",
+  "publisher" : {
+    "@type": "Organization",
+    "name" : "https:\/\/www.rubensanchez.dev",
+    "logo" : {
+        "@type" : "ImageObject",
+        "url" : "https:\/\/www.rubensanchez.dev",
+        "height" :  60 ,
+        "width" :  60
+    }
+  }
+}
+</script>
+
+<meta property="og:title" content="There is such thing as easy API development with Scala" />
+<meta property="og:description" content="I have to admit I am far from expert in Scala, that&rsquo;s why when recently I had to prototype an API in this language, I shuddered. Frameworks like Akka HTTP or HTTP4S were far too complex for a novice in the field like me, because learning Scala is not about the syntax, but about the mindset. And it&rsquo;s only logical that someone coming from the field of totally different languages such as Python or Javascript, can have a little trouble understanding concepts like the actor model or the functional proper way of using HTTP4S.">
+<meta property="og:url" content="https://www.rubensanchez.dev/blog/there-is-such-thing-as-easy-api-development-with-scala-2did/" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="rubensanchez.dev" />
+
+  <meta name="twitter:title" content="There is such thing as easy API development with Scala" />
+  <meta name="twitter:description" content="I have to admit I am far from expert in Scala, that&rsquo;s why when recently I had to prototype an API in this language, I shuddered. Frameworks like Akka HTTP or HTTP4S were far too complex for a …">
+  <meta name="twitter:card" content="summary" />
+  <meta name="generator" content="Hugo 0.76.5" />
+  <link rel="alternate" href="https://www.rubensanchez.dev/index.xml" type="application/rss+xml" title="rubensanchez.dev"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css" integrity="sha384-9eLZqc9ds8eNjO3TmqPeYcDj8n+Qfa4nuSiGYa6DjLNcv9BtN69ZIulL9+8CqC9Y" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"><link rel="stylesheet" href="https://www.rubensanchez.dev/css/main.css" /><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" /><link rel="stylesheet" href="https://www.rubensanchez.dev/css/syntax.css" /><link rel="stylesheet" href="https://www.rubensanchez.dev/css/codeblock.css" /><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.css" integrity="sha384-h/L2W9KefUClHWaty3SLE5F/qvc4djlyR4qY3NUV5HGQBBW7stbcfff1+I/vmsHh" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/default-skin/default-skin.min.css" integrity="sha384-iD0dNku6PYSIQLyfTOpB06F2KCZJAKLOThS5HRe8b3ibhdEQ6eKsFf/EeFxdOt5R" crossorigin="anonymous">
+
+
+
+  </head>
+  <body>
+    <nav class="navbar navbar-default navbar-fixed-top navbar-custom">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="https://www.rubensanchez.dev">rubensanchez.dev</a>
+    </div>
+
+    <div class="collapse navbar-collapse" id="main-navbar">
+      <ul class="nav navbar-nav navbar-right">
+        
+          
+            <li>
+              <a title="Contact" href="/contact/">Contact</a>
+            </li>
+          
+        
+
+        
+
+        
+      </ul>
+    </div>
+
+    
+
+  </div>
+</nav>
+
+
+
+
+    
+
+
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+<div class="pswp__bg"></div>
+
+<div class="pswp__scroll-wrap">
+    
+    <div class="pswp__container">
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+    </div>
+    
+    <div class="pswp__ui pswp__ui--hidden">
+    <div class="pswp__top-bar">
+      
+      <div class="pswp__counter"></div>
+      <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+      <button class="pswp__button pswp__button--share" title="Share"></button>
+      <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+      <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+      
+      
+      <div class="pswp__preloader">
+        <div class="pswp__preloader__icn">
+          <div class="pswp__preloader__cut">
+            <div class="pswp__preloader__donut"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+      <div class="pswp__share-tooltip"></div>
+    </div>
+    <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+    </button>
+    <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+    </button>
+    <div class="pswp__caption">
+      <div class="pswp__caption__center"></div>
+    </div>
+    </div>
+    </div>
+</div>
+
+
+  
+  
+  
+
+
+
+
+
+
+  
+
+  <header class="header-section ">
+    
+    <div class="intro-header no-img">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+            <div class="blog-heading">
+              
+                <h1>There is such thing as easy API development with Scala</h1>
+              
+              
+                <hr class="small">
+              
+              
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+
+    
+<div class="container" role="main">
+  <div class="row">
+    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+      <article role="main" class="blog-post">
+        <p>I have to admit I am far from expert in Scala, that&rsquo;s why when recently I had to prototype an API in this language, I shuddered. Frameworks like <a href="https://doc.akka.io/docs/akka-http/current/index.html">Akka HTTP</a> or <a href="https://http4s.org/">HTTP4S</a> were far too complex for a novice in the field like me, because learning Scala is not about the syntax, but about the mindset. And it&rsquo;s only logical that someone coming from the field of totally different languages such as Python or Javascript, can have a little trouble understanding concepts like the actor model or the functional proper way of using HTTP4S.</p>
+<h3 id="the-original-actor-model">The original Actor Model</h3>
+<p><img src="https://dev-to-uploads.s3.amazonaws.com/i/08qrrc2ecgwcpctlvdse.jpg" alt="Actor model in action"></p>
+<h3 id="cask">Cask</h3>
+<p>That&rsquo;s why I welcomed the discovery of <a href="https://github.com/lihaoyi/cask">Cask</a>, a micro HTTP framework which tries to follow closely the footsteps of Flask for Python. This looked like a good compromise between not switching straight away to Akka/Http4s, but still enjoying the benefits of a strongly typed language as interesting as Scala.</p>
+<h2 id="example-of-cask-usage-for-an-api-endpoint-from-a-postgres-database">Example of Cask usage for an API endpoint from a Postgres database</h2>
+<h3 id="setting-up">Setting up:</h3>
+<p>The author recommends to use his own build tool called <a href="http://www.lihaoyi.com/mill/">Mill</a>. Even though I found it easy to understand, I decided to stick with SBT out of habit, since that is what I had used in the past.</p>
+<h4 id="dependencies-for-this-project">Dependencies for this project:</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-scala" data-lang="scala">libraryDependencies <span style="color:#f92672">++=</span> <span style="color:#a6e22e">Seq</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;com.lihaoyi&#34;</span> <span style="color:#f92672">%%</span> <span style="color:#e6db74">&#34;cask&#34;</span> <span style="color:#f92672">%</span> <span style="color:#e6db74">&#34;0.2.9&#34;</span><span style="color:#f92672">,</span>
+  <span style="color:#e6db74">&#34;com.lihaoyi&#34;</span> <span style="color:#f92672">%%</span> <span style="color:#e6db74">&#34;utest&#34;</span> <span style="color:#f92672">%</span> <span style="color:#e6db74">&#34;0.7.4&#34;</span> <span style="color:#f92672">%</span> <span style="color:#a6e22e">Test</span><span style="color:#f92672">,</span>
+  <span style="color:#e6db74">&#34;com.lihaoyi&#34;</span> <span style="color:#f92672">%%</span> <span style="color:#e6db74">&#34;requests&#34;</span> <span style="color:#f92672">%</span> <span style="color:#e6db74">&#34;0.5.1&#34;</span><span style="color:#f92672">,</span>
+  <span style="color:#e6db74">&#34;org.postgresql&#34;</span> <span style="color:#f92672">%</span> <span style="color:#e6db74">&#34;postgresql&#34;</span> <span style="color:#f92672">%</span> <span style="color:#e6db74">&#34;42.2.8&#34;</span><span style="color:#f92672">,</span>
+  <span style="color:#e6db74">&#34;ch.qos.logback&#34;</span> <span style="color:#f92672">%</span> <span style="color:#e6db74">&#34;logback-classic&#34;</span> <span style="color:#f92672">%</span> <span style="color:#e6db74">&#34;1.2.3&#34;</span><span style="color:#f92672">,</span>
+  <span style="color:#e6db74">&#34;io.getquill&#34;</span> <span style="color:#f92672">%%</span> <span style="color:#e6db74">&#34;quill-jdbc&#34;</span> <span style="color:#f92672">%</span> <span style="color:#e6db74">&#34;3.2.0&#34;</span><span style="color:#f92672">,</span>
+  <span style="color:#e6db74">&#34;com.typesafe.scala-logging&#34;</span> <span style="color:#f92672">%%</span> <span style="color:#e6db74">&#34;scala-logging&#34;</span> <span style="color:#f92672">%</span> <span style="color:#e6db74">&#34;3.9.2&#34;</span><span style="color:#f92672">,</span>
+  <span style="color:#e6db74">&#34;com.typesafe&#34;</span> <span style="color:#f92672">%</span> <span style="color:#e6db74">&#34;config&#34;</span> <span style="color:#f92672">%</span> <span style="color:#e6db74">&#34;1.4.0&#34;</span><span style="color:#f92672">)</span>
+</code></pre></div><h4 id="what-are-we-retrieving-in-the-api">What are we retrieving in the API</h4>
+<p>This is an API which retrieves information about movies showing in the local cinemas of my city, so the modeled data is basically a movie. We create a case class, because that is what will be used by <a href="https://getquill.io/">Quill</a> to map to the values in the Postgres table and be able to retrieve the data. So when I do:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-scala" data-lang="scala"><span style="color:#66d9ef">case</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Movies</span><span style="color:#f92672">(</span>
+                   cinema<span style="color:#66d9ef">:</span> <span style="color:#66d9ef">String</span><span style="color:#f92672">,</span>
+                   details<span style="color:#66d9ef">:</span> <span style="color:#66d9ef">String</span><span style="color:#f92672">,</span>
+                   title<span style="color:#66d9ef">:</span> <span style="color:#66d9ef">String</span><span style="color:#f92672">,</span>
+                   movie_date<span style="color:#66d9ef">:</span> <span style="color:#66d9ef">String</span><span style="color:#f92672">,</span>
+                   movie_time<span style="color:#66d9ef">:</span> <span style="color:#66d9ef">String</span>
+                 <span style="color:#f92672">)</span>
+</code></pre></div><p>with this I actually mean that there is a table with the name
+<code>movies</code>
+that has as fields each of the case class fields. By the way! I am aware that certain data types are not correct. Date and time should not be strings. However, this is for the moment done like this to deal with data in a database that has been scraped and does not conform to proper date format yet. Work in progress!</p>
+<h4 id="how-to-manage-all-the-connection-settings-for-the-db">How to manage all the connection settings for the DB</h4>
+<p>As simple as creating an
+<code>application.properties</code>
+file in your resources folder with the following content</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-scala" data-lang="scala">ctx<span style="color:#f92672">.</span>dataSourceClassName<span style="color:#66d9ef">=</span>org<span style="color:#f92672">.</span>postgresql<span style="color:#f92672">.</span>ds<span style="color:#f92672">.</span><span style="color:#a6e22e">PGSimpleDataSource</span>
+ctx<span style="color:#f92672">.</span>dataSource<span style="color:#f92672">.</span>user<span style="color:#66d9ef">=</span>your_user
+ctx<span style="color:#f92672">.</span>dataSource<span style="color:#f92672">.</span>password<span style="color:#66d9ef">=</span>your_password
+ctx<span style="color:#f92672">.</span>dataSource<span style="color:#f92672">.</span>databaseName<span style="color:#66d9ef">=</span>your_db_name
+ctx<span style="color:#f92672">.</span>dataSource<span style="color:#f92672">.</span>portNumber<span style="color:#66d9ef">=</span>port_<span style="color:#f92672">(</span><span style="color:#ae81ff">5432</span><span style="color:#a6e22e">_for_postgres</span><span style="color:#f92672">)</span>
+ctx<span style="color:#f92672">.</span>dataSource<span style="color:#f92672">.</span>serverName<span style="color:#66d9ef">=</span>your_server
+ctx<span style="color:#f92672">.</span>connectionTimeout<span style="color:#66d9ef">=</span>up_to_you
+</code></pre></div><p>Of course, take the necessary precautions when dealing with version control and this file.</p>
+<h4 id="so-where-is-my-easy-api">So where is my easy API?</h4>
+<p>There you go. We do this via defining a route for
+<code>movies</code>
+with a function which creates a context to run the database query. See the Quill documentation for more details, but in this example we are basically doing a
+<code>SELECT * from movies</code>
+, so it couldn&rsquo;t get easier.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-scala" data-lang="scala"><span style="color:#66d9ef">object</span> <span style="color:#a6e22e">moviescrape</span> <span style="color:#66d9ef">extends</span> cask<span style="color:#f92672">.</span><span style="color:#a6e22e">MainRoutes</span> <span style="color:#66d9ef">with</span> <span style="color:#a6e22e">LazyLogging</span> <span style="color:#f92672">{</span>
+  <span style="color:#66d9ef">override</span> <span style="color:#66d9ef">def</span> port<span style="color:#66d9ef">:</span> <span style="color:#66d9ef">Int</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">8081</span>
+  <span style="color:#66d9ef">lazy</span> <span style="color:#66d9ef">val</span> ctx <span style="color:#66d9ef">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">PostgresJdbcContext</span><span style="color:#f92672">(</span><span style="color:#a6e22e">SnakeCase</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;ctx&#34;</span><span style="color:#f92672">)</span>
+  <span style="color:#66d9ef">import</span> ctx._
+  <span style="color:#a6e22e">@cask</span><span style="color:#f92672">.</span>get<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;/movies&#34;</span><span style="color:#f92672">)</span>
+  <span style="color:#66d9ef">def</span> getMovies<span style="color:#f92672">()</span> <span style="color:#66d9ef">=</span> <span style="color:#f92672">{</span>
+    <span style="color:#66d9ef">val</span> content <span style="color:#66d9ef">=</span> ctx<span style="color:#f92672">.</span>run<span style="color:#f92672">(</span>query<span style="color:#f92672">[</span><span style="color:#66d9ef">Movies</span><span style="color:#f92672">])</span>
+      <span style="color:#f92672">.</span>map<span style="color:#f92672">(</span>m <span style="color:#66d9ef">=&gt;</span> <span style="color:#f92672">{</span>ujson<span style="color:#f92672">.</span><span style="color:#a6e22e">Obj</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;cinema&#34;</span> <span style="color:#f92672">-&gt;</span> ujson<span style="color:#f92672">.</span><span style="color:#a6e22e">Str</span><span style="color:#f92672">(</span>m<span style="color:#f92672">.</span>cinema<span style="color:#f92672">),</span>
+        <span style="color:#e6db74">&#34;details&#34;</span> <span style="color:#f92672">-&gt;</span> ujson<span style="color:#f92672">.</span><span style="color:#a6e22e">Str</span><span style="color:#f92672">(</span>m<span style="color:#f92672">.</span>details<span style="color:#f92672">),</span> <span style="color:#e6db74">&#34;title&#34;</span> <span style="color:#f92672">-&gt;</span> ujson<span style="color:#f92672">.</span><span style="color:#a6e22e">Str</span><span style="color:#f92672">(</span>m<span style="color:#f92672">.</span>title<span style="color:#f92672">),</span>
+        <span style="color:#e6db74">&#34;movie_date&#34;</span> <span style="color:#f92672">-&gt;</span> ujson<span style="color:#f92672">.</span><span style="color:#a6e22e">Str</span><span style="color:#f92672">(</span>m<span style="color:#f92672">.</span>movie_date<span style="color:#f92672">),</span>
+        <span style="color:#e6db74">&#34;movie_time&#34;</span> <span style="color:#f92672">-&gt;</span> ujson<span style="color:#f92672">.</span><span style="color:#a6e22e">Str</span><span style="color:#f92672">(</span>m<span style="color:#f92672">.</span>movie_time<span style="color:#f92672">))})</span>
+
+    upickle<span style="color:#f92672">.</span>default<span style="color:#f92672">.</span>write<span style="color:#f92672">(</span>ujson<span style="color:#f92672">.</span><span style="color:#a6e22e">Obj</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;data&#34;</span> <span style="color:#f92672">-&gt;</span> content<span style="color:#f92672">))</span>
+  <span style="color:#f92672">}</span>
+
+  initialize<span style="color:#f92672">()</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><p>Things might get a bit tricky around the part of returning the proper json with the response. I tried a few different tools, such as Circe and the author&rsquo;s own Ujson and at the end I settled with the latter.</p>
+<h3 id="but-will-it-scale">But&hellip; will it scale?</h3>
+<p>I don&rsquo;t think this library is meant to handle your super scalable APIs for deployments that need to bear a load of millions of users, but if you are ever in the need of playing around with API development in Scala in order to understand the language a little better, Cask will definitely help you to get your feet wet without the headaches of jumping straight into Akka HTTP.</p>
+<h2 id="resources">Resources</h2>
+<ul>
+<li><a href="http://www.lihaoyi.com/cask/">Cask</a></li>
+<li><a href="https://getquill.io/">Quill</a></li>
+<li><a href="https://github.com/rubenwap/ov-movies-api">Repo with full code example</a></li>
+</ul>
+<p><em><a href="https://dev.to/rubenwap/there-is-such-thing-as-easy-api-development-with-scala-2did">This post is also available on DEV.</a></em></p>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+
+
+        
+          <div class="blog-tags">
+            
+              <a href="https://www.rubensanchez.dev/tags/scala/">scala</a>&nbsp;
+            
+              <a href="https://www.rubensanchez.dev/tags/cask/">cask</a>&nbsp;
+            
+              <a href="https://www.rubensanchez.dev/tags/api/">api</a>&nbsp;
+            
+          </div>
+        
+
+        
+
+        
+      </article>
+
+      
+        <ul class="pager blog-pager">
+          
+          
+            <li class="next">
+              <a href="https://www.rubensanchez.dev/blog/do-you-love-web-scraping-with-scrapy-then-check-colly-for-go-6kc/" data-toggle="tooltip" data-placement="top" title="Do you love web scraping with Scrapy? Then check Colly for Go">Next Post &rarr;</a>
+            </li>
+          
+        </ul>
+      
+
+
+      
+
+    </div>
+  </div>
+</div>
+
+      
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <ul class="list-inline text-center footer-links">
+          
+          
+        </ul>
+        <p class="credits copyright text-muted">
+          
+
+          &nbsp;&bull;&nbsp;&copy;
+          
+            2021
+          
+
+          
+            &nbsp;&bull;&nbsp;
+            <a href="https://www.rubensanchez.dev">rubensanchez.dev</a>
+          
+        </p>
+        
+        <p class="credits theme-by text-muted">
+          <a href="https://gohugo.io">Hugo v0.76.5</a> powered &nbsp;&bull;&nbsp; Theme <a href="https://github.com/halogenica/beautifulhugo">Beautiful Hugo</a> adapted from <a href="https://deanattali.com/beautiful-jekyll/">Beautiful Jekyll</a>
+          
+        </p>
+      </div>
+    </div>
+  </div>
+</footer><script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.js" integrity="sha384-K3vbOmF2BtaVai+Qk37uypf7VrgBubhQreNQe9aGsz9lB63dIFiQVlJbr92dw2Lx" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/contrib/auto-render.min.js" integrity="sha384-kmZOZB5ObwgQnS/DuDg6TScgOiWWBiVt0plIRkZCmE6rDZGrEOQeHM5PcHi+nyqe" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+<script src="https://www.rubensanchez.dev/js/main.js"></script><script> renderMathInElement(document.body); </script><script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.js" integrity="sha384-QELNnmcmU8IR9ZAykt67vGr9/rZJdHbiWi64V88fCPaOohUlHCqUD/unNN0BXSqy" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe-ui-default.min.js" integrity="sha384-m67o7SkQ1ALzKZIFh4CiTA8tmadaujiTa9Vu+nqPSwDOqHrDmxLezTdFln8077+q" crossorigin="anonymous"></script><script src="https://www.rubensanchez.dev/js/load-photoswipe.js"></script>
+
+
+
+
+
+
+
+
+
+    
+  </body>
+</html>
+

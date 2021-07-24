@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <url>
+    <loc>https://www.rubensanchez.dev/contact/</loc>
+    <lastmod>2021-07-20T22:34:09+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.rubensanchez.dev/</loc>
+    <lastmod>2021-07-20T22:34:09+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.rubensanchez.dev/blog/</loc>
+    <lastmod>2021-04-01T09:14:10+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.rubensanchez.dev/tags/go/</loc>
+    <lastmod>2021-04-01T09:14:10+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.rubensanchez.dev/tags/learning/</loc>
+    <lastmod>2021-04-01T09:14:10+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.rubensanchez.dev/blog/must-bookmarks-to-become-good-in-go-ln8/</loc>
+    <lastmod>2021-04-01T09:14:10+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.rubensanchez.dev/tags/</loc>
+    <lastmod>2021-04-01T09:14:10+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.rubensanchez.dev/blog/go-rabbitmq-to-kafka-etl-with-zero-lines-of-go-1b83/</loc>
+    <lastmod>2021-01-16T19:00:12+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.rubensanchez.dev/tags/kafka/</loc>
+    <lastmod>2021-01-16T19:00:12+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.rubensanchez.dev/tags/rabbitmq/</loc>
+    <lastmod>2021-01-16T19:00:12+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.rubensanchez.dev/tags/tutorial/</loc>
+    <lastmod>2021-01-16T19:00:12+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.rubensanchez.dev/tags/alexa/</loc>
+    <lastmod>2020-12-08T15:18:11+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.rubensanchez.dev/blog/create-a-useful-alexa-skill-with-minimal-python-knowledge-man/</loc>
+    <lastmod>2020-12-08T15:18:11+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.rubensanchez.dev/tags/python/</loc>
+    <lastmod>2020-12-08T15:18:11+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.rubensanchez.dev/tags/gnu/</loc>
+    <lastmod>2020-10-18T12:59:33+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.rubensanchez.dev/blog/making-a-fast-yes-clone-with-go-hom/</loc>
+    <lastmod>2020-10-18T12:59:33+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.rubensanchez.dev/tags/performance/</loc>
+    <lastmod>2020-10-18T12:59:33+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.rubensanchez.dev/tags/datascience/</loc>
+    <lastmod>2020-10-02T17:52:24+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.rubensanchez.dev/tags/julia/</loc>
+    <lastmod>2020-10-02T17:52:24+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.rubensanchez.dev/blog/will-this-quick-julia-lesson-make-you-forget-about-python-for-your-data-needs-4d1c/</loc>
+    <lastmod>2020-10-02T17:52:24+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.rubensanchez.dev/blog/upskill-yourself-by-recreating-gnu-coretools-in-go-9f5/</loc>
+    <lastmod>2020-09-26T21:10:52+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.rubensanchez.dev/tags/beginners/</loc>
+    <lastmod>2020-09-24T12:22:49+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.rubensanchez.dev/tags/career/</loc>
+    <lastmod>2020-09-24T12:22:49+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.rubensanchez.dev/blog/i-was-doing-bad-stuff-in-my-first-dev-job-sorry-part-ii-iak/</loc>
+    <lastmod>2020-09-24T12:22:49+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.rubensanchez.dev/tags/productivity/</loc>
+    <lastmod>2020-09-24T12:22:49+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.rubensanchez.dev/blog/i-was-doing-bad-stuff-in-my-first-dev-job-sorry-part-i-58k0/</loc>
+    <lastmod>2020-09-24T11:30:17+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.rubensanchez.dev/tags/docker/</loc>
+    <lastmod>2020-09-13T10:53:11+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.rubensanchez.dev/blog/monitor-the-behavior-of-your-python-app-by-learning-influxdb-grafana-and-telegraf-3ehg/</loc>
+    <lastmod>2020-09-13T10:53:11+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.rubensanchez.dev/tags/discuss/</loc>
+    <lastmod>2020-05-22T08:49:19+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.rubensanchez.dev/blog/how-do-you-approach-your-dev-reading-list-1l28/</loc>
+    <lastmod>2020-05-22T08:49:19+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.rubensanchez.dev/tags/meta/</loc>
+    <lastmod>2020-05-22T08:49:19+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.rubensanchez.dev/tags/javascript/</loc>
+    <lastmod>2020-05-21T10:57:53+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.rubensanchez.dev/blog/use-python-in-your-browser-client-code-together-with-js-no-server-required-thanks-to-web-assembly-2be2/</loc>
+    <lastmod>2020-05-21T10:57:53+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.rubensanchez.dev/tags/webassembly/</loc>
+    <lastmod>2020-05-21T10:57:53+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.rubensanchez.dev/blog/the-go-way-to-parse-strings-into-dates-is-pretty-confusing-unless-you-live-in-a-small-fraction-of-the-world-42o9/</loc>
+    <lastmod>2020-05-18T16:22:29+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.rubensanchez.dev/tags/github/</loc>
+    <lastmod>2020-05-15T14:57:59+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.rubensanchez.dev/blog/learn-tdd-basics-and-automated-deployments-with-go-github-actions-and-heroku-2hf3/</loc>
+    <lastmod>2020-05-15T14:57:59+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.rubensanchez.dev/tags/codenewbie/</loc>
+    <lastmod>2020-04-10T22:06:45+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.rubensanchez.dev/tags/functional/</loc>
+    <lastmod>2020-04-10T22:06:45+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.rubensanchez.dev/blog/should-you-learn-functional-programming-3flp/</loc>
+    <lastmod>2020-04-10T22:06:45+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.rubensanchez.dev/tags/gamedev/</loc>
+    <lastmod>2020-03-23T19:09:18+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.rubensanchez.dev/tags/love2d/</loc>
+    <lastmod>2020-03-23T19:09:18+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.rubensanchez.dev/tags/lua/</loc>
+    <lastmod>2020-03-23T19:09:18+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.rubensanchez.dev/blog/lua-and-love-are-your-gateway-drug-to-videogame-making-53ag/</loc>
+    <lastmod>2020-03-23T19:09:18+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.rubensanchez.dev/tags/colly/</loc>
+    <lastmod>2020-03-05T09:39:29+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.rubensanchez.dev/blog/do-you-love-web-scraping-with-scrapy-then-check-colly-for-go-6kc/</loc>
+    <lastmod>2020-03-05T09:39:29+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.rubensanchez.dev/tags/scraping/</loc>
+    <lastmod>2020-03-05T09:39:29+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.rubensanchez.dev/tags/scrapy/</loc>
+    <lastmod>2020-03-05T09:39:29+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.rubensanchez.dev/tags/api/</loc>
+    <lastmod>2020-02-29T14:59:19+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.rubensanchez.dev/tags/cask/</loc>
+    <lastmod>2020-02-29T14:59:19+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.rubensanchez.dev/tags/scala/</loc>
+    <lastmod>2020-02-29T14:59:19+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.rubensanchez.dev/blog/there-is-such-thing-as-easy-api-development-with-scala-2did/</loc>
+    <lastmod>2020-02-29T14:59:19+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.rubensanchez.dev/categories/</loc>
+  </url>
+  
+</urlset>

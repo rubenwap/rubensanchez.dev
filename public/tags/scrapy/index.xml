@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>scrapy on rubensanchez.dev</title>
+    <link>https://www.rubensanchez.dev/tags/scrapy/</link>
+    <description>Recent content in scrapy on rubensanchez.dev</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 05 Mar 2020 09:39:29 +0000</lastBuildDate><atom:link href="https://www.rubensanchez.dev/tags/scrapy/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Do you love web scraping with Scrapy? Then check Colly for Go</title>
+      <link>https://www.rubensanchez.dev/blog/do-you-love-web-scraping-with-scrapy-then-check-colly-for-go-6kc/</link>
+      <pubDate>Thu, 05 Mar 2020 09:39:29 +0000</pubDate>
+      
+      <guid>https://www.rubensanchez.dev/blog/do-you-love-web-scraping-with-scrapy-then-check-colly-for-go-6kc/</guid>
+      <description>Scrapy is the star of the web scraping world in Python. There are indeed other beautiful libraries out there, but the simplicity and power that Scrapy gives you has captured the hearts of many Python developers who now have this full suite of excellent tools to perform the type of tasks that used to need more tinkering and patching. Scrapy alone will give you the actual scraping running on the Twisted engine, a shell to test your xpaths and css paths, an elegant way to specify your middleware, build a pipeline of actions easily and much more.</description>
+    </item>
+    
+  </channel>
+</rss>

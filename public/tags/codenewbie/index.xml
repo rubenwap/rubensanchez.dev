@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>codenewbie on rubensanchez.dev</title>
+    <link>https://www.rubensanchez.dev/tags/codenewbie/</link>
+    <description>Recent content in codenewbie on rubensanchez.dev</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 10 Apr 2020 22:06:45 +0000</lastBuildDate><atom:link href="https://www.rubensanchez.dev/tags/codenewbie/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Should you learn Functional Programming?</title>
+      <link>https://www.rubensanchez.dev/blog/should-you-learn-functional-programming-3flp/</link>
+      <pubDate>Fri, 10 Apr 2020 22:06:45 +0000</pubDate>
+      
+      <guid>https://www.rubensanchez.dev/blog/should-you-learn-functional-programming-3flp/</guid>
+      <description>Have you started learning to program recently and heard that all the cool people are doing functional programming? Unsure about whether giving it a go or not? I used my mad design skills to put together a handy chart.
+Let me add some extra glossary that might help you in your quest:
+Programming paradigm: This means how we classify programming languages according to their features. If you started learning recently, it&amp;rsquo;s very likely that you are using a multiparadigm language such as Javascript or Python.</description>
+    </item>
+    
+  </channel>
+</rss>

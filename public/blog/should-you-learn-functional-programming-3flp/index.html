@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en" itemscope itemtype="http://schema.org/WebPage">
+  <head>
+    
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+  <title>Should you learn Functional Programming? - rubensanchez.dev</title>
+  <meta name="description" content="Have you started learning to program recently and heard that all the cool people are doing functional programming? Unsure about whether giving it a go or not? I used my mad design skills to put together a handy chart.
+Let me add some extra glossary that might help you in your quest:
+Programming paradigm: This means how we classify programming languages according to their features. If you started learning recently, it&rsquo;s very likely that you are using a multiparadigm language such as Javascript or Python."><script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "@type": "WebSite",
+    "name": "rubensanchez.dev",
+    
+    "url": "https:\/\/www.rubensanchez.dev"
+}
+</script><script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Organization",
+  "name": "",
+  "url": "https:\/\/www.rubensanchez.dev"
+  
+  
+  
+  
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "item": {
+          "@id": "https:\/\/www.rubensanchez.dev",
+          "name": "home"
+        }
+    },{
+        "@type": "ListItem",
+        "position": 3,
+        "item": {
+          "@id": "https:\/\/www.rubensanchez.dev\/blog\/should-you-learn-functional-programming-3flp\/",
+          "name": "Should you learn functional programming?"
+        }
+    }]
+}
+</script><script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Article",
+  "author": {
+    "name" : ""
+  },
+  "headline": "Should you learn Functional Programming?",
+  "description" : "Have you started learning to program recently and heard that all the cool people are doing functional programming? Unsure about whether giving it a go or not? I used my mad design skills to put together a handy chart.\nLet me add some extra glossary that might help you in your quest:\nProgramming paradigm: This means how we classify programming languages according to their features. If you started learning recently, it\u0026rsquo;s very likely that you are using a multiparadigm language such as Javascript or Python.",
+  "inLanguage" : "en",
+  "wordCount":  619 ,
+  "datePublished" : "2020-04-10T22:06:45",
+  "dateModified" : "2020-04-10T22:06:45",
+  "image" : "https:\/\/www.rubensanchez.dev",
+  "keywords" : [ "functional, codenewbie, beginners" ],
+  "mainEntityOfPage" : "https:\/\/www.rubensanchez.dev\/blog\/should-you-learn-functional-programming-3flp\/",
+  "publisher" : {
+    "@type": "Organization",
+    "name" : "https:\/\/www.rubensanchez.dev",
+    "logo" : {
+        "@type" : "ImageObject",
+        "url" : "https:\/\/www.rubensanchez.dev",
+        "height" :  60 ,
+        "width" :  60
+    }
+  }
+}
+</script>
+
+<meta property="og:title" content="Should you learn Functional Programming?" />
+<meta property="og:description" content="Have you started learning to program recently and heard that all the cool people are doing functional programming? Unsure about whether giving it a go or not? I used my mad design skills to put together a handy chart.
+Let me add some extra glossary that might help you in your quest:
+Programming paradigm: This means how we classify programming languages according to their features. If you started learning recently, it&rsquo;s very likely that you are using a multiparadigm language such as Javascript or Python.">
+<meta property="og:url" content="https://www.rubensanchez.dev/blog/should-you-learn-functional-programming-3flp/" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="rubensanchez.dev" />
+
+  <meta name="twitter:title" content="Should you learn Functional Programming?" />
+  <meta name="twitter:description" content="Have you started learning to program recently and heard that all the cool people are doing functional programming? Unsure about whether giving it a go or not? I used my mad design skills to put …">
+  <meta name="twitter:card" content="summary" />
+  <meta name="generator" content="Hugo 0.76.5" />
+  <link rel="alternate" href="https://www.rubensanchez.dev/index.xml" type="application/rss+xml" title="rubensanchez.dev"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css" integrity="sha384-9eLZqc9ds8eNjO3TmqPeYcDj8n+Qfa4nuSiGYa6DjLNcv9BtN69ZIulL9+8CqC9Y" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"><link rel="stylesheet" href="https://www.rubensanchez.dev/css/main.css" /><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" /><link rel="stylesheet" href="https://www.rubensanchez.dev/css/syntax.css" /><link rel="stylesheet" href="https://www.rubensanchez.dev/css/codeblock.css" /><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.css" integrity="sha384-h/L2W9KefUClHWaty3SLE5F/qvc4djlyR4qY3NUV5HGQBBW7stbcfff1+I/vmsHh" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/default-skin/default-skin.min.css" integrity="sha384-iD0dNku6PYSIQLyfTOpB06F2KCZJAKLOThS5HRe8b3ibhdEQ6eKsFf/EeFxdOt5R" crossorigin="anonymous">
+
+
+
+  </head>
+  <body>
+    <nav class="navbar navbar-default navbar-fixed-top navbar-custom">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="https://www.rubensanchez.dev">rubensanchez.dev</a>
+    </div>
+
+    <div class="collapse navbar-collapse" id="main-navbar">
+      <ul class="nav navbar-nav navbar-right">
+        
+          
+            <li>
+              <a title="Contact" href="/contact/">Contact</a>
+            </li>
+          
+        
+
+        
+
+        
+      </ul>
+    </div>
+
+    
+
+  </div>
+</nav>
+
+
+
+
+    
+
+
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+<div class="pswp__bg"></div>
+
+<div class="pswp__scroll-wrap">
+    
+    <div class="pswp__container">
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+    </div>
+    
+    <div class="pswp__ui pswp__ui--hidden">
+    <div class="pswp__top-bar">
+      
+      <div class="pswp__counter"></div>
+      <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+      <button class="pswp__button pswp__button--share" title="Share"></button>
+      <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+      <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+      
+      
+      <div class="pswp__preloader">
+        <div class="pswp__preloader__icn">
+          <div class="pswp__preloader__cut">
+            <div class="pswp__preloader__donut"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+      <div class="pswp__share-tooltip"></div>
+    </div>
+    <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+    </button>
+    <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+    </button>
+    <div class="pswp__caption">
+      <div class="pswp__caption__center"></div>
+    </div>
+    </div>
+    </div>
+</div>
+
+
+  
+  
+  
+
+
+
+
+
+
+  
+
+  <header class="header-section ">
+    
+    <div class="intro-header no-img">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+            <div class="blog-heading">
+              
+                <h1>Should you learn Functional Programming?</h1>
+              
+              
+                <hr class="small">
+              
+              
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+
+    
+<div class="container" role="main">
+  <div class="row">
+    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+      <article role="main" class="blog-post">
+        <p>Have you started learning to program recently and heard that all the cool people are doing functional programming? Unsure about whether giving it a go or not? I used my mad design skills to put together a handy chart.</p>
+<p><img src="https://dev-to-uploads.s3.amazonaws.com/i/0sjkay0qnq1kz3j2gd2u.png" alt="Alt Text"></p>
+<p>Let me add some extra glossary that might help you in your quest:</p>
+<p><em>Programming paradigm:</em>
+This means how we classify programming languages according to their features. If you started learning recently, it&rsquo;s very likely that you are using a multiparadigm language such as Javascript or Python. It means that the language accepts multiple paradigms and doesn&rsquo;t force you to stick with just one.</p>
+<p><em>Functions as first class citizens:</em>
+This refers to the fact that functions can have the role of values, being used as parameters in functions (a function that takes another function as parameter) or being used as a return value (a function that returns another function). That has a name: Higher order functions.</p>
+<p><em>About mutating data:</em>
+One of the things that Functional Programming advocates not to do. Being able to use setters and mutate states, can easily develop into a cause for bugs and great distress. Rather than mutate, we should ideally return a copy of our target with the new value. This can become confusing in languages that don&rsquo;t enforce this, but for example if you use Javascript, there is a library called <a href="https://immutable-js.github.io/immutable-js/">Immutable.js</a> which can help structuring your code this way. For Python you could use something like <a href="https://pythonhosted.org/pysistence/">Pysistence</a></p>
+<p><em>Function Currying:</em>
+So no, the name is not about the delicious oriental food (haha, I am surely the first person doing this joke!), but more about the mathematical technique on doing the following. What currying does it to split a function with various parameters into a number of function with one parameters. Why would you want to do this? Well, it can help you to transform very generic functions into really specific ones. To make things clear, let me show you this quick Python example.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">menu</span>(a):
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">today</span>(b):
+        <span style="color:#66d9ef">return</span> f<span style="color:#e6db74">&#34;{a} with {b}&#34;</span>
+    <span style="color:#66d9ef">return</span> today
+
+<span style="color:#75715e"># So now we could call this function like:</span>
+menu(<span style="color:#e6db74">&#34;rice&#34;</span>)(<span style="color:#e6db74">&#34;chicken&#34;</span>)
+
+<span style="color:#75715e"># and this returns:</span>
+<span style="color:#75715e"># &#34;rice with chicken&#34;</span>
+
+<span style="color:#75715e"># But things get more interesting if we assign it to a variable</span>
+rice_adder <span style="color:#f92672">=</span> menu(<span style="color:#e6db74">&#34;rice&#34;</span>)
+
+<span style="color:#75715e"># So when calling it like below, you can observe </span>
+<span style="color:#75715e"># how we have transformed a function with a very generic </span>
+<span style="color:#75715e"># purpose into a really specific one:</span>
+
+rice_adder(<span style="color:#e6db74">&#34;chicken&#34;</span>)
+<span style="color:#75715e"># returns &#34;rice with chicken&#34; </span>
+</code></pre></div><p><em>Test easily (no side effects!):</em></p>
+<p>Ok, so if you have a function called
+<code>transform_to_uppercase</code>
+we should expect that trasnform to uppercase is the only thing the function does. Not saving the text to your database or any other task that deviates from the main purpose of the function. So:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">menu_to_upper</span>(menu):
+    <span style="color:#66d9ef">return</span> menu<span style="color:#f92672">.</span>upper()
+</code></pre></div><p>can be tested with a simple
+<code>menu_to_upper(&quot;chicken with rice&quot;) == &quot;CHICKEN WITH RICE&quot;</code>
+, but how do you really test this?</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">menu_to_upper</span>(menu):
+    db <span style="color:#f92672">=</span> requests<span style="color:#f92672">.</span>get(<span style="color:#e6db74">&#34;localhost/api/db_name&#34;</span>)
+    menu_upper <span style="color:#f92672">=</span> menu<span style="color:#f92672">.</span>upper()
+    db<span style="color:#f92672">.</span>save(<span style="color:#e6db74">&#34;daily_menus&#34;</span>, menu_upper)
+</code></pre></div><p>Not so easy, right? Here you see in action the benefit of getting functions to do just one thing, although we could say that the single responsability principle is something you should try to use regardless of the paradigm you are using.</p>
+<h1 id="conclusion">Conclusion</h1>
+<p>Functional Programming is definitely more difficult to get right than imperative, but at the same time it can be more succint. You are actually spending longer time in order to write less. Rather than shoot code with a machine gun and hope for the best, FP forces you to make big efforts to produce something, but after you have done it, you can be sure that it will probably be more stable and less error prone.</p>
+<p>Give it a try!</p>
+<p><em><a href="https://dev.to/rubenwap/should-you-learn-functional-programming-3flp">This post is also available on DEV.</a></em></p>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+
+
+        
+          <div class="blog-tags">
+            
+              <a href="https://www.rubensanchez.dev/tags/functional/">functional</a>&nbsp;
+            
+              <a href="https://www.rubensanchez.dev/tags/codenewbie/">codenewbie</a>&nbsp;
+            
+              <a href="https://www.rubensanchez.dev/tags/beginners/">beginners</a>&nbsp;
+            
+          </div>
+        
+
+        
+
+        
+      </article>
+
+      
+        <ul class="pager blog-pager">
+          
+            <li class="previous">
+              <a href="https://www.rubensanchez.dev/blog/lua-and-love-are-your-gateway-drug-to-videogame-making-53ag/" data-toggle="tooltip" data-placement="top" title="Lua and Löve are your gateway drug to videogame making">&larr; Previous Post</a>
+            </li>
+          
+          
+            <li class="next">
+              <a href="https://www.rubensanchez.dev/blog/learn-tdd-basics-and-automated-deployments-with-go-github-actions-and-heroku-2hf3/" data-toggle="tooltip" data-placement="top" title="Learn to properly test and auto deploy your Go app with a movie posters server project">Next Post &rarr;</a>
+            </li>
+          
+        </ul>
+      
+
+
+      
+
+    </div>
+  </div>
+</div>
+
+      
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <ul class="list-inline text-center footer-links">
+          
+          
+        </ul>
+        <p class="credits copyright text-muted">
+          
+
+          &nbsp;&bull;&nbsp;&copy;
+          
+            2021
+          
+
+          
+            &nbsp;&bull;&nbsp;
+            <a href="https://www.rubensanchez.dev">rubensanchez.dev</a>
+          
+        </p>
+        
+        <p class="credits theme-by text-muted">
+          <a href="https://gohugo.io">Hugo v0.76.5</a> powered &nbsp;&bull;&nbsp; Theme <a href="https://github.com/halogenica/beautifulhugo">Beautiful Hugo</a> adapted from <a href="https://deanattali.com/beautiful-jekyll/">Beautiful Jekyll</a>
+          
+        </p>
+      </div>
+    </div>
+  </div>
+</footer><script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.js" integrity="sha384-K3vbOmF2BtaVai+Qk37uypf7VrgBubhQreNQe9aGsz9lB63dIFiQVlJbr92dw2Lx" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/contrib/auto-render.min.js" integrity="sha384-kmZOZB5ObwgQnS/DuDg6TScgOiWWBiVt0plIRkZCmE6rDZGrEOQeHM5PcHi+nyqe" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+<script src="https://www.rubensanchez.dev/js/main.js"></script><script> renderMathInElement(document.body); </script><script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.js" integrity="sha384-QELNnmcmU8IR9ZAykt67vGr9/rZJdHbiWi64V88fCPaOohUlHCqUD/unNN0BXSqy" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe-ui-default.min.js" integrity="sha384-m67o7SkQ1ALzKZIFh4CiTA8tmadaujiTa9Vu+nqPSwDOqHrDmxLezTdFln8077+q" crossorigin="anonymous"></script><script src="https://www.rubensanchez.dev/js/load-photoswipe.js"></script>
+
+
+
+
+
+
+
+
+
+    
+  </body>
+</html>
+
