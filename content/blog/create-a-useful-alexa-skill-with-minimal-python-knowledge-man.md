@@ -1,7 +1,7 @@
 ---
 stackbit_url_path: posts/create-a-useful-alexa-skill-with-minimal-python-knowledge-man
 title: Create a *useful* Alexa skill with minimal Python knowledge
-date: '2020-12-08T15:18:11.472Z'
+date: 2020-12-08T15:18:11.472Z
 excerpt: >-
   I am pretty disappointed with the terrible quality of most of the "custom"
   stuff found in the Alexa s...

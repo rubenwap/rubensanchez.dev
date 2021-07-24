@@ -1,7 +1,7 @@
 ---
 stackbit_url_path: posts/i-was-doing-bad-stuff-in-my-first-dev-job-sorry-part-ii-iak
 title: I was doing bad stuff in my first dev job. Sorry! (Part II)
-date: '2020-09-24T12:22:49.643Z'
+date: 2020-09-24T12:22:49.643Z
 excerpt: >-
   Glad to see you back. It means that you liked the previous part of this
   article. Or if you haven't se...

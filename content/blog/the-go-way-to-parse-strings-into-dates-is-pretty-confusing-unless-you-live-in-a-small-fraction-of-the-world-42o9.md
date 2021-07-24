@@ -4,7 +4,7 @@ stackbit_url_path: >-
 title: >-
   The Go way to parse strings into dates is pretty confusing unless you live in
   a small fraction of the world
-date: '2020-05-18T16:22:29.633Z'
+date: 2020-05-18T16:22:29.633Z
 excerpt: >-
   When it comes to date formats, there is about 640 million people who prefer to
   order using MDY, and m...

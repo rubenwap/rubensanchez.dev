@@ -4,7 +4,7 @@ stackbit_url_path: >-
 title: >-
   Learn to properly test and auto deploy your Go app with a movie posters server
   project
-date: '2020-05-15T14:57:59.696Z'
+date: 2020-05-15T14:57:59.696Z
 excerpt: >-
   Creating a well tested application pays off by having a lot less to debug in
   the future, together wit...

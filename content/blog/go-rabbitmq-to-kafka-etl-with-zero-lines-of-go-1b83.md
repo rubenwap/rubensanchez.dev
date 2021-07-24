@@ -1,7 +1,7 @@
 ---
 stackbit_url_path: posts/go-rabbitmq-to-kafka-etl-with-zero-lines-of-go-1b83
 title: Go RabbitMQ to Kafka ETL with zero lines of Go!
-date: '2021-01-16T19:00:12.850Z'
+date: 2021-01-16T19:00:12.850Z
 excerpt: >-
   I think that for a big percentage of cases, ETL pipelines are a solved
   problem. Unless you have very...

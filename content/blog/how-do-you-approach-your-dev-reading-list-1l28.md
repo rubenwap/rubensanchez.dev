@@ -1,7 +1,7 @@
 ---
 stackbit_url_path: posts/how-do-you-approach-your-dev-reading-list-1l28
 title: How do you approach your DEV "Reading List"?
-date: '2020-05-22T08:49:19.650Z'
+date: 2020-05-22T08:49:19.650Z
 excerpt: >-
   I have noticed that when faced with articles that are either long, or likely
   to be useful in the futu...

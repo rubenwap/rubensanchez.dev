@@ -4,7 +4,7 @@ stackbit_url_path: >-
 title: >-
   Will this quick Julia lesson make you forget about Python for your data
   needs? 
-date: '2020-10-02T17:52:24.272Z'
+date: 2020-10-02T17:52:24.272Z
 excerpt: >-
   I have been a Python heavy user for some time, so when I learned about Julia I
   thought that the prosp...

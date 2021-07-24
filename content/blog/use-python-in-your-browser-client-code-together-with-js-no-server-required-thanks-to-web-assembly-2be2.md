@@ -4,7 +4,7 @@ stackbit_url_path: >-
 title: >-
   Use Python in your browser client code together with JS. No server required,
   thanks to Web Assembly
-date: '2020-05-21T10:57:53.375Z'
+date: 2020-05-21T10:57:53.375Z
 excerpt: >-
   Use case: Let't say that I love Python Pandas for data manipulation, but at
   the same time I need to u...

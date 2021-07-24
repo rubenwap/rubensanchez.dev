@@ -1,7 +1,7 @@
 ---
 stackbit_url_path: posts/upskill-yourself-by-recreating-gnu-coretools-in-go-9f5
 title: Upskill yourself by recreating GNU Coreutils in Go
-date: '2020-09-26T21:10:52.275Z'
+date: 2020-09-26T21:10:52.275Z
 excerpt: >-
   Reinventing the wheel for fun   One of the most popular advice to gain skills
   programming is...

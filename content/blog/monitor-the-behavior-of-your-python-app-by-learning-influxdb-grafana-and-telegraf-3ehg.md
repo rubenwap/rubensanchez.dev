@@ -4,7 +4,7 @@ stackbit_url_path: >-
 title: >-
   Monitor the behavior of your Python app by learning InfluxDB, Grafana and
   Telegraf
-date: '2020-09-13T10:53:11.925Z'
+date: 2020-09-13T10:53:11.925Z
 excerpt: >-
   We will go through a tutorial where Python and Flask will be used. However,
   you will soon realize tha...

@@ -1,7 +1,7 @@
 ---
 stackbit_url_path: posts/do-you-love-web-scraping-with-scrapy-then-check-colly-for-go-6kc
 title: Do you love web scraping with Scrapy? Then check Colly for Go
-date: '2020-03-05T09:39:29.137Z'
+date: 2020-03-05T09:39:29.137Z
 excerpt: >-
   Scrapy is the star of the web scraping world in Python. There are indeed other
   beautiful libraries ou...

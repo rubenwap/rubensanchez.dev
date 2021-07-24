@@ -1,7 +1,7 @@
 ---
 stackbit_url_path: posts/making-a-fast-yes-clone-with-go-hom
 title: Making a fast "yes" clone with Go
-date: '2020-10-18T12:59:33.593Z'
+date: 2020-10-18T12:59:33.593Z
 excerpt: >-
   Following the series on creating Go based clones of the GNU coreutils, today I
   wanted to do a speed e...

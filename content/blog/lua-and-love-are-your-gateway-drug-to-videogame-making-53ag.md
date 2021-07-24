@@ -1,7 +1,7 @@
 ---
 stackbit_url_path: posts/lua-and-love-are-your-gateway-drug-to-videogame-making-53ag
 title: Lua and Löve are your gateway drug to videogame making
-date: '2020-03-23T19:09:18.069Z'
+date: 2020-03-23T19:09:18.069Z
 excerpt: >-
   So I admit it, I always wanted to create a game, but I have been too easily
   scared by the amount of w...

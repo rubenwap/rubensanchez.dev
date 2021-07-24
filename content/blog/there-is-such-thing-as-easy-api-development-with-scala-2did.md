@@ -1,7 +1,7 @@
 ---
 stackbit_url_path: posts/there-is-such-thing-as-easy-api-development-with-scala-2did
 title: There is such thing as easy API development with Scala
-date: '2020-02-29T14:59:19.821Z'
+date: 2020-02-29T14:59:19.821Z
 excerpt: >-
   I have to admit I am far from expert in Scala, that's why when recently I had
   to prototype an API in...

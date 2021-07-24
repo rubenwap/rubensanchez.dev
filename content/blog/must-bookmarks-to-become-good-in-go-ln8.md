@@ -1,7 +1,7 @@
 ---
 stackbit_url_path: posts/must-bookmarks-to-become-good-in-go-ln8
 title: Must-Bookmarks to become good in Go
-date: '2021-04-01T09:14:10.641Z'
+date: 2021-04-01T09:14:10.641Z
 excerpt: >-
   I am having some days off, so I have compiled a list of Golang resources to go
   through during this ti...

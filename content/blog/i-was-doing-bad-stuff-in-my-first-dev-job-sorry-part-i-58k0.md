@@ -1,7 +1,7 @@
 ---
 stackbit_url_path: posts/i-was-doing-bad-stuff-in-my-first-dev-job-sorry-part-i-58k0
 title: I was doing bad stuff in my first dev job. Sorry! (Part I)
-date: '2020-09-24T11:30:17.649Z'
+date: 2020-09-24T11:30:17.649Z
 excerpt: >-
   I got my first developer job almost by accident. I was not looking for a dev
   job back then, but while...

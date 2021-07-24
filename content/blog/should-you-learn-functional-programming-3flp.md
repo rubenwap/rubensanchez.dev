@@ -1,7 +1,7 @@
 ---
 stackbit_url_path: posts/should-you-learn-functional-programming-3flp
 title: Should you learn Functional Programming?
-date: '2020-04-10T22:06:45.251Z'
+date: 2020-04-10T22:06:45.251Z
 excerpt: >-
   Have you started learning to program recently and heard that all the cool
   people are doing functional...
